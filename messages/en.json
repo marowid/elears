@@ -1,0 +1,294 @@
+{
+  "site": {
+    "name": "Elears",
+    "shortTagline": "Intelligence from Europe's eastern frontier.",
+    "description": "EU-sovereign, AI-native private intelligence. Wrocław, Poland.",
+    "wordmark": "ELEARS"
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "insights": "Insights",
+    "contact": "Contact",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleLanguage": "Switch language"
+  },
+  "cta": {
+    "ourServices": "Our services",
+    "contactUs": "Contact us",
+    "discussMandate": "Discuss a mandate",
+    "readMore": "Read more",
+    "viewAll": "View all"
+  },
+  "home": {
+    "heroEyebrow": "Wrocław · CEE · NATO",
+    "heroSub": "Elears is an EU-sovereign private intelligence firm — AI-native delivery, senior-led judgment, multilingual depth across Central and Eastern Europe.",
+    "pillarsEyebrow": "01 / What we do",
+    "pillarsTitle": "Three disciplines, one operating standard.",
+    "whyEyebrow": "02 / Why Elears",
+    "whyTitle": "Built for the questions Western firms cannot answer alone.",
+    "insightsEyebrow": "03 / Selected insights",
+    "insightsTitle": "Recent analysis from the firm.",
+    "footerCtaTitle": "Have a mandate in mind?",
+    "footerCtaSub": "We respond to qualified enquiries within one business day."
+  },
+  "pillars": {
+    "geo": {
+      "title": "Geopolitical & corporate intelligence",
+      "body": "CEE, Russia-CIS, sanctions and beneficial-ownership depth — sourced in the languages that matter."
+    },
+    "cyber": {
+      "title": "Cyber threat intelligence",
+      "body": "Actor and campaign tracking, dark-web monitoring, and incident response support."
+    },
+    "investigations": {
+      "title": "Investigations & due diligence",
+      "body": "Fast-turnaround integrity DD, asset tracing, and sensitive investigations."
+    }
+  },
+  "why": {
+    "sovereign": {
+      "title": "EU-sovereign by design",
+      "body": "Data, infrastructure, and analysts inside the European Union."
+    },
+    "native": {
+      "title": "CEE-native, multilingual",
+      "body": "Polish, Russian, Ukrainian, German and English source coverage."
+    },
+    "ai": {
+      "title": "AI-first delivery",
+      "body": "An in-house platform that compresses cycle time, with humans in the loop."
+    },
+    "independent": {
+      "title": "Independent, ethically governed",
+      "body": "No mandates against journalists, activists, or whistleblowers."
+    }
+  },
+  "services": {
+    "indexEyebrow": "Services",
+    "indexTitle": "What we do.",
+    "indexLead": "Six service lines, scoped tightly and delivered by senior practitioners. Pricing on request — fixed-fee where the brief allows.",
+    "pricingNote": "Pricing on request — fixed-fee where the brief allows.",
+    "typicalEngagements": "Typical engagements",
+    "howWeWork": "How we work",
+    "deliverables": "Deliverables",
+    "stepScoping": "Scoping",
+    "stepDelivery": "Delivery",
+    "stepHandover": "Handover",
+    "items": {
+      "integrity-due-diligence": {
+        "title": "Integrity Due Diligence",
+        "short": "Pre-transaction and pre-hire integrity checks across CEE, Russia-CIS, and global jurisdictions.",
+        "lead": "Pre-transaction and pre-hire integrity checks on individuals and entities across CEE, Russia-CIS, and global jurisdictions. Sourcing is multilingual and native-language. Standard subjects turn around in three to five business days; complex subjects on a scoped timeline.",
+        "engagements": [
+          "Pre-acquisition target screening for a mid-market private equity fund",
+          "C-suite and board pre-hire checks for a multinational entering the region",
+          "Counterparty integrity reviews on commodities and infrastructure deals",
+          "Sanctions and beneficial-ownership unwinds across CIS jurisdictions"
+        ],
+        "scoping": "Brief intake, conflict check, source plan, and fixed-fee proposal where scope allows.",
+        "delivery": "Native-language open-source research, public-records review, and discreet human enquiry.",
+        "handover": "Structured report, source register, and a verbal briefing with the lead analyst.",
+        "deliverables": [
+          "Structured integrity report (red-flag summary plus narrative)",
+          "Source register with provenance and date stamps",
+          "Executive briefing to deal team or general counsel"
+        ]
+      },
+      "geopolitical-risk": {
+        "title": "Geopolitical & Country Risk",
+        "short": "Market-entry risk, political-cycle analysis, and bespoke country briefings.",
+        "lead": "Market-entry risk, political-cycle analysis, scenario planning, and bespoke country briefings. Our depth is in CEE and Russia-CIS, with selective MENA-adjacent coverage where it intersects with European interests.",
+        "engagements": [
+          "Country-entry risk briefing for an industrial investor",
+          "Election-cycle scenario planning for a foreign affairs team",
+          "Standing geopolitical retainer for a multinational executive committee",
+          "Sanctions trajectory and second-order effects assessments"
+        ],
+        "scoping": "Question definition, decision relevance, and a written brief that fixes scope.",
+        "delivery": "Primary and secondary research, expert interviews, and structured analysis.",
+        "handover": "Written briefing, scenarios with indicators, and a working session with decision owners.",
+        "deliverables": [
+          "Written country or thematic briefing",
+          "Scenario set with leading indicators to monitor",
+          "Closed-door briefing for the executive or board"
+        ]
+      },
+      "cyber-threat-intelligence": {
+        "title": "Cyber Threat Intelligence",
+        "short": "Threat-actor and campaign tracking, dark-web monitoring, and pre-incident posture assessment.",
+        "lead": "Threat-actor and campaign tracking, ransomware-group monitoring, dark-web and Russian- and Ukrainian-language source coverage, IOC feeds, and pre-incident posture assessment. We support, but do not replace, your incident-response retainer.",
+        "engagements": [
+          "Standing threat-actor coverage for critical infrastructure operators",
+          "Ransomware exposure and victim-disclosure monitoring for a sector",
+          "Targeted brand and executive monitoring across closed forums",
+          "Pre-incident readiness review and tabletop facilitation"
+        ],
+        "scoping": "Asset and adversary mapping, then a tailored collection plan.",
+        "delivery": "Continuous collection across surface, deep, and dark-web sources, in source-language.",
+        "handover": "Periodic reporting cadence, IOC delivery, and on-demand analyst access.",
+        "deliverables": [
+          "Threat landscape report and monthly cadence updates",
+          "Curated IOCs and TTP narratives for security operations",
+          "Direct analyst access for incident triage support"
+        ]
+      },
+      "investigations": {
+        "title": "Investigations & Asset Tracing",
+        "short": "Sensitive investigations, fraud and corruption matters, and asset tracing in support of disputes.",
+        "lead": "Sensitive investigations, fraud and corruption matters, sanctions evasion, and asset tracing in support of disputes and recoveries. Engagements are delivered in coordination with outside counsel and under privilege where appropriate.",
+        "engagements": [
+          "Asset tracing across multiple jurisdictions in support of recovery proceedings",
+          "Sanctions-evasion mapping for a Western financial counterparty",
+          "Internal investigation support for a regulated multinational",
+          "Discreet enquiry into reputational and integrity allegations"
+        ],
+        "scoping": "Counsel-led intake, privilege framework, and a written investigation plan.",
+        "delivery": "Open-source, public-records and discreet human-source work to a defined evidentiary standard.",
+        "handover": "Findings memorandum, exhibits binder, and witness or counsel briefing.",
+        "deliverables": [
+          "Findings memorandum suitable for use under privilege",
+          "Indexed exhibits and source register",
+          "Working session with counsel and, where requested, witness preparation"
+        ]
+      },
+      "monitorship-compliance": {
+        "title": "Monitorships & Independent Compliance Reviews",
+        "short": "Court-, regulator-, or board-mandated monitorships and independent reviews.",
+        "lead": "Court-, regulator-, or board-mandated monitorships and independent reviews, including post-settlement compliance programmes. We are explicit about independence: we will not accept a monitorship where we hold a conflicting commercial interest.",
+        "engagements": [
+          "Independent monitor in a post-settlement compliance programme",
+          "Board-commissioned review of a compliance function",
+          "Independent review of an internal investigation",
+          "Programme assessment against EU and US enforcement expectations"
+        ],
+        "scoping": "Mandate definition, independence assessment, and stakeholder protocol.",
+        "delivery": "Document review, interviews, and field testing under a defined work plan.",
+        "handover": "Reporting to the appointing authority on the agreed cadence.",
+        "deliverables": [
+          "Independent reports to the court, regulator, or board",
+          "Findings, recommendations, and remediation tracking",
+          "Annual or interim certifications as required"
+        ]
+      },
+      "advisory-retainer": {
+        "title": "CEO & Board Advisory Retainer",
+        "short": "Always-on senior advisory to a small number of CEO, Chair, and Minister-level clients.",
+        "lead": "Always-on senior advisory to a small number of CEO, Chair, and Minister-level clients on geopolitical, regulatory, and reputational matters. Capacity is deliberately limited; we accept new retainers only where we can sustain a single point of contact at partner level.",
+        "engagements": [
+          "Standing geopolitical advisory to a multinational chief executive",
+          "Crisis communications and reputational counsel during a regulatory event",
+          "Confidential second-opinion work on sensitive board decisions",
+          "Discreet introductions and back-channel facilitation where appropriate"
+        ],
+        "scoping": "Direct conversation with the principal and a short written engagement letter.",
+        "delivery": "On-call access to a partner, with structured monthly cadence and ad-hoc work.",
+        "handover": "Continuous — no formal handover; periodic relationship review.",
+        "deliverables": [
+          "Direct partner access and discreet counsel",
+          "Confidential briefings on demand",
+          "Quarterly written outlook tailored to the principal's portfolio"
+        ]
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Who we are.",
+    "whoTitle": "An EU-sovereign private intelligence firm.",
+    "whoBody1": "Elears is a Wrocław-headquartered private intelligence firm. We combine an AI-native platform with a senior services bench drawn from former intelligence, prosecutorial, diplomatic, and investigative-journalism backgrounds. Our analysts work in Polish, Russian, Ukrainian, German and English.",
+    "whoBody2": "We serve three audiences: NATO and EU defence buyers; global law firms and multinationals operating in the region; and Polish and CEE enterprises with cross-border exposure. We are independent of any client, government, or vendor.",
+    "heritageTitle": "On the name.",
+    "heritageBody": "Elears renders the Polish chorągiew elearska — the period name for the Lisowczycy, the elite 17th-century Polish-Lithuanian light cavalry famed for cross-border reconnaissance, autonomy, and intelligence-gathering for the Crown. They were Polish-led and allied-deployed. The continuity is not aesthetic; it is operational.",
+    "leadershipTitle": "Leadership",
+    "leadershipNote": "Leadership names and biographies are confirmed at the point of mandate.",
+    "ethicsTitle": "Ethics & governance",
+    "ethicsBullets": [
+      "Independent. We do not accept contingent fees on outcomes that create legal exposure.",
+      "We do not accept mandates targeting journalists, activists, or whistleblowers.",
+      "Aligned with the GDPR and the EU AI Act; data and infrastructure inside the European Union.",
+      "Conflicts-of-interest protocol applied at intake and throughout the engagement.",
+      "Analyst-in-the-loop on all AI-generated outputs; no unsupervised model output leaves the firm."
+    ],
+    "registrationsTitle": "Memberships & registrations",
+    "registrations": [
+      "KRS — TBD",
+      "NIP — TBD",
+      "REGON — TBD",
+      "ISO/IEC 27001 — in progress",
+      "ACAMS Poland — TBD"
+    ],
+    "leadership": {
+      "ceo": "Chief Executive",
+      "intelligence": "Head of Intelligence",
+      "cyber": "Head of Cyber",
+      "investigations": "Head of Investigations",
+      "counsel": "General Counsel"
+    }
+  },
+  "insights": {
+    "eyebrow": "Insights",
+    "title": "Analysis from the firm.",
+    "lead": "Selected commentary on geopolitics, cyber, and investigations. We publish sparingly.",
+    "readingTime": "{minutes} min read",
+    "more": "More from Elears",
+    "draftBanner": "DRAFT — placeholder content. Not for publication.",
+    "tag": "Tag",
+    "publishedOn": "Published",
+    "byAuthor": "By {author}"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in touch.",
+    "lead": "We respond to qualified enquiries within one business day.",
+    "general": "General",
+    "press": "Press",
+    "careers": "Careers",
+    "office": "Office",
+    "officeBody": "Wrocław, Poland — full address to be confirmed.",
+    "secureTitle": "Secure introductions",
+    "secureBody": "We accept encrypted introductions over Signal and PGP. Fingerprints below; please verify out-of-band before sharing sensitive material.",
+    "signal": "Signal",
+    "pgp": "PGP fingerprint",
+    "responseTitle": "Response time",
+    "responseBody": "Qualified enquiries: one business day. Press: same day, where possible."
+  },
+  "legal": {
+    "draftBanner": "DRAFT — review by Polish-qualified counsel before launch.",
+    "privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy policy",
+      "intro": "This page describes how Elears processes personal data collected through this website."
+    },
+    "terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of use",
+      "intro": "This website is provided for informational purposes only. The terms below govern its use."
+    },
+    "cookies": {
+      "eyebrow": "Legal",
+      "title": "Cookie policy",
+      "intro": "This website does not use tracking cookies. Below is an exhaustive description of what is stored on your device."
+    }
+  },
+  "footer": {
+    "tagline": "EU-sovereign private intelligence. Wrocław, Poland.",
+    "servicesHeading": "Services",
+    "firmHeading": "Firm",
+    "legalHeading": "Legal",
+    "careers": "Careers",
+    "rights": "All rights reserved.",
+    "company": "Elears sp. z o.o."
+  },
+  "cookieBanner": {
+    "message": "This site uses no tracking cookies. Only your locale preference is stored on your device.",
+    "ack": "Acknowledge"
+  },
+  "notFound": {
+    "title": "Page not found.",
+    "body": "The page you requested does not exist.",
+    "home": "Return home"
+  }
+}

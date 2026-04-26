@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-hosted fonts go in /public/fonts; declare with @font-face here.
+   Until the WOFF2 files are added, the system fallback stack in
+   tailwind.config.ts keeps the page rendering. See docs/content-todo.md. */
+
+:root {
+  color-scheme: dark;
+  --grid-line: rgba(245, 247, 250, 0.04);
+  --neon-orange: #ff6a1a;
+  --neon-green: #34f08d;
+}
+
+html,
+body {
+  background-color: theme('colors.navy');
+  color: theme('colors.graphite');
+}
+
+body {
+  font-family: theme('fontFamily.sans');
+  font-feature-settings: 'kern' 1, 'liga' 1, 'ss01' 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: theme('colors.crimson');
+  color: theme('colors.navy');
+}
+
+/* Hairline grid background — light lattice on dark ink. */
+.grid-paper {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Cyberpunk hero backdrop — circuit-glitch texture suggesting the logo. */
+.topo-bg {
+  position: relative;
+  background-color: theme('colors.navy');
+  background-image:
+    radial-gradient(ellipse 1100px 420px at 18% 8%, rgba(255, 106, 26, 0.10), transparent 65%),
+    radial-gradient(ellipse 900px 360px at 86% 78%, rgba(52, 240, 141, 0.10), transparent 65%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(245, 247, 250, 0.025) 0,
+      rgba(245, 247, 250, 0.025) 1px,
+      transparent 1px,
+      transparent 14px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(245, 247, 250, 0.018) 0,
+      rgba(245, 247, 250, 0.018) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+}
+
+/* Subtle scan-line — neon green/cyan sweeping the hero. */
+.scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.scanline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(52, 240, 141, 0.30),
+    rgba(255, 106, 26, 0.30),
+    transparent
+  );
+  filter: blur(0.5px);
+  animation: scan 7s linear infinite;
+}
+
+/* Corner brackets — applied to elements with .brackets */
+.brackets {
+  position: relative;
+}
+.brackets::before,
+.brackets::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: theme('colors.crimson');
+  pointer-events: none;
+}
+.brackets::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.brackets::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: theme('colors.cyan');
+}
+
+/* Mil-spec eyebrow / kicker text style */
+.eyebrow {
+  font-family: theme('fontFamily.mono');
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* Glitch-headline: neon orange+green offset shadows behind primary text. */
+.glitch {
+  position: relative;
+  color: theme('colors.ivory');
+  text-shadow:
+    1px 0 0 rgba(255, 106, 26, 0.55),
+    -1px 0 0 rgba(52, 240, 141, 0.55);
+}
+
+/* Focus ring — neon, visible */
+:where(a, button, [role='button'], input, select, textarea, summary):focus-visible {
+  outline: 2px solid theme('colors.cyan');
+  outline-offset: 3px;
+}
+
+/* Prose tweaks for MDX — dark variant */
+.prose-elears {
+  --tw-prose-body: theme('colors.graphite');
+  --tw-prose-headings: theme('colors.ivory');
+  --tw-prose-lead: theme('colors.graphite');
+  --tw-prose-links: theme('colors.crimson');
+  --tw-prose-bold: theme('colors.ivory');
+  --tw-prose-counters: theme('colors.graphite-soft');
+  --tw-prose-bullets: theme('colors.graphite-soft');
+  --tw-prose-hr: theme('colors.rule');
+  --tw-prose-quotes: theme('colors.ivory');
+  --tw-prose-quote-borders: theme('colors.crimson');
+  --tw-prose-code: theme('colors.cyan');
+  --tw-prose-pre-bg: theme('colors.navy-soft');
+  --tw-prose-pre-code: theme('colors.ivory');
+}
+.prose-elears a:hover {
+  color: theme('colors.cyan');
+}
+
+/* Ensure no border radii leak in from defaults — tactical sharp edges. */
+button,
+input,
+select,
+textarea {
+  border-radius: 0;
+}

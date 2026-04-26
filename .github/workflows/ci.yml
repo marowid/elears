@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci || npm install
+
+      - name: Lint + typecheck
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Start server
+        run: npm run start &
+        env:
+          PORT: 3000
+
+      - name: Wait for server
+        run: npx wait-on http://localhost:3000/pl
+
+      - name: Axe a11y sweep
+        run: |
+          npx --yes @axe-core/cli \
+            http://localhost:3000/pl \
+            http://localhost:3000/en \
+            http://localhost:3000/pl/services \
+            http://localhost:3000/en/services \
+            http://localhost:3000/pl/about \
+            http://localhost:3000/en/about \
+            http://localhost:3000/pl/contact \
+            http://localhost:3000/en/contact \
+            --exit

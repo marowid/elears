@@ -1,0 +1,294 @@
+{
+  "site": {
+    "name": "Elears",
+    "shortTagline": "Wywiad z europejskiej granicy wschodu.",
+    "description": "Suwerenny w UE, oparty na AI prywatny wywiad. Wrocław, Polska.",
+    "wordmark": "ELEARS"
+  },
+  "nav": {
+    "services": "Usługi",
+    "about": "O nas",
+    "insights": "Analizy",
+    "contact": "Kontakt",
+    "skipToContent": "Przejdź do treści",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "toggleLanguage": "Zmień język"
+  },
+  "cta": {
+    "ourServices": "Nasze usługi",
+    "contactUs": "Kontakt",
+    "discussMandate": "Porozmawiajmy o zleceniu",
+    "readMore": "Czytaj dalej",
+    "viewAll": "Wszystkie"
+  },
+  "home": {
+    "heroEyebrow": "Wrocław · CEE · NATO",
+    "heroSub": "Elears jest suwerennym w UE prywatnym domem wywiadowczym — z dostawą opartą na AI, oceną prowadzoną przez seniorów i wielojęzycznym zasięgiem w Europie Środkowo-Wschodniej.",
+    "pillarsEyebrow": "01 / Co robimy",
+    "pillarsTitle": "Trzy dyscypliny, jeden standard pracy.",
+    "whyEyebrow": "02 / Dlaczego Elears",
+    "whyTitle": "Stworzeni do pytań, na które Zachód sam nie odpowie.",
+    "insightsEyebrow": "03 / Wybrane analizy",
+    "insightsTitle": "Najnowsze materiały firmy.",
+    "footerCtaTitle": "Macie sprawę do omówienia?",
+    "footerCtaSub": "Na zapytania kwalifikowane odpowiadamy w ciągu jednego dnia roboczego."
+  },
+  "pillars": {
+    "geo": {
+      "title": "Wywiad geopolityczny i korporacyjny",
+      "body": "CEE, Rosja-WNP, sankcje i własność beneficjenta — w językach źródłowych."
+    },
+    "cyber": {
+      "title": "Cyberwywiad zagrożeń",
+      "body": "Śledzenie aktorów i kampanii, monitoring dark-webu, wsparcie w odpowiedzi na incydenty."
+    },
+    "investigations": {
+      "title": "Dochodzenia i due diligence",
+      "body": "Szybka integralność DD, śledzenie aktywów, dochodzenia o wysokiej wrażliwości."
+    }
+  },
+  "why": {
+    "sovereign": {
+      "title": "Suwerenni w UE",
+      "body": "Dane, infrastruktura i analitycy w obrębie Unii Europejskiej."
+    },
+    "native": {
+      "title": "Rdzenni w CEE, wielojęzyczni",
+      "body": "Polski, rosyjski, ukraiński, niemiecki i angielski w źródłach."
+    },
+    "ai": {
+      "title": "Dostawa oparta na AI",
+      "body": "Wewnętrzna platforma skraca cykle pracy; człowiek pozostaje w pętli."
+    },
+    "independent": {
+      "title": "Niezależni i etyczni",
+      "body": "Nie przyjmujemy zleceń wymierzonych w dziennikarzy, aktywistów ani sygnalistów."
+    }
+  },
+  "services": {
+    "indexEyebrow": "Usługi",
+    "indexTitle": "Co robimy.",
+    "indexLead": "Sześć linii usługowych, ściśle określonych i realizowanych przez praktyków seniorskich. Wycena na zapytanie — opłata stała tam, gdzie pozwala na to brief.",
+    "pricingNote": "Wycena na zapytanie — opłata stała tam, gdzie pozwala na to brief.",
+    "typicalEngagements": "Typowe zlecenia",
+    "howWeWork": "Jak pracujemy",
+    "deliverables": "Produkty końcowe",
+    "stepScoping": "Określenie zakresu",
+    "stepDelivery": "Realizacja",
+    "stepHandover": "Przekazanie",
+    "items": {
+      "integrity-due-diligence": {
+        "title": "Integrity Due Diligence",
+        "short": "Kontrola integralności osób i podmiotów w CEE, Rosji-WNP i jurysdykcjach globalnych.",
+        "lead": "Kontrole integralności osób i podmiotów w fazie przed transakcją lub przed zatrudnieniem, w CEE, Rosji-WNP i jurysdykcjach globalnych. Źródła w językach lokalnych. Standardowy podmiot — trzy do pięciu dni roboczych; podmioty złożone — według ustalonego harmonogramu.",
+        "engagements": [
+          "Sprawdzenie celu akwizycji dla funduszu private equity",
+          "Pre-zatrudnieniowe sprawdzenia kadry kierowniczej i rad nadzorczych",
+          "Przegląd integralności kontrahentów w transakcjach surowcowych i infrastrukturalnych",
+          "Rozplątywanie sankcji i własności beneficjenta w jurysdykcjach WNP"
+        ],
+        "scoping": "Zlecenie, kontrola konfliktu, plan źródeł i propozycja stałej opłaty, gdy to możliwe.",
+        "delivery": "Badania w językach źródłowych, rejestry publiczne, dyskretne zapytania.",
+        "handover": "Strukturalny raport, rejestr źródeł, ustna odprawa z analitykiem prowadzącym.",
+        "deliverables": [
+          "Strukturalny raport (czerwone flagi i narracja)",
+          "Rejestr źródeł z datami i pochodzeniem",
+          "Odprawa dla zespołu transakcyjnego lub General Counsel"
+        ]
+      },
+      "geopolitical-risk": {
+        "title": "Ryzyko geopolityczne i krajowe",
+        "short": "Ryzyko wejścia na rynek, analiza cykli politycznych, briefingi krajowe.",
+        "lead": "Ryzyko wejścia na rynek, analiza cykli politycznych, scenariusze i dedykowane briefingi krajowe. Głębia w CEE i Rosji-WNP, wybiórcze pokrycie MENA tam, gdzie krzyżuje się z interesami europejskimi.",
+        "engagements": [
+          "Briefing wejścia na rynek dla inwestora przemysłowego",
+          "Scenariusze cyklu wyborczego dla zespołu spraw zagranicznych",
+          "Stały retainer geopolityczny dla komitetu wykonawczego",
+          "Ocena trajektorii sankcji i efektów drugorzędnych"
+        ],
+        "scoping": "Definicja pytań, ich znaczenie decyzyjne, pisemny brief.",
+        "delivery": "Badania pierwotne i wtórne, rozmowy z ekspertami, analiza strukturalna.",
+        "handover": "Pisemny briefing, scenariusze ze wskaźnikami, sesja robocza z decydentami.",
+        "deliverables": [
+          "Pisemny briefing krajowy lub tematyczny",
+          "Zestaw scenariuszy ze wskaźnikami wczesnego ostrzegania",
+          "Briefing przy drzwiach zamkniętych dla zarządu"
+        ]
+      },
+      "cyber-threat-intelligence": {
+        "title": "Wywiad cybernetyczny zagrożeń",
+        "short": "Śledzenie aktorów i kampanii, monitoring dark-webu, ocena postawy przed incydentem.",
+        "lead": "Śledzenie aktorów i kampanii, monitoring grup ransomware, pokrycie źródeł w językach rosyjskim i ukraińskim, IOC, ocena postawy przed incydentem. Wspieramy, ale nie zastępujemy retainera reagowania.",
+        "engagements": [
+          "Stałe pokrycie aktorów dla operatorów infrastruktury krytycznej",
+          "Monitoring narażenia sektora na ransomware i ujawnień ofiar",
+          "Monitoring marki i kadry w forach zamkniętych",
+          "Przegląd gotowości i facylitacja ćwiczeń sztabowych"
+        ],
+        "scoping": "Mapowanie aktywów i adwersarzy, plan zbierania informacji.",
+        "delivery": "Ciągłe pozyskiwanie ze źródeł powierzchniowych, deep i dark, w językach źródłowych.",
+        "handover": "Cykliczne raporty, dostarczanie IOC, dostęp do analityków na żądanie.",
+        "deliverables": [
+          "Raport krajobrazu zagrożeń i miesięczne aktualizacje",
+          "IOC i narracje TTP dla operacji bezpieczeństwa",
+          "Bezpośredni dostęp do analityków przy triage incydentów"
+        ]
+      },
+      "investigations": {
+        "title": "Dochodzenia i śledzenie aktywów",
+        "short": "Dochodzenia o wysokiej wrażliwości i śledzenie aktywów w sporach.",
+        "lead": "Dochodzenia o wysokiej wrażliwości, sprawy nadużyć i korupcji, obejście sankcji oraz śledzenie aktywów w postępowaniach restytucyjnych. Realizowane we współpracy z kancelariami zewnętrznymi i — gdy zasadne — pod tajemnicą prawną.",
+        "engagements": [
+          "Śledzenie aktywów w wielu jurysdykcjach na rzecz odzyskania",
+          "Mapowanie obejścia sankcji dla zachodniej instytucji finansowej",
+          "Wsparcie wewnętrznego dochodzenia w regulowanej organizacji",
+          "Dyskretne zapytanie o zarzuty reputacyjne i integralnościowe"
+        ],
+        "scoping": "Zlecenie poprzez kancelarię, ramy tajemnicy, pisemny plan dochodzenia.",
+        "delivery": "Źródła otwarte, rejestry publiczne, dyskretne źródła ludzkie — w określonym standardzie dowodowym.",
+        "handover": "Memorandum z ustaleniami, segregator dowodów, briefing dla świadków lub kancelarii.",
+        "deliverables": [
+          "Memorandum z ustaleniami pod tajemnicą prawną",
+          "Indeksowane dowody i rejestr źródeł",
+          "Sesja robocza z kancelarią; przygotowanie świadków na życzenie"
+        ]
+      },
+      "monitorship-compliance": {
+        "title": "Monitorshipy i niezależne przeglądy zgodności",
+        "short": "Monitorshipy i niezależne przeglądy zlecone przez sąd, regulatora lub zarząd.",
+        "lead": "Monitorshipy i niezależne przeglądy zlecone przez sąd, regulatora lub zarząd, w tym programy zgodności po ugodzie. Niezależność jest jasna: nie przyjmujemy monitorshipu tam, gdzie mamy konfliktowy interes komercyjny.",
+        "engagements": [
+          "Niezależny monitor w programie po ugodzie",
+          "Przegląd funkcji compliance zlecony przez zarząd",
+          "Niezależny przegląd dochodzenia wewnętrznego",
+          "Ocena programu wobec oczekiwań regulatorów UE i USA"
+        ],
+        "scoping": "Definicja mandatu, ocena niezależności, protokół z interesariuszami.",
+        "delivery": "Przegląd dokumentacji, wywiady, testy terenowe według planu.",
+        "handover": "Raporty do organu zlecającego w ustalonej kadencji.",
+        "deliverables": [
+          "Niezależne raporty do sądu, regulatora lub zarządu",
+          "Ustalenia, rekomendacje i monitoring naprawy",
+          "Roczne lub przejściowe certyfikacje, zgodnie z wymogami"
+        ]
+      },
+      "advisory-retainer": {
+        "title": "Doradztwo CEO i Rady",
+        "short": "Stałe doradztwo seniorskie dla wąskiej grupy klientów na poziomie CEO, Przewodniczących i Ministrów.",
+        "lead": "Stałe doradztwo seniorskie dla wąskiej grupy klientów na poziomie CEO, Przewodniczących i Ministrów, w sprawach geopolitycznych, regulacyjnych i reputacyjnych. Pojemność jest celowo ograniczona; nowe retainery przyjmujemy tylko tam, gdzie utrzymamy jeden punkt kontaktu na poziomie partnera.",
+        "engagements": [
+          "Stałe doradztwo geopolityczne dla CEO multinacjonała",
+          "Komunikacja kryzysowa i doradztwo reputacyjne w czasie zdarzenia regulacyjnego",
+          "Poufne drugie zdanie przy wrażliwych decyzjach zarządu",
+          "Dyskretne wprowadzenia i facylitacja kanałów zapasowych"
+        ],
+        "scoping": "Bezpośrednia rozmowa z principalem i krótka umowa.",
+        "delivery": "Dostęp na życzenie do partnera; comiesięczna kadencja i prace ad hoc.",
+        "handover": "Ciągły — bez formalnego przekazania; okresowy przegląd relacji.",
+        "deliverables": [
+          "Bezpośredni dostęp do partnera i dyskretne doradztwo",
+          "Poufne briefingi na życzenie",
+          "Kwartalny pisemny outlook dostosowany do portfela principala"
+        ]
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "O nas",
+    "title": "Kim jesteśmy.",
+    "whoTitle": "Suwerenny w UE prywatny dom wywiadowczy.",
+    "whoBody1": "Elears jest prywatnym domem wywiadowczym z siedzibą we Wrocławiu. Łączymy platformę opartą na AI z bench'em seniorskim wywodzącym się z wywiadu, prokuratury, dyplomacji i dziennikarstwa śledczego. Pracujemy w językach polskim, rosyjskim, ukraińskim, niemieckim i angielskim.",
+    "whoBody2": "Obsługujemy trzy grupy klientów: kupujących obronnych w NATO i UE; globalne kancelarie i multinacjonały działające w regionie; oraz polskie i CEE przedsiębiorstwa z ekspozycją transgraniczną. Jesteśmy niezależni od jakiegokolwiek klienta, rządu czy dostawcy.",
+    "heritageTitle": "O nazwie.",
+    "heritageBody": "Elears oddaje polską chorągiew elearską — okresową nazwę Lisowczyków, elitarnej XVII-wiecznej polsko-litewskiej lekkiej jazdy słynącej z transgranicznego rozpoznania, autonomii i pozyskiwania wywiadu dla Korony. Polsko prowadzeni, rozmieszczani w siłach sojuszniczych. Ciągłość nie jest estetyczna; jest operacyjna.",
+    "leadershipTitle": "Kierownictwo",
+    "leadershipNote": "Nazwiska i biogramy kierownictwa potwierdzane są w momencie zlecenia.",
+    "ethicsTitle": "Etyka i zarządzanie",
+    "ethicsBullets": [
+      "Niezależni. Nie przyjmujemy honorariów warunkowych od skutków, które tworzą ekspozycję prawną.",
+      "Nie przyjmujemy zleceń wymierzonych w dziennikarzy, aktywistów ani sygnalistów.",
+      "Zgodność z RODO i Aktem o AI UE; dane i infrastruktura w obrębie Unii Europejskiej.",
+      "Protokół konfliktów interesów stosowany przy przyjęciu zlecenia i w jego trakcie.",
+      "Człowiek w pętli przy każdym wyniku AI; żaden niesuperwizowany wynik nie opuszcza firmy."
+    ],
+    "registrationsTitle": "Członkostwa i rejestracje",
+    "registrations": [
+      "KRS — TBD",
+      "NIP — TBD",
+      "REGON — TBD",
+      "ISO/IEC 27001 — w toku",
+      "ACAMS Polska — TBD"
+    ],
+    "leadership": {
+      "ceo": "Prezes Zarządu",
+      "intelligence": "Dyrektor Wywiadu",
+      "cyber": "Dyrektor Cyber",
+      "investigations": "Dyrektor Dochodzeń",
+      "counsel": "General Counsel"
+    }
+  },
+  "insights": {
+    "eyebrow": "Analizy",
+    "title": "Analiza z firmy.",
+    "lead": "Wybrane komentarze do geopolityki, cyberprzestrzeni i dochodzeń. Publikujemy oszczędnie.",
+    "readingTime": "{minutes} min czytania",
+    "more": "Więcej z Elears",
+    "draftBanner": "WERSJA ROBOCZA — treść zastępcza. Nie do publikacji.",
+    "tag": "Tag",
+    "publishedOn": "Opublikowano",
+    "byAuthor": "Autor: {author}"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Kontakt.",
+    "lead": "Na zapytania kwalifikowane odpowiadamy w ciągu jednego dnia roboczego.",
+    "general": "Ogólny",
+    "press": "Prasa",
+    "careers": "Praca",
+    "office": "Biuro",
+    "officeBody": "Wrocław, Polska — pełen adres do potwierdzenia.",
+    "secureTitle": "Bezpieczne wprowadzenia",
+    "secureBody": "Przyjmujemy zaszyfrowane wprowadzenia przez Signal i PGP. Odciski poniżej; zweryfikuj je kanałem off-line przed udostępnieniem materiałów wrażliwych.",
+    "signal": "Signal",
+    "pgp": "Odcisk PGP",
+    "responseTitle": "Czas reakcji",
+    "responseBody": "Zapytania kwalifikowane: jeden dzień roboczy. Prasa: tego samego dnia, gdy to możliwe."
+  },
+  "legal": {
+    "draftBanner": "WERSJA ROBOCZA — do przeglądu przez polskiego prawnika przed publikacją.",
+    "privacy": {
+      "eyebrow": "Prawne",
+      "title": "Polityka prywatności",
+      "intro": "Strona opisuje, jak Elears przetwarza dane osobowe zebrane przez tę witrynę."
+    },
+    "terms": {
+      "eyebrow": "Prawne",
+      "title": "Regulamin",
+      "intro": "Strona ma charakter informacyjny. Poniższe warunki regulują jej używanie."
+    },
+    "cookies": {
+      "eyebrow": "Prawne",
+      "title": "Polityka cookies",
+      "intro": "Strona nie używa plików śledzących. Poniżej wyczerpujący opis tego, co jest przechowywane na Twoim urządzeniu."
+    }
+  },
+  "footer": {
+    "tagline": "Suwerenny w UE prywatny wywiad. Wrocław, Polska.",
+    "servicesHeading": "Usługi",
+    "firmHeading": "Firma",
+    "legalHeading": "Prawne",
+    "careers": "Praca",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "company": "Elears sp. z o.o."
+  },
+  "cookieBanner": {
+    "message": "Strona nie używa plików śledzących. Na urządzeniu zapisywana jest tylko preferencja języka.",
+    "ack": "Rozumiem"
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony.",
+    "body": "Żądana strona nie istnieje.",
+    "home": "Powrót do strony głównej"
+  }
+}

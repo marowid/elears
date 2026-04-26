@@ -1,0 +1,73 @@
+import { useLocale, useTranslations } from 'next-intl';
+import Container from '@/components/ui/Container';
+import Button from '@/components/ui/Button';
+
+export default function Hero() {
+  const t = useTranslations();
+  const locale = useLocale();
+
+  return (
+    <section className="topo-bg relative overflow-hidden text-ivory">
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, rgba(245,247,250,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(245,247,250,0.04) 1px, transparent 1px)',
+            backgroundSize: '64px 64px'
+          }}
+        />
+      </div>
+      <div className="scanline" aria-hidden="true" />
+
+      <Container className="relative grid grid-cols-1 gap-10 py-24 lg:grid-cols-12 lg:py-36">
+        <div className="lg:col-span-8">
+          <p className="eyebrow text-cyan/80">{t('home.heroEyebrow')}</p>
+
+          <h1
+            className="glitch mt-6 font-display font-bold uppercase tracking-wide2 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl"
+            data-text={t('site.shortTagline')}
+          >
+            {t('site.shortTagline')}
+          </h1>
+
+          <p className="mt-8 max-w-2xl text-lg text-ivory-dim">{t('home.heroSub')}</p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Button href={`/${locale}/services`} variant="solid">
+              {t('cta.ourServices')}
+            </Button>
+            <Button href={`/${locale}/contact`} variant="ghost">
+              {t('cta.contactUs')}
+            </Button>
+          </div>
+        </div>
+
+        <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:justify-end">
+          <div className="brackets text-ivory/70 border border-ivory/15 p-6 font-mono text-xs">
+            <p className="eyebrow text-ivory/70">{'// Coordinates'}</p>
+            <ul className="mt-4 space-y-2">
+              <li className="flex justify-between gap-4">
+                <span>HQ</span>
+                <span>Wrocław · 51.1079° N · 17.0385° E</span>
+              </li>
+              <li className="flex justify-between gap-4">
+                <span>Languages</span>
+                <span>PL · RU · UK · DE · EN</span>
+              </li>
+              <li className="flex justify-between gap-4">
+                <span>Coverage</span>
+                <span>CEE · CIS · NATO</span>
+              </li>
+              <li className="flex justify-between gap-4">
+                <span>Established</span>
+                <span>2026</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
