@@ -14,11 +14,11 @@ export default function LegalShell({ eyebrow, title, intro, children }: Props) {
   return (
     <>
       <PageHeader eyebrow={eyebrow} title={title} lead={intro} />
-      <section className="bg-navy">
+      <section className="bg-ink">
         <Container className="py-12 lg:py-16">
           <div
             role="status"
-            className="mb-10 border border-crimson bg-crimson/5 p-4 font-mono text-xs uppercase tracking-widish text-crimson"
+            className="mb-10 border border-accent bg-forest/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
           >
             ⚠ {t('draftBanner')}
           </div>

@@ -13,7 +13,7 @@
 
 html,
 body {
-  background-color: theme('colors.navy');
+  background-color: theme('colors.ink');
   color: theme('colors.graphite');
 }
 
@@ -25,8 +25,8 @@ body {
 }
 
 ::selection {
-  background-color: theme('colors.crimson');
-  color: theme('colors.navy');
+  background-color: theme('colors.accent');
+  color: theme('colors.ink');
 }
 
 /* Hairline grid background — light lattice on dark ink.
@@ -38,13 +38,13 @@ body {
   background-size: var(--grid-size, 32px) var(--grid-size, 32px);
 }
 
-/* Cyberpunk hero backdrop — circuit-glitch texture suggesting the logo. */
+/* Hero backdrop — tactical-map texture over green and blue field washes. */
 .topo-bg {
   position: relative;
-  background-color: theme('colors.navy');
+  background-color: theme('colors.ink');
   background-image:
-    radial-gradient(ellipse 1100px 420px at 18% 8%, theme('colors.crimson / 10%'), transparent 65%),
-    radial-gradient(ellipse 900px 360px at 86% 78%, theme('colors.cyan / 10%'), transparent 65%),
+    radial-gradient(ellipse 1100px 420px at 18% 8%, theme('colors.forest / 70%'), transparent 65%),
+    radial-gradient(ellipse 900px 360px at 86% 78%, theme('colors.surface / 90%'), transparent 65%),
     repeating-linear-gradient(
       90deg,
       theme('colors.ivory / 2.5%') 0,
@@ -61,7 +61,7 @@ body {
     );
 }
 
-/* Subtle scan-line — neon green/cyan sweeping the hero. */
+/* Subtle scan-line — accent/signal sweep across the hero. */
 .scanline {
   position: absolute;
   inset: 0;
@@ -78,8 +78,8 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    theme('colors.cyan / 30%'),
-    theme('colors.crimson / 30%'),
+    theme('colors.signal / 30%'),
+    theme('colors.accent / 30%'),
     transparent
   );
   filter: blur(0.5px);
@@ -96,7 +96,7 @@ body {
   position: absolute;
   width: 14px;
   height: 14px;
-  border-color: theme('colors.crimson');
+  border-color: theme('colors.accent');
   pointer-events: none;
 }
 .brackets::before {
@@ -110,7 +110,7 @@ body {
   right: -1px;
   border-bottom: 1px solid;
   border-right: 1px solid;
-  border-color: theme('colors.cyan');
+  border-color: theme('colors.signal');
 }
 
 /* Mil-spec eyebrow / kicker text style */
@@ -122,18 +122,18 @@ body {
   line-height: 1;
 }
 
-/* Glitch-headline: neon orange+green offset shadows behind primary text. */
+/* Glitch-headline: accent/signal offset shadows behind primary text. */
 .glitch {
   position: relative;
   color: theme('colors.ivory');
   text-shadow:
-    1px 0 0 theme('colors.crimson / 55%'),
-    -1px 0 0 theme('colors.cyan / 55%');
+    1px 0 0 theme('colors.accent / 55%'),
+    -1px 0 0 theme('colors.signal / 55%');
 }
 
-/* Focus ring — neon, visible */
+/* Focus ring — signal blue, visible */
 :where(a, button, [role='button'], input, select, textarea, summary):focus-visible {
-  outline: 2px solid theme('colors.cyan');
+  outline: 2px solid theme('colors.signal');
   outline-offset: 3px;
 }
 
@@ -142,19 +142,19 @@ body {
   --tw-prose-body: theme('colors.graphite');
   --tw-prose-headings: theme('colors.ivory');
   --tw-prose-lead: theme('colors.graphite');
-  --tw-prose-links: theme('colors.crimson');
+  --tw-prose-links: theme('colors.accent');
   --tw-prose-bold: theme('colors.ivory');
   --tw-prose-counters: theme('colors.graphite-soft');
   --tw-prose-bullets: theme('colors.graphite-soft');
   --tw-prose-hr: theme('colors.rule');
   --tw-prose-quotes: theme('colors.ivory');
-  --tw-prose-quote-borders: theme('colors.crimson');
-  --tw-prose-code: theme('colors.cyan');
-  --tw-prose-pre-bg: theme('colors.navy-soft');
+  --tw-prose-quote-borders: theme('colors.accent');
+  --tw-prose-code: theme('colors.signal');
+  --tw-prose-pre-bg: theme('colors.surface');
   --tw-prose-pre-code: theme('colors.ivory');
 }
 .prose-elears a:hover {
-  color: theme('colors.cyan');
+  color: theme('colors.signal');
 }
 
 /* Ensure no border radii leak in from defaults — tactical sharp edges. */

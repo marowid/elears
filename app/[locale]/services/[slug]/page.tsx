@@ -54,7 +54,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
         title={t(`${ns}.title`)}
       />
 
-      <section className="bg-navy">
+      <section className="bg-ink">
         <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-8">
             <p className="max-w-prose font-serif text-xl leading-relaxed text-graphite">
@@ -85,8 +85,8 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
                     { label: t('services.stepHandover'), body: t(`${ns}.handover`) }
                   ] as const
                 ).map((step, i) => (
-                  <li key={i} className="bg-navy p-6">
-                    <p className="eyebrow text-crimson">
+                  <li key={i} className="bg-ink p-6">
+                    <p className="eyebrow text-accent">
                       {String(i + 1).padStart(2, '0')} / {step.label}
                     </p>
                     <p className="mt-3 text-sm text-graphite">{step.body}</p>
@@ -100,7 +100,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
               <ul className="mt-4 space-y-3">
                 {deliverables.map((line, i) => (
                   <li key={i} className="flex gap-3 text-graphite">
-                    <span aria-hidden="true" className="text-crimson">
+                    <span aria-hidden="true" className="text-accent">
                       ▍
                     </span>
                     <span>{line}</span>
@@ -142,7 +142,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
                   <li key={s}>
                     <Link
                       href={`/${locale}/services/${s}`}
-                      className="text-ivory hover:text-cyan"
+                      className="text-ivory hover:text-signal"
                     >
                       {t(`services.items.${s}.title`)}
                     </Link>

@@ -20,7 +20,7 @@ export default function Hero() {
 
       <Container className="relative grid grid-cols-1 gap-10 py-24 lg:grid-cols-12 lg:py-36">
         <div className="lg:col-span-8">
-          <p className="eyebrow text-cyan/80">{t('home.heroEyebrow')}</p>
+          <p className="eyebrow text-signal/80">{t('home.heroEyebrow')}</p>
 
           <h1
             className="glitch mt-6 font-display font-bold uppercase tracking-wide2 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl"

@@ -7,7 +7,7 @@ export default function CtaStrip() {
   const locale = useLocale();
 
   return (
-    <section className="bg-navy text-ivory">
+    <section className="bg-ink text-ivory">
       <Container className="flex flex-col items-start justify-between gap-8 py-16 lg:flex-row lg:items-center lg:py-20">
         <div>
           <h2 className="font-serif text-2xl lg:text-3xl">{t('home.footerCtaTitle')}</h2>

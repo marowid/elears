@@ -38,7 +38,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
         lead={t('contact.lead')}
       />
 
-      <section className="bg-navy">
+      <section className="bg-ink">
         <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-7">
             <ul className="divide-y divide-rule/30 border-y border-rule/30">
@@ -51,7 +51,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   {/* TODO:contact-detail — confirm with founders before launch */}
                   <a
                     href={`mailto:${c.email}`}
-                    className="font-mono text-lg text-ivory hover:text-cyan"
+                    className="font-mono text-lg text-ivory hover:text-signal"
                   >
                     {c.email}
                   </a>
@@ -63,7 +63,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
               <h2 className="eyebrow text-graphite-soft">{t('contact.office')}</h2>
               <p className="mt-3 font-serif text-xl text-ivory">{t('contact.officeBody')}</p>
               {/* TODO:contact-detail — replace with real street address, then update static map below */}
-              <div className="mt-6 brackets border border-rule/40 bg-navy-soft/80 p-6">
+              <div className="mt-6 brackets border border-rule/40 bg-surface/80 p-6">
                 <svg
                   viewBox="0 0 600 320"
                   role="img"
@@ -77,7 +77,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   {/* River Oder — abstract flow */}
                   <path
                     d="M20 220 Q120 180 200 200 T380 180 Q480 170 580 200"
-                    className="stroke-cyan"
+                    className="stroke-signal"
                     strokeWidth="1.5"
                     opacity="0.85"
                   />
@@ -93,8 +93,8 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   <path d="M520 20 L520 300" />
                   {/* HQ marker */}
                   <g transform="translate(300 160)">
-                    <circle r="8" className="fill-crimson" />
-                    <circle r="14" fill="none" className="stroke-crimson" strokeWidth="1.5" />
+                    <circle r="8" className="fill-accent" />
+                    <circle r="14" fill="none" className="stroke-accent" strokeWidth="1.5" />
                     <text
                       x="20"
                       y="6"

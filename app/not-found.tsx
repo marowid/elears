@@ -7,7 +7,7 @@ export default function RootNotFound() {
       <body
         style={{
           fontFamily: 'system-ui, sans-serif',
-          background: colors.navy,
+          background: colors.ink,
           color: colors.ivory,
           minHeight: '100vh',
           display: 'grid',
@@ -22,7 +22,7 @@ export default function RootNotFound() {
               fontFamily: 'monospace',
               textTransform: 'uppercase',
               letterSpacing: '0.18em',
-              color: colors.crimson
+              color: colors.accent
             }}
           >
             404
@@ -31,11 +31,11 @@ export default function RootNotFound() {
             Page not found · Nie znaleziono strony.
           </h1>
           <p style={{ marginTop: '1rem' }}>
-            <Link href="/pl" style={{ color: colors.cyan }}>
+            <Link href="/pl" style={{ color: colors.signal }}>
               Strona główna
             </Link>{' '}
             ·{' '}
-            <Link href="/en" style={{ color: colors.cyan }}>
+            <Link href="/en" style={{ color: colors.signal }}>
               Home
             </Link>
           </p>

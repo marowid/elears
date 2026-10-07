@@ -9,7 +9,7 @@ type Props = {
 
 export default function PageHeader({ eyebrow, title, lead }: Props) {
   return (
-    <section className="border-b border-rule/30 bg-navy">
+    <section className="border-b border-rule/30 bg-ink">
       <Container className="py-16 lg:py-24">
         <Eyebrow>{eyebrow}</Eyebrow>
         <h1 className="mt-4 font-serif text-4xl leading-tight text-ivory sm:text-5xl">{title}</h1>

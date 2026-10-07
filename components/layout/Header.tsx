@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-40 border-b transition-colors duration-150 ${
-        scrolled ? 'border-rule/40 bg-navy/90 backdrop-blur' : 'border-transparent bg-navy'
+        scrolled ? 'border-rule/40 bg-ink/90 backdrop-blur' : 'border-transparent bg-ink'
       }`}
     >
       <Container className="flex items-center justify-between py-4 lg:py-5">
@@ -58,7 +58,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`text-sm tracking-widish transition-colors ${
-                  active ? 'text-crimson' : 'text-ivory-dim hover:text-cyan'
+                  active ? 'text-accent' : 'text-ivory-dim hover:text-signal'
                 }`}
               >
                 {item.label}
@@ -68,7 +68,7 @@ export default function Header() {
           <Link
             href={swapLocale}
             aria-label={t('toggleLanguage')}
-            className="eyebrow border border-ivory/40 px-2 py-1 text-ivory hover:border-cyan hover:text-cyan"
+            className="eyebrow border border-ivory/40 px-2 py-1 text-ivory hover:border-signal hover:text-signal"
           >
             {otherLocale.toUpperCase()}
           </Link>
@@ -87,14 +87,14 @@ export default function Header() {
       </Container>
 
       {open && (
-        <div id="mobile-nav" className="border-t border-rule/40 bg-navy lg:hidden">
+        <div id="mobile-nav" className="border-t border-rule/40 bg-ink lg:hidden">
           <Container className="flex flex-col gap-4 py-6">
             {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-rule/30 pb-3 text-sm tracking-widish text-ivory-dim hover:text-cyan"
+                className="border-b border-rule/30 pb-3 text-sm tracking-widish text-ivory-dim hover:text-signal"
               >
                 {item.label}
               </Link>
@@ -102,7 +102,7 @@ export default function Header() {
             <Link
               href={swapLocale}
               onClick={() => setOpen(false)}
-              className="eyebrow self-start border border-ivory/40 px-2 py-1 text-ivory hover:border-cyan hover:text-cyan"
+              className="eyebrow self-start border border-ivory/40 px-2 py-1 text-ivory hover:border-signal hover:text-signal"
             >
               {otherLocale.toUpperCase()}
             </Link>

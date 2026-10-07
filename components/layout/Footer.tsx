@@ -18,7 +18,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 border-t border-rule/40 bg-navy text-ivory">
+    <footer className="mt-24 border-t border-rule/40 bg-ink text-ivory">
       <Container className="grid grid-cols-1 gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Wordmark />
@@ -33,7 +33,7 @@ export default function Footer() {
               <li key={slug}>
                 <Link
                   href={`/${locale}/services/${slug}`}
-                  className="text-graphite hover:text-cyan"
+                  className="text-graphite hover:text-signal"
                 >
                   {t(`services.items.${slug}.title`)}
                 </Link>
@@ -46,23 +46,23 @@ export default function Footer() {
           <p className="eyebrow text-graphite-soft">{t('footer.firmHeading')}</p>
           <ul className="mt-4 space-y-3 text-sm">
             <li>
-              <Link href={`/${locale}/about`} className="text-graphite hover:text-cyan">
+              <Link href={`/${locale}/about`} className="text-graphite hover:text-signal">
                 {t('nav.about')}
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/insights`} className="text-graphite hover:text-cyan">
+              <Link href={`/${locale}/insights`} className="text-graphite hover:text-signal">
                 {t('nav.insights')}
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/contact`} className="text-graphite hover:text-cyan">
+              <Link href={`/${locale}/contact`} className="text-graphite hover:text-signal">
                 {t('nav.contact')}
               </Link>
             </li>
             <li>
               {/* TODO:contact-detail — confirm with founders before launch */}
-              <a href="mailto:careers@elears.com" className="text-graphite hover:text-cyan">
+              <a href="mailto:careers@elears.com" className="text-graphite hover:text-signal">
                 {t('footer.careers')}
               </a>
             </li>
@@ -73,17 +73,17 @@ export default function Footer() {
           <p className="eyebrow text-graphite-soft">{t('footer.legalHeading')}</p>
           <ul className="mt-4 space-y-3 text-sm">
             <li>
-              <Link href={`/${locale}/legal/privacy`} className="text-graphite hover:text-cyan">
+              <Link href={`/${locale}/legal/privacy`} className="text-graphite hover:text-signal">
                 {t('legal.privacy.title')}
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/legal/terms`} className="text-graphite hover:text-cyan">
+              <Link href={`/${locale}/legal/terms`} className="text-graphite hover:text-signal">
                 {t('legal.terms.title')}
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/legal/cookies`} className="text-graphite hover:text-cyan">
+              <Link href={`/${locale}/legal/cookies`} className="text-graphite hover:text-signal">
                 {t('legal.cookies.title')}
               </Link>
             </li>
@@ -91,7 +91,7 @@ export default function Footer() {
         </div>
       </Container>
 
-      <div className="border-t border-navy-soft">
+      <div className="border-t border-surface">
         <Container className="flex flex-col items-start justify-between gap-3 py-6 text-xs text-graphite-soft sm:flex-row sm:items-center">
           <p className="font-mono uppercase tracking-widish">
             © {year} {t('footer.company')} · Wrocław · Polska

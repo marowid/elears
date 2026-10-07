@@ -13,15 +13,15 @@ export default function Image() {
         style={{
           height: '100%',
           width: '100%',
-          background: colors.navy,
+          background: colors.ink,
           color: colors.ivory,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: '64px',
           backgroundImage: [
-            `radial-gradient(ellipse 900px 360px at 18% 8%, ${rgba('crimson', 0.18)}, transparent 65%)`,
-            `radial-gradient(ellipse 800px 320px at 86% 78%, ${rgba('cyan', 0.18)}, transparent 65%)`,
+            `radial-gradient(ellipse 900px 360px at 18% 8%, ${rgba('accent', 0.18)}, transparent 65%)`,
+            `radial-gradient(ellipse 800px 320px at 86% 78%, ${rgba('signal', 0.18)}, transparent 65%)`,
             `linear-gradient(135deg, ${rgba('ivory', 0.04)} 0 1px, transparent 1px 24px)`,
             `linear-gradient(45deg, ${rgba('ivory', 0.03)} 0 1px, transparent 1px 32px)`
           ].join(', ')
@@ -29,8 +29,8 @@ export default function Image() {
       >
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 18, fontSize: 28 }}>
           <span style={{ letterSpacing: 8, fontWeight: 700 }}>ELEARS</span>
-          <span style={{ color: colors.crimson }}>/</span>
-          <span style={{ letterSpacing: 6, opacity: 0.75, fontSize: 18, color: colors.cyan }}>
+          <span style={{ color: colors.accent }}>/</span>
+          <span style={{ letterSpacing: 6, opacity: 0.75, fontSize: 18, color: colors.signal }}>
             LISOWCZYCY
           </span>
         </div>
@@ -41,7 +41,7 @@ export default function Image() {
               fontSize: 16,
               letterSpacing: 4,
               textTransform: 'uppercase',
-              color: colors.cyan,
+              color: colors.signal,
               opacity: 0.85,
               margin: 0,
               fontFamily: 'monospace'
@@ -58,7 +58,7 @@ export default function Image() {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.02em',
-              textShadow: `2px 0 0 ${rgba('crimson', 0.5)}, -2px 0 0 ${rgba('cyan', 0.5)}`
+              textShadow: `2px 0 0 ${rgba('accent', 0.5)}, -2px 0 0 ${rgba('signal', 0.5)}`
             }}
           >
             Intelligence from Europe&apos;s eastern frontier.

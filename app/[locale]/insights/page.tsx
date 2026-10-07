@@ -40,7 +40,7 @@ export default async function InsightsIndex({
         lead={t('insights.lead')}
       />
 
-      <section className="bg-navy">
+      <section className="bg-ink">
         <Container className="py-12 lg:py-16">
           <ul className="divide-y divide-rule/30 border-y border-rule/30">
             {posts.map((post) => (
@@ -53,15 +53,15 @@ export default async function InsightsIndex({
                     <span className="eyebrow text-graphite-soft">
                       {formatInsightDate(post.date, locale)}
                     </span>
-                    <span className="eyebrow text-crimson">{post.tag}</span>
+                    <span className="eyebrow text-accent">{post.tag}</span>
                   </div>
                   <div className="lg:col-span-9">
                     {post.draft ? (
-                      <span className="eyebrow mr-3 inline-block border border-crimson px-2 py-1 text-crimson">
+                      <span className="eyebrow mr-3 inline-block border border-accent px-2 py-1 text-accent">
                         DRAFT
                       </span>
                     ) : null}
-                    <h2 className="inline font-serif text-xl text-ivory hover:text-cyan lg:text-2xl">
+                    <h2 className="inline font-serif text-xl text-ivory hover:text-signal lg:text-2xl">
                       {post.title}
                     </h2>
                     <p className="mt-2 max-w-2xl text-sm text-graphite">{post.excerpt}</p>
