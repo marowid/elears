@@ -21,7 +21,7 @@ This file is the single, grep-able punch list of every placeholder, draft, or "c
 
 ### Contact details
 - `app/[locale]/contact/page.tsx` — `contact@elears.com`, `press@elears.com`, `careers@elears.com` (`TODO:contact-detail`)
-- `app/[locale]/contact/page.tsx` — Office line "Wrocław, Poland — full address to be confirmed." and the schematic SVG city map (replace with verified location once address is final).
+- `app/[locale]/contact/page.tsx` — Office line (currently city only: "Wrocław, Poland") and the schematic SVG city map (replace with verified location once address is final).
 - `app/[locale]/contact/page.tsx` — Signal username and PGP fingerprint (`TODO:secure-contact`).
 - `components/layout/Footer.tsx` — `careers@elears.com` link (`TODO:contact-detail`).
 - `app/[locale]/legal/privacy/page.tsx` — controller contact `contact@elears.com` (`TODO:contact-detail`).
@@ -30,7 +30,7 @@ This file is the single, grep-able punch list of every placeholder, draft, or "c
 ### About page placeholders
 - `app/[locale]/about/page.tsx` — leadership name strings (`TODO:leadership-name`, currently "Name TBD").
 - `app/[locale]/about/page.tsx` — leadership bio text (`TODO:leadership-bio`, currently "TODO: bio …").
-- `app/[locale]/about/page.tsx` — registration items (`TODO:registrations`) — KRS / NIP / REGON / ISO 27001 / ACAMS Poland.
+- `app/[locale]/about/page.tsx` — registration items (`TODO:registrations`) — KRS / NIP / REGON (currently "in creation" / "w organizacji"), ISO 27001 / ACAMS Poland.
 - `messages/en.json`, `messages/pl.json` — `about.registrations` strings ("KRS — TBD", etc.) rendered by the item above.
 
 ### Legal page placeholders

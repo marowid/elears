@@ -90,12 +90,9 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
 
       <section className="bg-ink">
         <Container className="py-16 lg:py-20">
-          <div className="flex items-end justify-between">
-            <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
-              {t('about.leadershipTitle')}
-            </h2>
-            <p className="eyebrow text-graphite-soft">{LEADERSHIP_KEYS.length} roles</p>
-          </div>
+          <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
+            {t('about.leadershipTitle')}
+          </h2>
 
           <ul className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-2 lg:grid-cols-3">
             {LEADERSHIP_KEYS.map((key, i) => (
@@ -140,12 +137,9 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
 
       <section className="border-t border-rule/30 bg-surface/60">
         <Container className="py-16 lg:py-20">
-          <div className="flex items-end justify-between">
-            <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
-              {t('about.registrationsTitle')}
-            </h2>
-            <p className="eyebrow text-graphite-soft">{'// Placeholder · TODO'}</p>
-          </div>
+          <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
+            {t('about.registrationsTitle')}
+          </h2>
           <ul className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-2 lg:grid-cols-5">
             {registrations.map((line) => (
               <li

@@ -214,9 +214,9 @@
     ],
     "registrationsTitle": "Memberships & registrations",
     "registrations": [
-      "KRS — TBD",
-      "NIP — TBD",
-      "REGON — TBD",
+      "KRS — in creation",
+      "NIP — in creation",
+      "REGON — in creation",
       "ISO/IEC 27001 — in progress",
       "ACAMS Poland — TBD"
     ],
@@ -247,7 +247,7 @@
     "press": "Press",
     "careers": "Careers",
     "office": "Office",
-    "officeBody": "Wrocław, Poland — full address to be confirmed.",
+    "officeBody": "Wrocław, Poland",
     "secureTitle": "Secure introductions",
     "secureBody": "We accept encrypted introductions over Signal and PGP. Fingerprints below; please verify out-of-band before sharing sensitive material.",
     "signal": "Signal",

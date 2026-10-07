@@ -214,9 +214,9 @@
     ],
     "registrationsTitle": "Członkostwa i rejestracje",
     "registrations": [
-      "KRS — TBD",
-      "NIP — TBD",
-      "REGON — TBD",
+      "KRS — w organizacji",
+      "NIP — w organizacji",
+      "REGON — w organizacji",
       "ISO/IEC 27001 — w toku",
       "ACAMS Polska — TBD"
     ],
@@ -247,7 +247,7 @@
     "press": "Prasa",
     "careers": "Praca",
     "office": "Biuro",
-    "officeBody": "Wrocław, Polska — pełen adres do potwierdzenia.",
+    "officeBody": "Wrocław, Polska",
     "secureTitle": "Bezpieczne wprowadzenia",
     "secureBody": "Przyjmujemy zaszyfrowane wprowadzenia przez Signal i PGP. Odciski poniżej; zweryfikuj je kanałem off-line przed udostępnieniem materiałów wrażliwych.",
     "signal": "Signal",
