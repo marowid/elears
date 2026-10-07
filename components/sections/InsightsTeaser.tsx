@@ -24,7 +24,7 @@ export default async function InsightsTeaser({ locale }: { locale: Locale }) {
           </div>
           <Link
             href={`/${locale}/insights`}
-            className="eyebrow border-b border-crimson text-crimson hover:opacity-80"
+            className="eyebrow border-b border-crimson text-crimson hover:border-cyan hover:text-cyan"
           >
             {t('cta.viewAll')} →
           </Link>
@@ -44,7 +44,7 @@ export default async function InsightsTeaser({ locale }: { locale: Locale }) {
                   <span className="eyebrow text-crimson">{post.tag}</span>
                 </div>
                 <div className="lg:col-span-9">
-                  <h3 className="font-serif text-xl text-ivory hover:text-crimson lg:text-2xl">
+                  <h3 className="font-serif text-xl text-ivory hover:text-cyan lg:text-2xl">
                     {post.title}
                   </h3>
                   <p className="mt-2 max-w-2xl text-sm text-graphite">{post.excerpt}</p>

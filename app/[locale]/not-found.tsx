@@ -13,7 +13,7 @@ export default function NotFound() {
         <p className="mt-4 text-graphite">{t('body')}</p>
         <Link
           href={`/${locale}`}
-          className="mt-8 inline-block border border-rule px-5 py-3 text-sm tracking-widish text-ivory hover:bg-navy hover:text-ivory"
+          className="mt-8 inline-block border border-rule/40 px-5 py-3 text-sm tracking-widish text-ivory hover:border-cyan hover:text-cyan"
         >
           {t('home')}
         </Link>

@@ -9,7 +9,7 @@ export default function Eyebrow({ children, tone = 'default' }: Props) {
         : 'text-graphite-soft';
   return (
     <p className={`eyebrow ${color}`}>
-      <span aria-hidden="true" className="mr-2 inline-block text-crimson">
+      <span aria-hidden="true" className={`mr-2 inline-block ${tone === 'cyan' ? 'text-cyan' : 'text-crimson'}`}>
         ▍
       </span>
       {children}

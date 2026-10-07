@@ -127,7 +127,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
           </div>
           <ul className="space-y-4 lg:col-span-7">
             {ethics.map((line, i) => (
-              <li key={i} className="flex gap-4 border-b border-rule/20 pb-4 text-graphite">
+              <li key={i} className="flex gap-4 border-b border-rule/30 pb-4 text-graphite">
                 <span aria-hidden="true" className="font-mono text-xs uppercase tracking-widish text-crimson">
                   {String(i + 1).padStart(2, '0')}
                 </span>

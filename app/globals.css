@@ -8,9 +8,7 @@
 
 :root {
   color-scheme: dark;
-  --grid-line: rgba(245, 247, 250, 0.04);
-  --neon-orange: #ff6a1a;
-  --neon-green: #34f08d;
+  --grid-line: theme('colors.ivory / 4%');
 }
 
 html,
@@ -31,12 +29,13 @@ body {
   color: theme('colors.navy');
 }
 
-/* Hairline grid background — light lattice on dark ink. */
+/* Hairline grid background — light lattice on dark ink.
+   Set --grid-size / --grid-line on the element to vary density or strength. */
 .grid-paper {
   background-image:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-size: var(--grid-size, 32px) var(--grid-size, 32px);
 }
 
 /* Cyberpunk hero backdrop — circuit-glitch texture suggesting the logo. */
@@ -44,19 +43,19 @@ body {
   position: relative;
   background-color: theme('colors.navy');
   background-image:
-    radial-gradient(ellipse 1100px 420px at 18% 8%, rgba(255, 106, 26, 0.10), transparent 65%),
-    radial-gradient(ellipse 900px 360px at 86% 78%, rgba(52, 240, 141, 0.10), transparent 65%),
+    radial-gradient(ellipse 1100px 420px at 18% 8%, theme('colors.crimson / 10%'), transparent 65%),
+    radial-gradient(ellipse 900px 360px at 86% 78%, theme('colors.cyan / 10%'), transparent 65%),
     repeating-linear-gradient(
       90deg,
-      rgba(245, 247, 250, 0.025) 0,
-      rgba(245, 247, 250, 0.025) 1px,
+      theme('colors.ivory / 2.5%') 0,
+      theme('colors.ivory / 2.5%') 1px,
       transparent 1px,
       transparent 14px
     ),
     repeating-linear-gradient(
       0deg,
-      rgba(245, 247, 250, 0.018) 0,
-      rgba(245, 247, 250, 0.018) 1px,
+      theme('colors.ivory / 1.8%') 0,
+      theme('colors.ivory / 1.8%') 1px,
       transparent 1px,
       transparent 22px
     );
@@ -79,8 +78,8 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(52, 240, 141, 0.30),
-    rgba(255, 106, 26, 0.30),
+    theme('colors.cyan / 30%'),
+    theme('colors.crimson / 30%'),
     transparent
   );
   filter: blur(0.5px);
@@ -128,8 +127,8 @@ body {
   position: relative;
   color: theme('colors.ivory');
   text-shadow:
-    1px 0 0 rgba(255, 106, 26, 0.55),
-    -1px 0 0 rgba(52, 240, 141, 0.55);
+    1px 0 0 theme('colors.crimson / 55%'),
+    -1px 0 0 theme('colors.cyan / 55%');
 }
 
 /* Focus ring — neon, visible */

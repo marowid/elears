@@ -54,7 +54,7 @@ export default async function ServicesIndex({
                       →
                     </span>
                   </div>
-                  <h2 className="font-serif text-xl text-ivory group-hover:text-crimson">
+                  <h2 className="font-serif text-xl text-ivory group-hover:text-cyan">
                     {t(`services.items.${slug}.title`)}
                   </h2>
                   <p className="text-sm text-graphite">{t(`services.items.${slug}.short`)}</p>

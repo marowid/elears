@@ -61,7 +61,7 @@ export default async function InsightsIndex({
                         DRAFT
                       </span>
                     ) : null}
-                    <h2 className="inline font-serif text-xl text-ivory hover:text-crimson lg:text-2xl">
+                    <h2 className="inline font-serif text-xl text-ivory hover:text-cyan lg:text-2xl">
                       {post.title}
                     </h2>
                     <p className="mt-2 max-w-2xl text-sm text-graphite">{post.excerpt}</p>

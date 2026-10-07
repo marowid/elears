@@ -35,7 +35,7 @@ export default function CookieBanner() {
       className="fixed inset-x-0 bottom-0 z-50 border-t border-cyan/40 bg-navy-soft/95 text-ivory backdrop-blur"
     >
       <div className="mx-auto flex max-w-page flex-col items-start justify-between gap-3 px-5 py-3 sm:flex-row sm:items-center sm:px-8 lg:px-12">
-        <p className="text-sm text-ivory/85">{t('message')}</p>
+        <p className="text-sm text-graphite">{t('message')}</p>
         <button
           type="button"
           onClick={dismiss}

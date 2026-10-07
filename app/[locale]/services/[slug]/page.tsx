@@ -142,7 +142,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
                   <li key={s}>
                     <Link
                       href={`/${locale}/services/${s}`}
-                      className="text-ivory hover:text-crimson"
+                      className="text-ivory hover:text-cyan"
                     >
                       {t(`services.items.${s}.title`)}
                     </Link>

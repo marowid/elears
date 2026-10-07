@@ -11,7 +11,7 @@ export default function CtaStrip() {
       <Container className="flex flex-col items-start justify-between gap-8 py-16 lg:flex-row lg:items-center lg:py-20">
         <div>
           <h2 className="font-serif text-2xl lg:text-3xl">{t('home.footerCtaTitle')}</h2>
-          <p className="mt-3 max-w-xl text-sm text-ivory/75">{t('home.footerCtaSub')}</p>
+          <p className="mt-3 max-w-xl text-sm text-ivory-dim">{t('home.footerCtaSub')}</p>
         </div>
         <Button href={`/${locale}/contact`} variant="invert">
           {t('cta.discussMandate')}

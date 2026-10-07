@@ -51,7 +51,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   {/* TODO:contact-detail — confirm with founders before launch */}
                   <a
                     href={`mailto:${c.email}`}
-                    className="font-mono text-lg text-ivory hover:text-crimson"
+                    className="font-mono text-lg text-ivory hover:text-cyan"
                   >
                     {c.email}
                   </a>
@@ -68,7 +68,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   viewBox="0 0 600 320"
                   role="img"
                   aria-label="Wrocław, Poland — schematic city outline"
-                  className="h-auto w-full text-ivory/40"
+                  className="h-auto w-full text-graphite-soft"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1"
@@ -77,7 +77,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   {/* River Oder — abstract flow */}
                   <path
                     d="M20 220 Q120 180 200 200 T380 180 Q480 170 580 200"
-                    stroke="#34F08D"
+                    className="stroke-cyan"
                     strokeWidth="1.5"
                     opacity="0.85"
                   />
@@ -93,14 +93,14 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   <path d="M520 20 L520 300" />
                   {/* HQ marker */}
                   <g transform="translate(300 160)">
-                    <circle r="8" fill="#FF6A1A" />
-                    <circle r="14" fill="none" stroke="#FF6A1A" strokeWidth="1.5" />
+                    <circle r="8" className="fill-crimson" />
+                    <circle r="14" fill="none" className="stroke-crimson" strokeWidth="1.5" />
                     <text
                       x="20"
                       y="6"
                       fontFamily="JetBrains Mono, monospace"
                       fontSize="11"
-                      fill="#F5F7FA"
+                      className="fill-ivory"
                       stroke="none"
                     >
                       WRO · HQ

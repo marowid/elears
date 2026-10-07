@@ -6,7 +6,7 @@ export default function Card({ tone = 'surface', className = '', children, ...re
   const palette =
     tone === 'sunken'
       ? 'bg-navy text-ivory border-rule/40'
-      : 'bg-navy-soft text-ivory border-rule/60';
+      : 'bg-navy-soft text-ivory border-rule/40';
   return (
     <div
       className={`brackets relative border ${palette} p-6 sm:p-8 transition-colors duration-150 ${className}`}

@@ -24,11 +24,17 @@ This file is the single, grep-able punch list of every placeholder, draft, or "c
 - `app/[locale]/contact/page.tsx` — Office line "Wrocław, Poland — full address to be confirmed." and the schematic SVG city map (replace with verified location once address is final).
 - `app/[locale]/contact/page.tsx` — Signal username and PGP fingerprint (`TODO:secure-contact`).
 - `components/layout/Footer.tsx` — `careers@elears.com` link (`TODO:contact-detail`).
+- `app/[locale]/legal/privacy/page.tsx` — controller contact `contact@elears.com` (`TODO:contact-detail`).
+- **Decide the email domain:** the brief (`website.md`) specifies `@elears.pl`, the code uses `@elears.com` everywhere.
 
 ### About page placeholders
 - `app/[locale]/about/page.tsx` — leadership name strings (`TODO:leadership-name`, currently "Name TBD").
 - `app/[locale]/about/page.tsx` — leadership bio text (`TODO:leadership-bio`, currently "TODO: bio …").
 - `app/[locale]/about/page.tsx` — registration items (`TODO:registrations`) — KRS / NIP / REGON / ISO 27001 / ACAMS Poland.
+- `messages/en.json`, `messages/pl.json` — `about.registrations` strings ("KRS — TBD", etc.) rendered by the item above.
+
+### Legal page placeholders
+- `app/[locale]/legal/privacy/page.tsx` — "registration details — TBD" / "dane rejestrowe — TBD" in the data-controller paragraph (`TODO:registrations`).
 
 ### Plausible analytics
 - `app/[locale]/layout.tsx` — `PLAUSIBLE_DOMAIN` constant (`TODO:plausible`). Confirm the production domain registered with Plausible.

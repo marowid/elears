@@ -68,7 +68,7 @@ export default function Header() {
           <Link
             href={swapLocale}
             aria-label={t('toggleLanguage')}
-            className="eyebrow border border-ivory/30 px-2 py-1 text-ivory hover:border-cyan hover:text-cyan"
+            className="eyebrow border border-ivory/40 px-2 py-1 text-ivory hover:border-cyan hover:text-cyan"
           >
             {otherLocale.toUpperCase()}
           </Link>
@@ -80,7 +80,7 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden border border-rule px-3 py-2 text-sm uppercase tracking-widish text-ivory"
+          className="lg:hidden border border-rule/40 px-3 py-2 text-sm uppercase tracking-widish text-ivory"
         >
           {open ? '×' : '≡'}
         </button>

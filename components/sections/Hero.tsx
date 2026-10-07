@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import { rgba } from '@/lib/colors';
 
 export default function Hero() {
   const t = useTranslations();
@@ -11,12 +12,8 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none">
         <div
           aria-hidden="true"
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, rgba(245,247,250,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(245,247,250,0.04) 1px, transparent 1px)',
-            backgroundSize: '64px 64px'
-          }}
+          className="grid-paper absolute inset-0"
+          style={{ '--grid-size': '64px', '--grid-line': rgba('ivory', 0.05) } as React.CSSProperties}
         />
       </div>
       <div className="scanline" aria-hidden="true" />
@@ -45,8 +42,8 @@ export default function Hero() {
         </div>
 
         <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:justify-end">
-          <div className="brackets text-ivory/70 border border-ivory/15 p-6 font-mono text-xs">
-            <p className="eyebrow text-ivory/70">{'// Coordinates'}</p>
+          <div className="brackets text-ivory-dim border border-rule/40 p-6 font-mono text-xs">
+            <p className="eyebrow text-ivory-dim">{'// Coordinates'}</p>
             <ul className="mt-4 space-y-2">
               <li className="flex justify-between gap-4">
                 <span>HQ</span>
