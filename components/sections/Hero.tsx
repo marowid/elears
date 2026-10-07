@@ -3,6 +3,8 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { rgba } from '@/lib/colors';
 
+const COORDINATE_ROWS = ['hq', 'gps', 'languages', 'established'] as const;
+
 export default function Hero() {
   const t = useTranslations();
   const locale = useLocale();
@@ -43,24 +45,14 @@ export default function Hero() {
 
         <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:justify-end">
           <div className="brackets text-ivory-dim border border-rule/40 p-6 font-mono text-xs">
-            <p className="eyebrow text-ivory-dim">{'// Coordinates'}</p>
+            <p className="eyebrow text-ivory-dim">{t('home.coordinates.title')}</p>
             <ul className="mt-4 space-y-2">
-              <li className="flex justify-between gap-4">
-                <span>HQ</span>
-                <span>Wrocław · 51.1079° N · 17.0385° E</span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Languages</span>
-                <span>PL · RU · UK · DE · EN</span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Coverage</span>
-                <span>CEE · CIS · NATO</span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Established</span>
-                <span>2026</span>
-              </li>
+              {COORDINATE_ROWS.map((row) => (
+                <li key={row} className="flex justify-between gap-4">
+                  <span>{t(`home.coordinates.${row}Label`)}</span>
+                  <span className="whitespace-nowrap">{t(`home.coordinates.${row}Value`)}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

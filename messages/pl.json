@@ -24,7 +24,18 @@
   },
   "home": {
     "heroEyebrow": "Wrocław · CEE · NATO",
-    "heroSub": "Elears jest suwerennym w UE prywatnym domem wywiadowczym — z dostawą opartą na AI, oceną prowadzoną przez seniorów i wielojęzycznym zasięgiem w Europie Środkowo-Wschodniej.",
+    "heroSub": "Elears to prywatna firma wywiadowcza o unijnym rodowodzie i niezależności – łącząca rozwiązania oparte na sztucznej inteligencji, ekspercką ocenę sytuacji oraz głęboką znajomość realiów Europy Środkowo-Wschodniej.",
+    "coordinates": {
+      "title": "// Współrzędne",
+      "hqLabel": "Siedziba",
+      "hqValue": "Wrocław",
+      "gpsLabel": "GPS",
+      "gpsValue": "51,1079°N 17,0385°E",
+      "languagesLabel": "Języki",
+      "languagesValue": "PL · RU · UK · DE · EN",
+      "establishedLabel": "Założona",
+      "establishedValue": "2026"
+    },
     "pillarsEyebrow": "01 / Co robimy",
     "pillarsTitle": "Trzy dyscypliny, jeden standard pracy.",
     "whyEyebrow": "02 / Dlaczego Elears",
