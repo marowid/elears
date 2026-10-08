@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Container from '@/components/ui/Container';
 import PageHeader from '@/components/sections/PageHeader';
-import type { Locale } from '@/i18n';
+import OfficeMap from '@/components/sections/OfficeMap';
+import { FEATURES } from '@/lib/features';
+import { languageAlternates, type  Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -15,7 +17,7 @@ export async function generateMetadata({
     description: t('lead'),
     alternates: {
       canonical: `/${locale}/contact`,
-      languages: { pl: '/pl/contact', en: '/en/contact' }
+      languages: languageAlternates('/contact')
     }
   };
 }
@@ -62,72 +64,38 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             <div className="mt-12">
               <h2 className="eyebrow text-graphite-soft">{t('contact.office')}</h2>
               <p className="mt-3 font-serif text-xl text-ivory">{t('contact.officeBody')}</p>
-              {/* TODO:contact-detail — replace with real street address, then update static map below */}
-              <div className="mt-6 brackets border border-rule/40 bg-surface/80 p-6">
-                <svg
-                  viewBox="0 0 600 320"
-                  role="img"
-                  aria-label="Wrocław, Poland — schematic city outline"
-                  className="h-auto w-full text-graphite-soft"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                >
-                  <rect x="0" y="0" width="600" height="320" fill="none" />
-                  {/* River Oder — abstract flow */}
-                  <path
-                    d="M20 220 Q120 180 200 200 T380 180 Q480 170 580 200"
-                    className="stroke-signal"
-                    strokeWidth="1.5"
-                    opacity="0.85"
-                  />
-                  {/* Schematic streets */}
-                  <path d="M40 60 L560 60" />
-                  <path d="M40 100 L560 100" />
-                  <path d="M40 140 L560 140" />
-                  <path d="M40 260 L560 260" />
-                  <path d="M120 20 L120 300" />
-                  <path d="M220 20 L220 300" />
-                  <path d="M320 20 L320 300" />
-                  <path d="M420 20 L420 300" />
-                  <path d="M520 20 L520 300" />
-                  {/* HQ marker */}
-                  <g transform="translate(300 160)">
-                    <circle r="8" className="fill-accent" />
-                    <circle r="14" fill="none" className="stroke-accent" strokeWidth="1.5" />
-                    <text
-                      x="20"
-                      y="6"
-                      fontFamily="JetBrains Mono, monospace"
-                      fontSize="11"
-                      className="fill-ivory"
-                      stroke="none"
-                    >
-                      WRO · HQ
-                    </text>
-                  </g>
-                </svg>
+              {/* TODO:contact-detail — add the street address once confirmed */}
+              <div className="mt-6">
+                <OfficeMap
+                  label={t('contact.mapLabel')}
+                  pinTitle={t('contact.mapPin')}
+                  coords={t('home.coordinates.gpsValue')}
+                  legendHome={t('contact.mapLegendHome')}
+                  legendRegion={t('contact.mapLegendRegion')}
+                />
               </div>
             </div>
 
-            <div className="mt-12">
-              <h2 className="eyebrow text-graphite-soft">{t('contact.secureTitle')}</h2>
-              <p className="mt-3 max-w-prose text-graphite">{t('contact.secureBody')}</p>
-              <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div className="border border-rule/40 p-4">
-                  <dt className="eyebrow text-graphite-soft">{t('contact.signal')}</dt>
-                  {/* TODO:secure-contact — replace placeholder with real Signal username */}
-                  <dd className="mt-2 font-mono text-sm text-ivory">@elears.signal · TBD</dd>
-                </div>
-                <div className="border border-rule/40 p-4">
-                  <dt className="eyebrow text-graphite-soft">{t('contact.pgp')}</dt>
-                  {/* TODO:secure-contact — replace placeholder with real PGP fingerprint */}
-                  <dd className="mt-2 break-all font-mono text-sm text-ivory">
-                    0000 0000 0000 0000 0000 0000 0000 0000 0000 TBD
-                  </dd>
-                </div>
-              </dl>
-            </div>
+            {FEATURES.secureContact && (
+              <div className="mt-12">
+                <h2 className="eyebrow text-graphite-soft">{t('contact.secureTitle')}</h2>
+                <p className="mt-3 max-w-prose text-graphite">{t('contact.secureBody')}</p>
+                <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div className="border border-rule/40 p-4">
+                    <dt className="eyebrow text-graphite-soft">{t('contact.signal')}</dt>
+                    {/* TODO:secure-contact — replace placeholder with real Signal username */}
+                    <dd className="mt-2 font-mono text-sm text-ivory">@elears.signal · TBD</dd>
+                  </div>
+                  <div className="border border-rule/40 p-4">
+                    <dt className="eyebrow text-graphite-soft">{t('contact.pgp')}</dt>
+                    {/* TODO:secure-contact — replace placeholder with real PGP fingerprint */}
+                    <dd className="mt-2 break-all font-mono text-sm text-ivory">
+                      0000 0000 0000 0000 0000 0000 0000 0000 0000 TBD
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            )}
           </div>
 
           <aside className="lg:col-span-5">

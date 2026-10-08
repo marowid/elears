@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Elears",
+    "name": "ELEARS",
     "shortTagline": "Intelligence from Europe's eastern frontier.",
     "description": "EU-sovereign, AI-native private intelligence. Wrocław, Poland.",
     "wordmark": "ELEARS"
@@ -24,7 +24,7 @@
   },
   "home": {
     "heroEyebrow": "Wrocław · CEE · NATO",
-    "heroSub": "Elears is an EU-sovereign private intelligence firm — AI-native delivery, senior-led judgment, multilingual depth across Central and Eastern Europe.",
+    "heroSub": "ELEARS is an EU-sovereign private intelligence firm — AI-native delivery, senior-led judgment, multilingual depth across Central and Eastern Europe.",
     "coordinates": {
       "title": "// Coordinates",
       "hqLabel": "HQ",
@@ -38,7 +38,7 @@
     },
     "pillarsEyebrow": "01 / What we do",
     "pillarsTitle": "Three disciplines, one operating standard.",
-    "whyEyebrow": "02 / Why Elears",
+    "whyEyebrow": "02 / Why ELEARS",
     "whyTitle": "Built for the questions Western firms cannot answer alone.",
     "insightsEyebrow": "03 / Selected insights",
     "insightsTitle": "Recent analysis from the firm.",
@@ -209,10 +209,10 @@
     "eyebrow": "About",
     "title": "Who we are.",
     "whoTitle": "An EU-sovereign private intelligence firm.",
-    "whoBody1": "Elears is a Wrocław-headquartered private intelligence firm. We combine an AI-native platform with a senior services bench drawn from former intelligence, prosecutorial, diplomatic, and investigative-journalism backgrounds. Our analysts work in Polish, Russian, Ukrainian, German and English.",
+    "whoBody1": "ELEARS is a Wrocław-headquartered private intelligence firm. We combine an AI-native platform with a senior services bench drawn from former intelligence, prosecutorial, diplomatic, and investigative-journalism backgrounds. Our analysts work in Polish, Russian, Ukrainian, German and English.",
     "whoBody2": "We serve three audiences: NATO and EU defence buyers; global law firms and multinationals operating in the region; and Polish and CEE enterprises with cross-border exposure. We are independent of any client, government, or vendor.",
     "heritageTitle": "On the name.",
-    "heritageBody": "Elears renders the Polish chorągiew elearska — the period name for the Lisowczycy, the elite 17th-century Polish-Lithuanian light cavalry famed for cross-border reconnaissance, autonomy, and intelligence-gathering for the Crown. They were Polish-led and allied-deployed. The continuity is not aesthetic; it is operational.",
+    "heritageBody": "ELEARS renders the Polish chorągiew elearska — the period name for the Lisowczycy, the elite 17th-century Polish-Lithuanian light cavalry famed for cross-border reconnaissance, autonomy, and intelligence-gathering for the Crown. They were Polish-led and allied-deployed. The continuity is not aesthetic; it is operational.",
     "leadershipTitle": "Leadership",
     "leadershipNote": "Leadership names and biographies are confirmed at the point of mandate.",
     "ethicsTitle": "Ethics & governance",
@@ -225,18 +225,29 @@
     ],
     "registrationsTitle": "Memberships & registrations",
     "registrations": [
-      "KRS — in creation",
-      "NIP — in creation",
-      "REGON — in creation",
+      "Security clearance — obtained",
       "ISO/IEC 27001 — in progress",
-      "ACAMS Poland — TBD"
+      "SOC 2 — in progress"
     ],
     "leadership": {
-      "ceo": "Chief Executive",
-      "intelligence": "Head of Intelligence",
-      "cyber": "Head of Cyber",
-      "investigations": "Head of Investigations",
-      "counsel": "General Counsel"
+      "companiesLabel": "Previously",
+      "photoPending": "Photo",
+      "ceo": {
+        "role": "Chief Executive Officer",
+        "bio": "Ex-military. 20 years in business."
+      },
+      "intelligence": {
+        "role": "Head of Intelligence",
+        "bio": "Ex-military. Technology leader and visionary; information security and defence practitioner."
+      },
+      "investigations": {
+        "role": "Head of Investigations",
+        "bio": "A decade doing due diligence and target analysis for C-suite leaders and clients in government, defence, healthcare and finance."
+      },
+      "cyber": {
+        "role": "Head of Cyber",
+        "bio": "15 years of building Tier 1 infrastructure. AI Architect."
+      }
     }
   },
   "insights": {
@@ -244,7 +255,7 @@
     "title": "Analysis from the firm.",
     "lead": "Selected commentary on geopolitics, cyber, and investigations. We publish sparingly.",
     "readingTime": "{minutes} min read",
-    "more": "More from Elears",
+    "more": "More from ELEARS",
     "draftBanner": "DRAFT — placeholder content. Not for publication.",
     "tag": "Tag",
     "publishedOn": "Published",
@@ -259,6 +270,10 @@
     "careers": "Careers",
     "office": "Office",
     "officeBody": "Wrocław, Poland",
+    "mapLabel": "Map of Europe highlighting Central and Eastern Europe and Poland, with ELEARS headquarters marked in Wrocław at 51.1079°N 17.0385°E.",
+    "mapPin": "WROCŁAW · HQ",
+    "mapLegendHome": "Poland",
+    "mapLegendRegion": "Central & Eastern Europe",
     "secureTitle": "Secure introductions",
     "secureBody": "We accept encrypted introductions over Signal and PGP. Fingerprints below; please verify out-of-band before sharing sensitive material.",
     "signal": "Signal",
@@ -271,7 +286,7 @@
     "privacy": {
       "eyebrow": "Legal",
       "title": "Privacy policy",
-      "intro": "This page describes how Elears processes personal data collected through this website."
+      "intro": "This page describes how ELEARS processes personal data collected through this website."
     },
     "terms": {
       "eyebrow": "Legal",
@@ -291,7 +306,7 @@
     "legalHeading": "Legal",
     "careers": "Careers",
     "rights": "All rights reserved.",
-    "company": "Elears sp. z o.o."
+    "company": "ELEARS sp. z o.o."
   },
   "cookieBanner": {
     "message": "This site uses no tracking cookies. Only your locale preference is stored on your device.",

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Wordmark from '@/components/ui/Wordmark';
+import { FEATURES } from '@/lib/features';
 import { locales } from '@/i18n';
 
 export default function Header() {
@@ -25,12 +26,14 @@ export default function Header() {
   const items = [
     { href: `/${locale}/services`, label: t('services') },
     { href: `/${locale}/about`, label: t('about') },
-    { href: `/${locale}/insights`, label: t('insights') },
+    ...(FEATURES.insights ? [{ href: `/${locale}/insights`, label: t('insights') }] : []),
     { href: `/${locale}/contact`, label: t('contact') }
   ];
 
-  const otherLocale = locales.find((l) => l !== locale) ?? 'en';
+  // Undefined when only one locale is served — the switcher is then hidden.
+  const otherLocale = locales.find((l) => l !== locale);
   const swapLocale = (() => {
+    if (!otherLocale) return '';
     const segs = pathname.split('/');
     if (segs[1] && (locales as readonly string[]).includes(segs[1])) {
       segs[1] = otherLocale;
@@ -46,7 +49,7 @@ export default function Header() {
       }`}
     >
       <Container className="flex items-center justify-between py-4 lg:py-5">
-        <Link href={`/${locale}`} aria-label="Elears" className="shrink-0">
+        <Link href={`/${locale}`} aria-label="ELEARS" className="shrink-0">
           <Wordmark />
         </Link>
 
@@ -65,13 +68,15 @@ export default function Header() {
               </Link>
             );
           })}
-          <Link
-            href={swapLocale}
-            aria-label={t('toggleLanguage')}
-            className="eyebrow border border-ivory/40 px-2 py-1 text-ivory hover:border-signal hover:text-signal"
-          >
-            {otherLocale.toUpperCase()}
-          </Link>
+          {otherLocale && (
+            <Link
+              href={swapLocale}
+              aria-label={t('toggleLanguage')}
+              className="eyebrow border border-ivory/40 px-2 py-1 text-ivory hover:border-signal hover:text-signal"
+            >
+              {otherLocale.toUpperCase()}
+            </Link>
+          )}
         </nav>
 
         <button
@@ -99,13 +104,15 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href={swapLocale}
-              onClick={() => setOpen(false)}
-              className="eyebrow self-start border border-ivory/40 px-2 py-1 text-ivory hover:border-signal hover:text-signal"
-            >
-              {otherLocale.toUpperCase()}
-            </Link>
+            {otherLocale && (
+              <Link
+                href={swapLocale}
+                onClick={() => setOpen(false)}
+                className="eyebrow self-start border border-ivory/40 px-2 py-1 text-ivory hover:border-signal hover:text-signal"
+              >
+                {otherLocale.toUpperCase()}
+              </Link>
+            )}
           </Container>
         </div>
       )}

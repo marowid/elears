@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Wordmark from '@/components/ui/Wordmark';
+import { FEATURES } from '@/lib/features';
 
 const SERVICE_SLUGS = [
   'integrity-due-diligence',
@@ -18,7 +19,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 border-t border-rule/40 bg-ink text-ivory">
+    <footer className="border-t border-rule/40 bg-ink text-ivory">
       <Container className="grid grid-cols-1 gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Wordmark />
@@ -50,11 +51,13 @@ export default function Footer() {
                 {t('nav.about')}
               </Link>
             </li>
-            <li>
-              <Link href={`/${locale}/insights`} className="text-graphite hover:text-signal">
-                {t('nav.insights')}
-              </Link>
-            </li>
+            {FEATURES.insights && (
+              <li>
+                <Link href={`/${locale}/insights`} className="text-graphite hover:text-signal">
+                  {t('nav.insights')}
+                </Link>
+              </li>
+            )}
             <li>
               <Link href={`/${locale}/contact`} className="text-graphite hover:text-signal">
                 {t('nav.contact')}

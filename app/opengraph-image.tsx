@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { colors, rgba } from '@/lib/colors';
 
 export const runtime = 'edge';
-export const alt = 'Elears — EU-sovereign private intelligence';
+export const alt = 'ELEARS — EU-sovereign private intelligence';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

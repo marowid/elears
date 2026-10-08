@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Elears",
+    "name": "ELEARS",
     "shortTagline": "Wywiad z europejskiej granicy wschodu.",
     "description": "Suwerenny w UE, oparty na AI prywatny wywiad. Wrocław, Polska.",
     "wordmark": "ELEARS"
@@ -24,7 +24,7 @@
   },
   "home": {
     "heroEyebrow": "Wrocław · CEE · NATO",
-    "heroSub": "Elears to prywatna firma wywiadowcza o unijnym rodowodzie i niezależności – łącząca rozwiązania oparte na sztucznej inteligencji, ekspercką ocenę sytuacji oraz głęboką znajomość realiów Europy Środkowo-Wschodniej.",
+    "heroSub": "ELEARS to prywatna firma wywiadowcza o unijnym rodowodzie i niezależności – łącząca rozwiązania oparte na sztucznej inteligencji, ekspercką ocenę sytuacji oraz głęboką znajomość realiów Europy Środkowo-Wschodniej.",
     "coordinates": {
       "title": "// Współrzędne",
       "hqLabel": "Siedziba",
@@ -38,7 +38,7 @@
     },
     "pillarsEyebrow": "01 / Co robimy",
     "pillarsTitle": "Trzy dyscypliny, jeden standard pracy.",
-    "whyEyebrow": "02 / Dlaczego Elears",
+    "whyEyebrow": "02 / Dlaczego ELEARS",
     "whyTitle": "Stworzeni do pytań, na które Zachód sam nie odpowie.",
     "insightsEyebrow": "03 / Wybrane analizy",
     "insightsTitle": "Najnowsze materiały firmy.",
@@ -209,10 +209,10 @@
     "eyebrow": "O nas",
     "title": "Kim jesteśmy.",
     "whoTitle": "Suwerenny w UE prywatny dom wywiadowczy.",
-    "whoBody1": "Elears jest prywatnym domem wywiadowczym z siedzibą we Wrocławiu. Łączymy platformę opartą na AI z bench'em seniorskim wywodzącym się z wywiadu, prokuratury, dyplomacji i dziennikarstwa śledczego. Pracujemy w językach polskim, rosyjskim, ukraińskim, niemieckim i angielskim.",
+    "whoBody1": "ELEARS jest prywatnym domem wywiadowczym z siedzibą we Wrocławiu. Łączymy platformę opartą na AI z bench'em seniorskim wywodzącym się z wywiadu, prokuratury, dyplomacji i dziennikarstwa śledczego. Pracujemy w językach polskim, rosyjskim, ukraińskim, niemieckim i angielskim.",
     "whoBody2": "Obsługujemy trzy grupy klientów: kupujących obronnych w NATO i UE; globalne kancelarie i multinacjonały działające w regionie; oraz polskie i CEE przedsiębiorstwa z ekspozycją transgraniczną. Jesteśmy niezależni od jakiegokolwiek klienta, rządu czy dostawcy.",
     "heritageTitle": "O nazwie.",
-    "heritageBody": "Elears oddaje polską chorągiew elearską — okresową nazwę Lisowczyków, elitarnej XVII-wiecznej polsko-litewskiej lekkiej jazdy słynącej z transgranicznego rozpoznania, autonomii i pozyskiwania wywiadu dla Korony. Polsko prowadzeni, rozmieszczani w siłach sojuszniczych. Ciągłość nie jest estetyczna; jest operacyjna.",
+    "heritageBody": "ELEARS oddaje polską chorągiew elearską — okresową nazwę Lisowczyków, elitarnej XVII-wiecznej polsko-litewskiej lekkiej jazdy słynącej z transgranicznego rozpoznania, autonomii i pozyskiwania wywiadu dla Korony. Polsko prowadzeni, rozmieszczani w siłach sojuszniczych. Ciągłość nie jest estetyczna; jest operacyjna.",
     "leadershipTitle": "Kierownictwo",
     "leadershipNote": "Nazwiska i biogramy kierownictwa potwierdzane są w momencie zlecenia.",
     "ethicsTitle": "Etyka i zarządzanie",
@@ -225,18 +225,29 @@
     ],
     "registrationsTitle": "Członkostwa i rejestracje",
     "registrations": [
-      "KRS — w organizacji",
-      "NIP — w organizacji",
-      "REGON — w organizacji",
+      "Poświadczenie bezpieczeństwa — uzyskane",
       "ISO/IEC 27001 — w toku",
-      "ACAMS Polska — TBD"
+      "SOC 2 — w toku"
     ],
     "leadership": {
-      "ceo": "Prezes Zarządu",
-      "intelligence": "Dyrektor Wywiadu",
-      "cyber": "Dyrektor Cyber",
-      "investigations": "Dyrektor Dochodzeń",
-      "counsel": "General Counsel"
+      "companiesLabel": "Wcześniej",
+      "photoPending": "Zdjęcie",
+      "ceo": {
+        "role": "Prezes Zarządu",
+        "bio": "Były wojskowy. 20 lat w biznesie."
+      },
+      "intelligence": {
+        "role": "Dyrektor Wywiadu",
+        "bio": "Były wojskowy. Lider technologiczny i wizjoner; praktyk bezpieczeństwa informacji i obronności."
+      },
+      "investigations": {
+        "role": "Dyrektor Dochodzeń",
+        "bio": "Od dekady prowadzi due diligence i analizę celów dla zarządów oraz klientów z sektora publicznego, obronnego, ochrony zdrowia i finansów."
+      },
+      "cyber": {
+        "role": "Dyrektor Cyber",
+        "bio": "15 lat budowania infrastruktury klasy Tier 1. Architekt AI."
+      }
     }
   },
   "insights": {
@@ -244,7 +255,7 @@
     "title": "Analiza z firmy.",
     "lead": "Wybrane komentarze do geopolityki, cyberprzestrzeni i dochodzeń. Publikujemy oszczędnie.",
     "readingTime": "{minutes} min czytania",
-    "more": "Więcej z Elears",
+    "more": "Więcej z ELEARS",
     "draftBanner": "WERSJA ROBOCZA — treść zastępcza. Nie do publikacji.",
     "tag": "Tag",
     "publishedOn": "Opublikowano",
@@ -259,6 +270,10 @@
     "careers": "Praca",
     "office": "Biuro",
     "officeBody": "Wrocław, Polska",
+    "mapLabel": "Mapa Europy z wyróżnioną Europą Środkowo-Wschodnią i Polską; siedziba ELEARS zaznaczona we Wrocławiu, 51,1079°N 17,0385°E.",
+    "mapPin": "WROCŁAW · HQ",
+    "mapLegendHome": "Polska",
+    "mapLegendRegion": "Europa Środkowo-Wschodnia",
     "secureTitle": "Bezpieczne wprowadzenia",
     "secureBody": "Przyjmujemy zaszyfrowane wprowadzenia przez Signal i PGP. Odciski poniżej; zweryfikuj je kanałem off-line przed udostępnieniem materiałów wrażliwych.",
     "signal": "Signal",
@@ -271,7 +286,7 @@
     "privacy": {
       "eyebrow": "Prawne",
       "title": "Polityka prywatności",
-      "intro": "Strona opisuje, jak Elears przetwarza dane osobowe zebrane przez tę witrynę."
+      "intro": "Strona opisuje, jak ELEARS przetwarza dane osobowe zebrane przez tę witrynę."
     },
     "terms": {
       "eyebrow": "Prawne",
@@ -291,7 +306,7 @@
     "legalHeading": "Prawne",
     "careers": "Praca",
     "rights": "Wszelkie prawa zastrzeżone.",
-    "company": "Elears sp. z o.o."
+    "company": "ELEARS sp. z o.o."
   },
   "cookieBanner": {
     "message": "Strona nie używa plików śledzących. Na urządzeniu zapisywana jest tylko preferencja języka.",

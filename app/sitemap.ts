@@ -2,9 +2,19 @@ import type { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
 import { SERVICE_SLUGS } from '@/lib/services';
 import { getAllInsights } from '@/lib/insights';
+import { FEATURES } from '@/lib/features';
 
 const SITE = 'https://elears.com';
-const STATIC_PATHS = ['', '/services', '/about', '/insights', '/contact', '/legal/privacy', '/legal/terms', '/legal/cookies'];
+const STATIC_PATHS = [
+  '',
+  '/services',
+  '/about',
+  ...(FEATURES.insights ? ['/insights'] : []),
+  '/contact',
+  '/legal/privacy',
+  '/legal/terms',
+  '/legal/cookies'
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
@@ -27,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.6
       });
     }
-    const posts = await getAllInsights(locale);
+    const posts = FEATURES.insights ? await getAllInsights(locale) : [];
     for (const post of posts) {
       entries.push({
         url: `${SITE}/${locale}/insights/${post.slug}`,

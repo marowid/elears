@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container';
 import PageHeader from '@/components/sections/PageHeader';
 import CtaStrip from '@/components/sections/CtaStrip';
 import { SERVICE_SLUGS, SERVICE_CODES } from '@/lib/services';
-import type { Locale } from '@/i18n';
+import { languageAlternates, type  Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -18,7 +18,7 @@ export async function generateMetadata({
     description: t('indexLead'),
     alternates: {
       canonical: `/${locale}/services`,
-      languages: { pl: '/pl/services', en: '/en/services' }
+      languages: languageAlternates('/services')
     }
   };
 }

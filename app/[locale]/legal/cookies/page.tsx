@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import LegalShell from '@/components/sections/LegalShell';
-import type { Locale } from '@/i18n';
+import { languageAlternates, type  Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: t('intro'),
     alternates: {
       canonical: `/${locale}/legal/cookies`,
-      languages: { pl: '/pl/legal/cookies', en: '/en/legal/cookies' }
+      languages: languageAlternates('/legal/cookies')
     }
   };
 }

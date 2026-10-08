@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import LegalShell from '@/components/sections/LegalShell';
-import type { Locale } from '@/i18n';
+import { languageAlternates, type  Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: t('intro'),
     alternates: {
       canonical: `/${locale}/legal/privacy`,
-      languages: { pl: '/pl/legal/privacy', en: '/en/legal/privacy' }
+      languages: languageAlternates('/legal/privacy')
     }
   };
 }
@@ -31,8 +31,8 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
       {/* TODO:contact-detail — confirm controller contact email with founders before launch */}
       <p>
         {isPL
-          ? 'Administratorem danych jest Elears sp. z o.o. z siedzibą we Wrocławiu (dane rejestrowe — TBD). Kontakt: '
-          : 'The data controller is Elears sp. z o.o., headquartered in Wrocław, Poland (registration details — TBD). Contact: '}
+          ? 'Administratorem danych jest ELEARS sp. z o.o. z siedzibą we Wrocławiu (dane rejestrowe — TBD). Kontakt: '
+          : 'The data controller is ELEARS sp. z o.o., headquartered in Wrocław, Poland (registration details — TBD). Contact: '}
         <a href="mailto:contact@elears.com">contact@elears.com</a>.
       </p>
 
