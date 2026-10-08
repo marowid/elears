@@ -4,15 +4,15 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://elears.com'),
   title: {
-    default: 'Elears — EU-sovereign private intelligence',
-    template: '%s — Elears'
+    default: 'ELEARS — EU-sovereign private intelligence',
+    template: '%s — ELEARS'
   },
   description:
-    'Elears is an EU-sovereign, AI-native private intelligence firm headquartered in Wrocław, Poland.',
-  applicationName: 'Elears',
-  authors: [{ name: 'Elears sp. z o.o.' }],
-  creator: 'Elears sp. z o.o.',
-  publisher: 'Elears sp. z o.o.',
+    'ELEARS is an EU-sovereign, AI-native private intelligence firm headquartered in Wrocław, Poland.',
+  applicationName: 'ELEARS',
+  authors: [{ name: 'ELEARS sp. z o.o.' }],
+  creator: 'ELEARS sp. z o.o.',
+  publisher: 'ELEARS sp. z o.o.',
   robots: { index: true, follow: true }
 };
 

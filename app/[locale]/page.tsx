@@ -4,6 +4,7 @@ import Pillars from '@/components/sections/Pillars';
 import WhyElears from '@/components/sections/WhyElears';
 import InsightsTeaser from '@/components/sections/InsightsTeaser';
 import CtaStrip from '@/components/sections/CtaStrip';
+import { FEATURES } from '@/lib/features';
 import type { Locale } from '@/i18n';
 
 export default function HomePage({ params: { locale } }: { params: { locale: Locale } }) {
@@ -13,7 +14,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: Loc
       <Hero />
       <Pillars />
       <WhyElears />
-      <InsightsTeaser locale={locale} />
+      {FEATURES.insights && <InsightsTeaser locale={locale} />}
       <CtaStrip />
     </>
   );

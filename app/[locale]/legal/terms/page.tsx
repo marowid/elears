@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import LegalShell from '@/components/sections/LegalShell';
-import type { Locale } from '@/i18n';
+import { languageAlternates, type  Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -14,7 +14,7 @@ export async function generateMetadata({
     description: t('intro'),
     alternates: {
       canonical: `/${locale}/legal/terms`,
-      languages: { pl: '/pl/legal/terms', en: '/en/legal/terms' }
+      languages: languageAlternates('/legal/terms')
     }
   };
 }
@@ -36,15 +36,15 @@ export default async function TermsPage({ params: { locale } }: { params: { loca
       <h2>{isPL ? 'Własność intelektualna' : 'Intellectual property'}</h2>
       <p>
         {isPL
-          ? 'Wszystkie treści, znaki towarowe i grafiki należą do Elears sp. z o.o. lub są używane za zgodą. Cytowanie z atrybucją jest dozwolone.'
-          : 'All content, marks, and visuals belong to Elears sp. z o.o. or are used by permission. Quotation with attribution is permitted.'}
+          ? 'Wszystkie treści, znaki towarowe i grafiki należą do ELEARS sp. z o.o. lub są używane za zgodą. Cytowanie z atrybucją jest dozwolone.'
+          : 'All content, marks, and visuals belong to ELEARS sp. z o.o. or are used by permission. Quotation with attribution is permitted.'}
       </p>
 
       <h2>{isPL ? 'Ograniczenie odpowiedzialności' : 'Limitation of liability'}</h2>
       <p>
         {isPL
-          ? 'W maksymalnym zakresie dozwolonym prawem Elears nie ponosi odpowiedzialności za szkody wynikające z użycia strony.'
-          : 'To the maximum extent permitted by law, Elears is not liable for damages arising from use of the site.'}
+          ? 'W maksymalnym zakresie dozwolonym prawem ELEARS nie ponosi odpowiedzialności za szkody wynikające z użycia strony.'
+          : 'To the maximum extent permitted by law, ELEARS is not liable for damages arising from use of the site.'}
       </p>
 
       <h2>{isPL ? 'Prawo właściwe i jurysdykcja' : 'Governing law and jurisdiction'}</h2>

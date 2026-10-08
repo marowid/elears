@@ -1,5 +1,6 @@
 import { getAllInsights } from '@/lib/insights';
 import { locales, type Locale } from '@/i18n';
+import { FEATURES } from '@/lib/features';
 
 export const dynamic = 'force-static';
 
@@ -19,6 +20,7 @@ function escape(input: string): string {
 }
 
 export async function GET(_req: Request, { params }: { params: { locale: Locale } }) {
+  if (!FEATURES.insights) return new Response('Not found', { status: 404 });
   const locale = params.locale;
   const posts = await getAllInsights(locale);
 
@@ -38,7 +40,7 @@ export async function GET(_req: Request, { params }: { params: { locale: Locale 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Elears — Insights (${locale.toUpperCase()})</title>
+    <title>ELEARS — Insights (${locale.toUpperCase()})</title>
     <link>${SITE}/${locale}/insights</link>
     <description>Analysis from the firm.</description>
     <language>${locale}</language>

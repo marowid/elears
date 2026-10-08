@@ -4,8 +4,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Container from '@/components/ui/Container';
 import PageHeader from '@/components/sections/PageHeader';
 import CtaStrip from '@/components/sections/CtaStrip';
+import { notFound } from 'next/navigation';
 import { getAllInsights, formatInsightDate } from '@/lib/insights';
-import type { Locale } from '@/i18n';
+import { FEATURES } from '@/lib/features';
+import { languageAlternates, type  Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -18,7 +20,7 @@ export async function generateMetadata({
     description: t('lead'),
     alternates: {
       canonical: `/${locale}/insights`,
-      languages: { pl: '/pl/insights', en: '/en/insights' }
+      languages: languageAlternates('/insights')
     }
   };
 }
@@ -28,6 +30,7 @@ export default async function InsightsIndex({
 }: {
   params: { locale: Locale };
 }) {
+  if (!FEATURES.insights) notFound();
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
   const posts = await getAllInsights(locale);

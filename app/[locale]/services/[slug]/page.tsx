@@ -7,7 +7,7 @@ import PageHeader from '@/components/sections/PageHeader';
 import CtaStrip from '@/components/sections/CtaStrip';
 import Button from '@/components/ui/Button';
 import { SERVICE_SLUGS, SERVICE_CODES, isServiceSlug, type ServiceSlug } from '@/lib/services';
-import { locales, type Locale } from '@/i18n';
+import { languageAlternates, locales, type Locale } from '@/i18n';
 
 type Params = { locale: Locale; slug: string };
 
@@ -31,7 +31,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: `/${locale}/services/${slug}`,
-      languages: { pl: `/pl/services/${slug}`, en: `/en/services/${slug}` }
+      languages: languageAlternates(`/services/${slug}`)
     }
   };
 }

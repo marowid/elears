@@ -8,10 +8,12 @@ import PageHeader from '@/components/sections/PageHeader';
 import CtaStrip from '@/components/sections/CtaStrip';
 import { getAllInsights, getInsight, formatInsightDate, listInsightFiles } from '@/lib/insights';
 import { locales, type Locale } from '@/i18n';
+import { FEATURES } from '@/lib/features';
 
 type Params = { locale: Locale; slug: string };
 
 export async function generateStaticParams() {
+  if (!FEATURES.insights) return [];
   const all = await Promise.all(
     locales.map(async (locale) => {
       const files = await listInsightFiles(locale);
@@ -40,6 +42,7 @@ export async function generateMetadata({ params: { locale, slug } }: { params: P
 }
 
 export default async function InsightPostPage({ params: { locale, slug } }: { params: Params }) {
+  if (!FEATURES.insights) notFound();
   setRequestLocale(locale);
   const post = await getInsight(locale, slug);
   if (!post) notFound();
@@ -53,8 +56,8 @@ export default async function InsightPostPage({ params: { locale, slug } }: { pa
     headline: post.title,
     datePublished: post.date,
     description: post.excerpt,
-    author: { '@type': 'Organization', name: 'Elears' },
-    publisher: { '@type': 'Organization', name: 'Elears' }
+    author: { '@type': 'Organization', name: 'ELEARS' },
+    publisher: { '@type': 'Organization', name: 'ELEARS' }
   };
 
   return (

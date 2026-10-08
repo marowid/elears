@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { locales, type Locale } from '@/i18n';
+import { languageAlternates, locales, type Locale } from '@/i18n';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CookieBanner from '@/components/layout/CookieBanner';
@@ -22,7 +22,7 @@ export async function generateMetadata({
     description: t('description'),
     alternates: {
       canonical: `/${locale}`,
-      languages: { pl: '/pl', en: '/en', 'x-default': '/pl' }
+      languages: languageAlternates('')
     },
     openGraph: {
       type: 'website',
@@ -52,8 +52,8 @@ export default async function LocaleLayout({
   const orgJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Elears',
-    legalName: 'Elears sp. z o.o.',
+    name: 'ELEARS',
+    legalName: 'ELEARS sp. z o.o.',
     url: 'https://elears.com',
     address: {
       '@type': 'PostalAddress',
@@ -66,9 +66,6 @@ export default async function LocaleLayout({
     <html lang={locale} className="grid-paper">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate" hrefLang="pl" href="https://elears.com/pl" />
-        <link rel="alternate" hrefLang="en" href="https://elears.com/en" />
-        <link rel="alternate" hrefLang="x-default" href="https://elears.com/pl" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
