@@ -27,7 +27,7 @@ export default function Wordmark({ size = 'md' }: Props) {
         <span className="font-display font-bold tracking-wide2 text-ivory text-base sm:text-lg">
           ELEARS
         </span>
-        <span className="eyebrow mt-1 text-cyan/80">Lisowczycy</span>
+        <span className="eyebrow mt-1 text-signal/80">Lisowczycy</span>
       </span>
     </span>
   );

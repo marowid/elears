@@ -32,7 +32,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
     <>
       <PageHeader eyebrow={t('about.eyebrow')} title={t('about.title')} />
 
-      <section className="bg-navy">
+      <section className="bg-ink">
         <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-8">
             <h2 className="font-serif text-2xl text-ivory lg:text-3xl">{t('about.whoTitle')}</h2>
@@ -55,7 +55,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         </Container>
       </section>
 
-      <section className="border-y border-rule/30 bg-navy-soft/60">
+      <section className="border-y border-rule/30 bg-surface/60">
         <Container className="grid grid-cols-1 items-start gap-12 py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-5">
             <p className="eyebrow text-graphite-soft">Lisowczycy · 1615–1635</p>
@@ -64,7 +64,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             </h2>
 
             <figure className="mt-10">
-              <div className="brackets relative mx-auto w-full max-w-sm bg-navy p-6 sm:p-8">
+              <div className="brackets relative mx-auto w-full max-w-sm bg-ink p-6 sm:p-8">
                 <div className="relative aspect-[1685/2048] w-full">
                   <Image
                     src={logo}
@@ -76,7 +76,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 </div>
               </div>
               <figcaption className="eyebrow mt-4 text-center text-graphite-soft">
-                <span className="text-crimson">▍</span> Chorągiew elearska
+                <span className="text-accent">▍</span> Chorągiew elearska
               </figcaption>
             </figure>
           </div>
@@ -88,19 +88,16 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         </Container>
       </section>
 
-      <section className="bg-navy">
+      <section className="bg-ink">
         <Container className="py-16 lg:py-20">
-          <div className="flex items-end justify-between">
-            <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
-              {t('about.leadershipTitle')}
-            </h2>
-            <p className="eyebrow text-graphite-soft">{LEADERSHIP_KEYS.length} roles</p>
-          </div>
+          <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
+            {t('about.leadershipTitle')}
+          </h2>
 
           <ul className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-2 lg:grid-cols-3">
             {LEADERSHIP_KEYS.map((key, i) => (
-              <li key={key} className="flex flex-col gap-3 bg-navy p-8">
-                <p className="eyebrow text-crimson">{String(i + 1).padStart(2, '0')}</p>
+              <li key={key} className="flex flex-col gap-3 bg-ink p-8">
+                <p className="eyebrow text-accent">{String(i + 1).padStart(2, '0')}</p>
                 <p className="font-mono text-xs uppercase tracking-widish text-graphite-soft">
                   {/* TODO:leadership-name — replace placeholder name with confirmed founder/exec name */}
                   Name TBD
@@ -120,15 +117,15 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         </Container>
       </section>
 
-      <section className="border-t border-rule/30 bg-navy">
+      <section className="border-t border-rule/30 bg-ink">
         <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-5">
             <h2 className="font-serif text-2xl text-ivory lg:text-3xl">{t('about.ethicsTitle')}</h2>
           </div>
           <ul className="space-y-4 lg:col-span-7">
             {ethics.map((line, i) => (
-              <li key={i} className="flex gap-4 border-b border-rule/20 pb-4 text-graphite">
-                <span aria-hidden="true" className="font-mono text-xs uppercase tracking-widish text-crimson">
+              <li key={i} className="flex gap-4 border-b border-rule/30 pb-4 text-graphite">
+                <span aria-hidden="true" className="font-mono text-xs uppercase tracking-widish text-accent">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span>{line}</span>
@@ -138,19 +135,16 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         </Container>
       </section>
 
-      <section className="border-t border-rule/30 bg-navy-soft/60">
+      <section className="border-t border-rule/30 bg-surface/60">
         <Container className="py-16 lg:py-20">
-          <div className="flex items-end justify-between">
-            <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
-              {t('about.registrationsTitle')}
-            </h2>
-            <p className="eyebrow text-graphite-soft">{'// Placeholder · TODO'}</p>
-          </div>
+          <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
+            {t('about.registrationsTitle')}
+          </h2>
           <ul className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-2 lg:grid-cols-5">
             {registrations.map((line) => (
               <li
                 key={line}
-                className="bg-navy p-6 font-mono text-xs uppercase tracking-widish text-graphite-soft"
+                className="bg-ink p-6 font-mono text-xs uppercase tracking-widish text-graphite-soft"
               >
                 {/* TODO:registrations — replace with real numbers and certifications before launch */}
                 {line}

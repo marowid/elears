@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { colors } from '@/lib/colors';
 
 export default function RootNotFound() {
   return (
@@ -6,8 +7,8 @@ export default function RootNotFound() {
       <body
         style={{
           fontFamily: 'system-ui, sans-serif',
-          background: '#06070C',
-          color: '#F5F7FA',
+          background: colors.ink,
+          color: colors.ivory,
           minHeight: '100vh',
           display: 'grid',
           placeItems: 'center',
@@ -21,7 +22,7 @@ export default function RootNotFound() {
               fontFamily: 'monospace',
               textTransform: 'uppercase',
               letterSpacing: '0.18em',
-              color: '#FF6A1A'
+              color: colors.accent
             }}
           >
             404
@@ -30,11 +31,11 @@ export default function RootNotFound() {
             Page not found · Nie znaleziono strony.
           </h1>
           <p style={{ marginTop: '1rem' }}>
-            <Link href="/pl" style={{ color: '#34F08D' }}>
+            <Link href="/pl" style={{ color: colors.signal }}>
               Strona główna
             </Link>{' '}
             ·{' '}
-            <Link href="/en" style={{ color: '#34F08D' }}>
+            <Link href="/en" style={{ color: colors.signal }}>
               Home
             </Link>
           </p>

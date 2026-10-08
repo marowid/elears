@@ -27,6 +27,8 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
   return (
     <LegalShell eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')}>
       <h2>{isPL ? 'Administrator danych' : 'Data controller'}</h2>
+      {/* TODO:registrations — replace "registration details — TBD" with KRS / NIP / REGON before launch */}
+      {/* TODO:contact-detail — confirm controller contact email with founders before launch */}
       <p>
         {isPL
           ? 'Administratorem danych jest Elears sp. z o.o. z siedzibą we Wrocławiu (dane rejestrowe — TBD). Kontakt: '

@@ -66,12 +66,12 @@ export default async function InsightPostPage({ params: { locale, slug } }: { pa
 
       <PageHeader eyebrow={`${t('insights.eyebrow')} · ${post.tag}`} title={post.title} />
 
-      <section className="bg-navy">
+      <section className="bg-ink">
         <Container className="py-10 lg:py-16">
           {post.draft ? (
             <div
               role="status"
-              className="mb-10 border border-crimson bg-crimson/5 p-4 font-mono text-xs uppercase tracking-widish text-crimson"
+              className="mb-10 border border-accent bg-forest/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
             >
               ⚠ {t('insights.draftBanner')}
             </div>
@@ -96,17 +96,17 @@ export default async function InsightPostPage({ params: { locale, slug } }: { pa
       </section>
 
       {more.length > 0 ? (
-        <section className="border-t border-rule/30 bg-navy-soft/60">
+        <section className="border-t border-rule/30 bg-surface/60">
           <Container className="py-16">
             <h2 className="font-serif text-2xl text-ivory">{t('insights.more')}</h2>
             <ul className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-3">
               {more.map((m) => (
-                <li key={m.slug} className="bg-navy">
+                <li key={m.slug} className="bg-ink">
                   <Link
                     href={`/${locale}/insights/${m.slug}`}
-                    className="flex h-full flex-col gap-3 p-6 hover:bg-navy-soft/80"
+                    className="flex h-full flex-col gap-3 p-6 hover:bg-surface/80"
                   >
-                    <span className="eyebrow text-crimson">{m.tag}</span>
+                    <span className="eyebrow text-accent">{m.tag}</span>
                     <h3 className="font-serif text-lg text-ivory">{m.title}</h3>
                     <span className="font-mono text-xs uppercase tracking-widish text-graphite-soft">
                       {formatInsightDate(m.date, locale)}

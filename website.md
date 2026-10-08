@@ -26,7 +26,7 @@ Tone of voice
 Sober, precise, understated. Short sentences. Active voice. No emojis. No exclamation marks. No marketing superlatives ("revolutionary", "cutting-edge", "world-class"). When in doubt, write it the way The Economist would.
 Visual direction
 
-Palette: deep navy (#0B1B2B) primary, warm off-white (#F4F1EA) background, muted crimson accent (#8B1E2D — a nod to Lisowczycy banner colours), graphite (#2A2D34) text. Avoid bright blues, gradients, and neon.
+Palette: dark theme following the Tactical Brutalism concept in design.md. Deep black (#0A0A0A) page background, strategic dark blue (#0D1B2A) for cards and panels, tactical dark green (#0F3D2E) for filled elements (primary buttons, banners). The three brand hues are too dark for text, so use lighter tints of the same hues: accent green (#5DBB8C) for highlights and active states, signal blue (#6FA8DC) for hover and focus. Text in light neutrals: off-white (#F5F7FA) headings, light grey (#C9CDD8) body, muted grey (#7C8194) labels. Every text/background pair must meet WCAG AA. Tokens live in lib/colors.ts. Keep it muted: no saturated neon, gradients only as subtle background washes.
 Typography: a serif for headings (suggested: Source Serif 4 or Spectral), a clean sans for body (suggested: Inter or IBM Plex Sans). Self-host fonts (no Google Fonts CDN — sovereignty signal).
 Imagery: abstract cartography, satellite-style topographic textures, monochrome photography of architecture and infrastructure. No stock photos of people in suits shaking hands. No globes wrapped in glowing networks.
 Iconography: thin-stroke line icons (Lucide or Phosphor), monochrome only.
@@ -169,7 +169,7 @@ Header: logotype (left), nav (Services / About / Insights / Contact), language s
 Footer: four columns — Elears (short tagline + Wrocław), Services (links), Firm (About, Insights, Contact, Careers email), Legal (Privacy, Terms, Cookies). Copyright line: "© {year} Elears sp. z o.o. — Wrocław, Poland."
 Cookie banner: a single thin strip at the bottom on first visit, stating that the site uses no tracking cookies and only stores a locale preference. One Acknowledge button. Persist dismissal in localStorage.
 404 page: sober, one-line message in both locales, link home.
-OpenGraph / metadata: every page exports metadata (Next.js App Router convention) with localised title, description, and a single shared OG image (a dark navy card with the Elears wordmark — generate a simple SVG and rasterise to PNG at build time).
+OpenGraph / metadata: every page exports metadata (Next.js App Router convention) with localised title, description, and a single shared OG image (a deep-black card in the site palette with the Elears wordmark — generate a simple SVG and rasterise to PNG at build time).
 
 
 7. Accessibility, performance, SEO

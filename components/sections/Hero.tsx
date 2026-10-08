@@ -1,6 +1,9 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import { rgba } from '@/lib/colors';
+
+const COORDINATE_ROWS = ['hq', 'gps', 'languages', 'established'] as const;
 
 export default function Hero() {
   const t = useTranslations();
@@ -11,19 +14,15 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none">
         <div
           aria-hidden="true"
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, rgba(245,247,250,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(245,247,250,0.04) 1px, transparent 1px)',
-            backgroundSize: '64px 64px'
-          }}
+          className="grid-paper absolute inset-0"
+          style={{ '--grid-size': '64px', '--grid-line': rgba('ivory', 0.05) } as React.CSSProperties}
         />
       </div>
       <div className="scanline" aria-hidden="true" />
 
       <Container className="relative grid grid-cols-1 gap-10 py-24 lg:grid-cols-12 lg:py-36">
         <div className="lg:col-span-8">
-          <p className="eyebrow text-cyan/80">{t('home.heroEyebrow')}</p>
+          <p className="eyebrow text-signal/80">{t('home.heroEyebrow')}</p>
 
           <h1
             className="glitch mt-6 font-display font-bold uppercase tracking-wide2 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl"
@@ -45,25 +44,15 @@ export default function Hero() {
         </div>
 
         <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:justify-end">
-          <div className="brackets text-ivory/70 border border-ivory/15 p-6 font-mono text-xs">
-            <p className="eyebrow text-ivory/70">{'// Coordinates'}</p>
+          <div className="brackets text-ivory-dim border border-rule/40 p-6 font-mono text-xs">
+            <p className="eyebrow text-ivory-dim">{t('home.coordinates.title')}</p>
             <ul className="mt-4 space-y-2">
-              <li className="flex justify-between gap-4">
-                <span>HQ</span>
-                <span>Wrocław · 51.1079° N · 17.0385° E</span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Languages</span>
-                <span>PL · RU · UK · DE · EN</span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Coverage</span>
-                <span>CEE · CIS · NATO</span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Established</span>
-                <span>2026</span>
-              </li>
+              {COORDINATE_ROWS.map((row) => (
+                <li key={row} className="flex justify-between gap-4">
+                  <span>{t(`home.coordinates.${row}Label`)}</span>
+                  <span className="whitespace-nowrap">{t(`home.coordinates.${row}Value`)}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default async function InsightsTeaser({ locale }: { locale: Locale }) {
   if (items.length === 0) return null;
 
   return (
-    <section className="bg-navy">
+    <section className="bg-ink">
       <Container className="py-20 lg:py-28">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
@@ -24,7 +24,7 @@ export default async function InsightsTeaser({ locale }: { locale: Locale }) {
           </div>
           <Link
             href={`/${locale}/insights`}
-            className="eyebrow border-b border-crimson text-crimson hover:opacity-80"
+            className="eyebrow border-b border-accent text-accent hover:border-signal hover:text-signal"
           >
             {t('cta.viewAll')} →
           </Link>
@@ -41,10 +41,10 @@ export default async function InsightsTeaser({ locale }: { locale: Locale }) {
                   <span className="eyebrow text-graphite-soft">
                     {formatInsightDate(post.date, locale)}
                   </span>
-                  <span className="eyebrow text-crimson">{post.tag}</span>
+                  <span className="eyebrow text-accent">{post.tag}</span>
                 </div>
                 <div className="lg:col-span-9">
-                  <h3 className="font-serif text-xl text-ivory hover:text-crimson lg:text-2xl">
+                  <h3 className="font-serif text-xl text-ivory hover:text-signal lg:text-2xl">
                     {post.title}
                   </h3>
                   <p className="mt-2 max-w-2xl text-sm text-graphite">{post.excerpt}</p>

@@ -25,6 +25,17 @@
   "home": {
     "heroEyebrow": "Wrocław · CEE · NATO",
     "heroSub": "Elears is an EU-sovereign private intelligence firm — AI-native delivery, senior-led judgment, multilingual depth across Central and Eastern Europe.",
+    "coordinates": {
+      "title": "// Coordinates",
+      "hqLabel": "HQ",
+      "hqValue": "Wrocław",
+      "gpsLabel": "GPS",
+      "gpsValue": "51.1079°N 17.0385°E",
+      "languagesLabel": "Languages",
+      "languagesValue": "PL · RU · UK · DE · EN",
+      "establishedLabel": "Established",
+      "establishedValue": "2026"
+    },
     "pillarsEyebrow": "01 / What we do",
     "pillarsTitle": "Three disciplines, one operating standard.",
     "whyEyebrow": "02 / Why Elears",
@@ -214,9 +225,9 @@
     ],
     "registrationsTitle": "Memberships & registrations",
     "registrations": [
-      "KRS — TBD",
-      "NIP — TBD",
-      "REGON — TBD",
+      "KRS — in creation",
+      "NIP — in creation",
+      "REGON — in creation",
       "ISO/IEC 27001 — in progress",
       "ACAMS Poland — TBD"
     ],
@@ -247,7 +258,7 @@
     "press": "Press",
     "careers": "Careers",
     "office": "Office",
-    "officeBody": "Wrocław, Poland — full address to be confirmed.",
+    "officeBody": "Wrocław, Poland",
     "secureTitle": "Secure introductions",
     "secureBody": "We accept encrypted introductions over Signal and PGP. Fingerprints below; please verify out-of-band before sharing sensitive material.",
     "signal": "Signal",
