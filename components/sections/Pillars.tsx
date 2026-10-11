@@ -6,7 +6,7 @@ import Card from '@/components/ui/Card';
 
 const ITEMS = [
   { key: 'geo', slug: 'geopolitical-risk', code: 'GEO' },
-  { key: 'cyber', slug: 'cyber-threat-intelligence', code: 'CYB' },
+  { key: 'cyber', slug: 'cyber-threat-intelligence', code: 'CTI' },
   { key: 'investigations', slug: 'investigations', code: 'INV' }
 ] as const;
 
@@ -30,7 +30,7 @@ export default function Pillars() {
               <Link key={item.key} href={`/${locale}/services/${item.slug}`} className="group block">
                 <Card className="flex h-full flex-col group-hover:border-signal group-focus-visible:border-signal">
                   <p className="eyebrow text-graphite-soft">{item.code}</p>
-                  <h3 className="mt-3 font-serif text-xl text-ivory">
+                  <h3 className="mt-3 hyphens-auto break-words font-serif text-xl text-ivory">
                     {t(`pillars.${item.key}.title`)}
                   </h3>
                   <p className="mt-3 text-sm text-graphite">{t(`pillars.${item.key}.body`)}</p>

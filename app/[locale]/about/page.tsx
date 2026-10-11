@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Container from '@/components/ui/Container';
 import PageHeader from '@/components/sections/PageHeader';
 import CtaStrip from '@/components/sections/CtaStrip';
+import RedactedPortrait from '@/components/ui/RedactedPortrait';
 import { LEADERSHIP, type LeadershipKey } from '@/lib/leadership';
 import logo from '@/public/logo.svg';
 import { languageAlternates, type  Locale } from '@/i18n';
@@ -43,12 +44,12 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
           </div>
           <aside className="lg:col-span-4">
             <div className="brackets border border-rule/40 p-6 font-mono text-xs uppercase tracking-widish text-graphite-soft">
-              <p className="eyebrow text-graphite-soft">{'// HQ'}</p>
+              <p className="eyebrow text-graphite-soft">{'// '}{t('home.coordinates.hqLabel')}</p>
               <p className="mt-3 text-ivory normal-case tracking-normal font-sans text-sm">
-                Wrocław, Polska
+                {t('contact.officeBody')}
               </p>
               <p className="mt-1 text-ivory normal-case tracking-normal font-sans text-sm">
-                51.1079° N · 17.0385° E
+                {t('home.coordinates.gpsValue')}
               </p>
             </div>
           </aside>
@@ -70,7 +71,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
               </div>
             </div>
             <figcaption className="eyebrow mt-3 text-center text-graphite-soft">
-              <span className="text-accent">▍</span> Chorągiew elearska
+              <span className="text-accent">▍</span> {t('about.heritageCaption')}
             </figcaption>
           </figure>
           <div>
@@ -98,7 +99,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 <li key={person.key} className="flex flex-col gap-6 bg-ink p-8 sm:flex-row">
                   {/* TODO:leadership-photo — set `photo` in lib/leadership.ts */}
                   {person.photo ? (
-                    <div className="brackets relative aspect-[4/5] w-32 shrink-0 overflow-hidden border border-rule/40 bg-surface">
+                    <div className="brackets relative aspect-[4/5] w-32 shrink-0 self-start overflow-hidden border border-rule/40 bg-surface">
                       <Image
                         src={person.photo}
                         alt={`${person.name}, ${role}`}
@@ -108,7 +109,11 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                       />
                     </div>
                   ) : (
-                    <PhotoPlaceholder label={t('about.leadership.photoPending')} />
+                    <RedactedPortrait
+                      label={t('about.leadership.photoWithheld')}
+                      tag={t('about.leadership.redactedTag')}
+                      fileNo={`${t('about.leadership.fileLabel')} ${String(i + 1).padStart(2, '0')}`}
+                    />
                   )}
                   <div className="flex flex-1 flex-col gap-3">
                     <p className="eyebrow text-accent">{String(i + 1).padStart(2, '0')}</p>
@@ -177,21 +182,5 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
 
       <CtaStrip />
     </>
-  );
-}
-
-function PhotoPlaceholder({ label }: { label: string }) {
-  return (
-    <div
-      role="img"
-      aria-label={label}
-      className="brackets relative flex aspect-[4/5] w-32 shrink-0 items-end justify-center overflow-hidden border border-rule/40 bg-surface"
-    >
-      <svg viewBox="0 0 80 100" aria-hidden="true" className="h-4/5 w-4/5 fill-rule">
-        <circle cx="40" cy="34" r="17" />
-        <path d="M6 100c0-21 15-36 34-36s34 15 34 36z" />
-      </svg>
-      <span className="eyebrow absolute left-2 top-2 text-[9px] text-graphite-soft">{label}</span>
-    </div>
   );
 }

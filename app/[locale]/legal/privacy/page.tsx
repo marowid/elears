@@ -39,12 +39,12 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
       <h2>{isPL ? 'Jakie dane zbieramy' : 'What we collect'}</h2>
       <p>
         {isPL
-          ? 'Strona używa Plausible Analytics — bez plików cookie i bez identyfikatorów osobistych. Zbieramy: ścieżkę URL, nagłówek referer, ogólny typ urządzenia, kraj na podstawie IP. Adres IP nie jest przechowywany.'
+          ? 'Serwis korzysta z Plausible Analytics — bez plików cookie i bez identyfikatorów osobowych. Zbieramy: adres odwiedzanej strony, stronę odsyłającą (referer), ogólny typ urządzenia oraz kraj ustalony na podstawie adresu IP. Adres IP nie jest przechowywany.'
           : 'This site uses Plausible Analytics — cookieless and without personal identifiers. We collect: URL path, referer, broad device type, and IP-derived country. IP addresses are not stored.'}
       </p>
       <p>
         {isPL
-          ? 'Korespondencja przesłana przez mailto: jest przechowywana w systemach pocztowych firmy.'
+          ? 'Korespondencja przesłana pocztą elektroniczną jest przechowywana w systemach pocztowych firmy.'
           : 'Correspondence sent via mailto: is stored in the firm’s mail systems.'}
       </p>
 
@@ -52,12 +52,12 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
       <ul>
         <li>
           {isPL
-            ? 'Art. 6(1)(f) RODO — prawnie uzasadniony interes (analityka bez cookies, bezpieczeństwo strony).'
+            ? 'Art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes administratora (analityka bez plików cookie, bezpieczeństwo serwisu).'
             : 'Art. 6(1)(f) GDPR — legitimate interest (cookieless analytics, site security).'}
         </li>
         <li>
           {isPL
-            ? 'Art. 6(1)(b) RODO — wykonanie czynności przed zawarciem umowy (korespondencja kontaktowa).'
+            ? 'Art. 6 ust. 1 lit. b RODO — podjęcie działań na żądanie osoby, której dane dotyczą, przed zawarciem umowy (korespondencja).'
             : 'Art. 6(1)(b) GDPR — pre-contractual steps (contact correspondence).'}
         </li>
       </ul>
@@ -65,14 +65,14 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
       <h2>{isPL ? 'Okres przechowywania' : 'Retention'}</h2>
       <p>
         {isPL
-          ? 'Dane analityczne — 24 miesiące, w postaci zagregowanej. Korespondencja — przez czas niezbędny do prowadzenia sprawy lub realizacji obowiązków prawnych.'
+          ? 'Dane analityczne — 24 miesiące, w postaci zagregowanej. Korespondencja — przez okres niezbędny do obsługi sprawy lub wypełnienia obowiązków prawnych.'
           : 'Analytics — 24 months, in aggregate form. Correspondence — for the time necessary to handle the matter or comply with legal obligations.'}
       </p>
 
-      <h2>{isPL ? 'Twoje prawa' : 'Your rights'}</h2>
+      <h2>{isPL ? 'Prawa osób, których dane dotyczą' : 'Your rights'}</h2>
       <p>
         {isPL
-          ? 'Przysługują Ci prawa z Art. 15–22 RODO: dostęp, sprostowanie, usunięcie, ograniczenie, sprzeciw i przenoszenie danych. Pisz na contact@elears.com. Organ nadzorczy: Prezes UODO, ul. Stawki 2, 00-193 Warszawa.'
+          ? 'Przysługują Państwu prawa określone w art. 15–22 RODO: dostęp do danych, ich sprostowanie, usunięcie, ograniczenie przetwarzania, przenoszenie oraz sprzeciw. Wnioski prosimy kierować na adres contact@elears.com. Przysługuje Państwu również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.'
           : 'You have rights under GDPR Art. 15–22: access, rectification, erasure, restriction, objection, and portability. Write to contact@elears.com. Supervisory authority: President of UODO, ul. Stawki 2, 00-193 Warsaw, Poland.'}
       </p>
     </LegalShell>

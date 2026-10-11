@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { getAllInsights } from '@/lib/insights';
 import { locales, type Locale } from '@/i18n';
 import { FEATURES } from '@/lib/features';
@@ -23,6 +24,7 @@ export async function GET(_req: Request, { params }: { params: { locale: Locale 
   if (!FEATURES.insights) return new Response('Not found', { status: 404 });
   const locale = params.locale;
   const posts = await getAllInsights(locale);
+  const t = await getTranslations({ locale, namespace: 'insights' });
 
   const items = posts
     .map((post) => {
@@ -40,9 +42,9 @@ export async function GET(_req: Request, { params }: { params: { locale: Locale 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>ELEARS — Insights (${locale.toUpperCase()})</title>
+    <title>ELEARS — ${escape(t('eyebrow'))}</title>
     <link>${SITE}/${locale}/insights</link>
-    <description>Analysis from the firm.</description>
+    <description>${escape(t('title'))}</description>
     <language>${locale}</language>
 ${items}
   </channel>

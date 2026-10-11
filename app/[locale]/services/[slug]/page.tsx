@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Container from '@/components/ui/Container';
 import PageHeader from '@/components/sections/PageHeader';
-import CtaStrip from '@/components/sections/CtaStrip';
 import Button from '@/components/ui/Button';
 import { SERVICE_SLUGS, SERVICE_CODES, isServiceSlug, type ServiceSlug } from '@/lib/services';
 import { languageAlternates, locales, type Locale } from '@/i18n';
@@ -45,7 +44,6 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
   const engagements = t.raw(`${ns}.engagements`) as string[];
   const deliverables = t.raw(`${ns}.deliverables`) as string[];
 
-  const others = SERVICE_SLUGS.filter((s) => s !== slug).slice(0, 3);
 
   return (
     <>
@@ -116,36 +114,43 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
 
           <aside className="lg:col-span-4">
             <div className="brackets sticky top-24 border border-rule/40 p-6">
-              <p className="eyebrow text-graphite-soft">{'// Service brief'}</p>
+              <p className="eyebrow text-graphite-soft">{'// '}{t('services.brief.title')}</p>
               <dl className="mt-4 space-y-3 font-mono text-xs uppercase tracking-widish text-graphite-soft">
                 <div className="flex justify-between gap-4">
-                  <dt>Code</dt>
+                  <dt>{t('services.brief.code')}</dt>
                   <dd className="text-ivory">{SERVICE_CODES[slug]}</dd>
                 </div>
                 <div className="flex justify-between gap-4">
-                  <dt>Pricing</dt>
-                  <dd className="text-right text-ivory">On request</dd>
+                  <dt>{t('services.brief.pricing')}</dt>
+                  <dd className="text-right text-ivory">{t('services.brief.pricingValue')}</dd>
                 </div>
                 <div className="flex justify-between gap-4">
-                  <dt>Delivery</dt>
-                  <dd className="text-ivory">EU sovereign</dd>
+                  <dt>{t('services.brief.delivery')}</dt>
+                  <dd className="text-ivory">{t('services.brief.deliveryValue')}</dd>
                 </div>
                 <div className="flex justify-between gap-4">
-                  <dt>Languages</dt>
-                  <dd className="text-ivory">PL · RU · UK · DE · EN</dd>
+                  <dt>{t('home.coordinates.languagesLabel')}</dt>
+                  <dd className="text-ivory">{t('home.coordinates.languagesValue')}</dd>
                 </div>
               </dl>
               <hr className="my-6 border-rule/40" />
-              <p className="eyebrow text-graphite-soft">{'// Other services'}</p>
+              <p className="eyebrow text-graphite-soft">{'// '}{t('services.brief.others')}</p>
               <ul className="mt-3 space-y-2 text-sm">
-                {others.map((s) => (
+                {SERVICE_SLUGS.map((s) => (
                   <li key={s}>
-                    <Link
-                      href={`/${locale}/services/${s}`}
-                      className="text-ivory hover:text-signal"
-                    >
-                      {t(`services.items.${s}.title`)}
-                    </Link>
+                    {s === slug ? (
+                      <span aria-current="page" className="flex gap-2 text-accent">
+                        <span aria-hidden="true">▍</span>
+                        {t(`services.items.${s}.title`)}
+                      </span>
+                    ) : (
+                      <Link
+                        href={`/${locale}/services/${s}`}
+                        className="text-ivory hover:text-signal"
+                      >
+                        {t(`services.items.${s}.title`)}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -154,7 +159,6 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
         </Container>
       </section>
 
-      <CtaStrip />
     </>
   );
 }

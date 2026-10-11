@@ -31,7 +31,7 @@ export default function CookieBanner() {
   return (
     <div
       role="region"
-      aria-label="Cookie notice"
+      aria-label={t('label')}
       className="fixed inset-x-0 bottom-0 z-50 border-t border-signal/40 bg-surface/95 text-ivory backdrop-blur"
     >
       <div className="mx-auto flex max-w-page flex-col items-start justify-between gap-3 px-5 py-3 sm:flex-row sm:items-center sm:px-8 lg:px-12">
