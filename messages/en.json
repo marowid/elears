@@ -6,6 +6,7 @@
     "wordmark": "ELEARS"
   },
   "nav": {
+    "home": "Home",
     "services": "Services",
     "about": "About",
     "insights": "Insights",
@@ -37,27 +38,13 @@
       "establishedValue": "2026"
     },
     "pillarsEyebrow": "01 / What we do",
-    "pillarsTitle": "Three disciplines, one operating standard.",
+    "pillarsTitle": "Six service lines, one operating standard.",
     "whyEyebrow": "02 / Why ELEARS",
     "whyTitle": "Built for the questions Western firms cannot answer alone.",
     "insightsEyebrow": "03 / Selected insights",
     "insightsTitle": "Recent analysis from the firm.",
     "footerCtaTitle": "Have a mandate in mind?",
     "footerCtaSub": "We respond to qualified enquiries within one business day."
-  },
-  "pillars": {
-    "geo": {
-      "title": "Geopolitical & corporate intelligence",
-      "body": "CEE, Russia-CIS, sanctions and beneficial-ownership depth — sourced in the languages that matter."
-    },
-    "cyber": {
-      "title": "Cyber threat intelligence",
-      "body": "Actor and campaign tracking, dark-web monitoring, and incident response support."
-    },
-    "investigations": {
-      "title": "Investigations & due diligence",
-      "body": "Fast-turnaround integrity DD, asset tracing, and sensitive investigations."
-    }
   },
   "why": {
     "sovereign": {

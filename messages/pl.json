@@ -6,6 +6,7 @@
     "wordmark": "ELEARS"
   },
   "nav": {
+    "home": "Strona główna",
     "services": "Usługi",
     "about": "O nas",
     "insights": "Analizy",
@@ -37,27 +38,13 @@
       "establishedValue": "2026"
     },
     "pillarsEyebrow": "01 / Co robimy",
-    "pillarsTitle": "Trzy specjalizacje, jeden standard pracy.",
+    "pillarsTitle": "Sześć obszarów usług, jeden standard pracy.",
     "whyEyebrow": "02 / Dlaczego ELEARS",
     "whyTitle": "Odpowiadamy na pytania, z którymi zachodnie firmy nie poradzą sobie same.",
     "insightsEyebrow": "03 / Wybrane analizy",
     "insightsTitle": "Najnowsze analizy firmy.",
     "footerCtaTitle": "Mają Państwo zlecenie do omówienia?",
     "footerCtaSub": "Na zapytania odpowiadamy w ciągu jednego dnia roboczego."
-  },
-  "pillars": {
-    "geo": {
-      "title": "Wywiad geopolityczny i korporacyjny",
-      "body": "Europa Środkowo-Wschodnia, Rosja i WNP, sankcje i beneficjenci rzeczywiści — na podstawie źródeł w językach oryginalnych."
-    },
-    "cyber": {
-      "title": "Wywiad o cyberzagrożeniach",
-      "body": "Śledzenie sprawców i kampanii, monitoring dark webu oraz wsparcie w reagowaniu na incydenty."
-    },
-    "investigations": {
-      "title": "Dochodzenia i due diligence",
-      "body": "Szybka weryfikacja wiarygodności, śledzenie aktywów i dochodzenia w sprawach wrażliwych."
-    }
   },
   "why": {
     "sovereign": {
