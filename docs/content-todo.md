@@ -8,13 +8,13 @@ This file is the single, grep-able punch list of every placeholder, draft, or "c
 - [ ] Replace Wrocław office address placeholder with the real street address.
 - [ ] Secure-contact block is hidden (`FEATURES.secureContact = false`). Add the real Signal username and PGP fingerprint before re-enabling.
 - [ ] Replace KRS / NIP / REGON / certification placeholders on About page.
-- [ ] Add leadership portraits: put files in `public/team/` and set `photo` in `lib/leadership.ts` (shown greyscale automatically; `TODO:leadership-photo`).
+- [ ] Leadership cards show an anonymous redacted portrait (`components/ui/RedactedPortrait.tsx`). To use real portraits, put files in `public/team/` and set `photo` in `lib/leadership.ts` (shown greyscale automatically; `TODO:leadership-photo`).
 - [ ] Have a Polish-qualified lawyer review the three legal pages and remove the DRAFT banners.
 - [ ] Insights is hidden (`FEATURES.insights = false` in `lib/features.ts`). Before re-enabling, replace or delete the placeholder posts.
 - [ ] Confirm Plausible domain and add the production `data-domain` value.
 - [ ] Verify `hreflang` tags resolve correctly on every page.
 - [ ] Run final Lighthouse and axe sweeps on the production URL.
-- [ ] Polish is hidden (`FEATURES.polish = false` in `lib/features.ts`); the site is English-only and /pl/* redirects to /en/*. Review `messages/pl.json` before re-enabling.
+- [ ] Polish is enabled (`FEATURES.polish = true`) with revised copy in `messages/pl.json` and the legal pages. Have a native-speaker editor proofread it; the legal pages also need counsel review (see below).
 
 ---
 

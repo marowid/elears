@@ -12,7 +12,7 @@ type Leader = {
 export const LEADERSHIP: readonly Leader[] = [
   { key: 'ceo', name: 'Max', companies: ['Intel', 'RADMOR', 'BRIDGE foundation'] },
   { key: 'intelligence', name: 'Maciej', companies: ['Palantir', 'Dell', 'Canonical'] },
-  { key: 'investigations', name: 'Maciej', companies: ['CVS Health', 'Dell'] },
+  { key: 'investigations', name: 'Maciej', companies: ['Dell', 'CVS Health'] },
   { key: 'cyber', name: 'Bartłomiej', companies: ['Dell', 'Canonical', 'Credit Suisse'] }
 ];
 

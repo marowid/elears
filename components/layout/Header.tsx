@@ -24,7 +24,7 @@ export default function Header() {
   }, []);
 
   const items = [
-    { href: `/${locale}/services`, label: t('services') },
+    { href: `/${locale}`, label: t('home'), exact: true },
     { href: `/${locale}/about`, label: t('about') },
     ...(FEATURES.insights ? [{ href: `/${locale}/insights`, label: t('insights') }] : []),
     { href: `/${locale}/contact`, label: t('contact') }
@@ -55,7 +55,8 @@ export default function Header() {
 
         <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
           {items.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(item.href + '/');
+            const active =
+              pathname === item.href || (!('exact' in item) && pathname.startsWith(item.href + '/'));
             return (
               <Link
                 key={item.href}

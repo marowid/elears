@@ -6,6 +6,7 @@
     "wordmark": "ELEARS"
   },
   "nav": {
+    "home": "Home",
     "services": "Services",
     "about": "About",
     "insights": "Insights",
@@ -37,27 +38,13 @@
       "establishedValue": "2026"
     },
     "pillarsEyebrow": "01 / What we do",
-    "pillarsTitle": "Three disciplines, one operating standard.",
+    "pillarsTitle": "Six service lines, one operating standard.",
     "whyEyebrow": "02 / Why ELEARS",
     "whyTitle": "Built for the questions Western firms cannot answer alone.",
     "insightsEyebrow": "03 / Selected insights",
     "insightsTitle": "Recent analysis from the firm.",
     "footerCtaTitle": "Have a mandate in mind?",
     "footerCtaSub": "We respond to qualified enquiries within one business day."
-  },
-  "pillars": {
-    "geo": {
-      "title": "Geopolitical & corporate intelligence",
-      "body": "CEE, Russia-CIS, sanctions and beneficial-ownership depth — sourced in the languages that matter."
-    },
-    "cyber": {
-      "title": "Cyber threat intelligence",
-      "body": "Actor and campaign tracking, dark-web monitoring, and incident response support."
-    },
-    "investigations": {
-      "title": "Investigations & due diligence",
-      "body": "Fast-turnaround integrity DD, asset tracing, and sensitive investigations."
-    }
   },
   "why": {
     "sovereign": {
@@ -192,7 +179,7 @@
           "Standing geopolitical advisory to a multinational chief executive",
           "Crisis communications and reputational counsel during a regulatory event",
           "Confidential second-opinion work on sensitive board decisions",
-          "Discreet introductions and back-channel facilitation where appropriate"
+          "Discreet introductions and back-channel facilitation"
         ],
         "scoping": "Direct conversation with the principal and a short written engagement letter.",
         "delivery": "On-call access to a partner, with structured monthly cadence and ad-hoc work.",
@@ -203,6 +190,15 @@
           "Quarterly written outlook tailored to the principal's portfolio"
         ]
       }
+    },
+    "brief": {
+      "title": "Service brief",
+      "code": "Code",
+      "pricing": "Pricing",
+      "pricingValue": "On request",
+      "delivery": "Delivery",
+      "deliveryValue": "EU sovereign",
+      "others": "Services"
     }
   },
   "about": {
@@ -212,6 +208,7 @@
     "whoBody1": "ELEARS is a Wrocław-headquartered private intelligence firm. We combine an AI-native platform with a senior services bench drawn from former intelligence, prosecutorial, diplomatic, and investigative-journalism backgrounds. Our analysts work in Polish, Russian, Ukrainian, German and English.",
     "whoBody2": "We serve three audiences: NATO and EU defence buyers; global law firms and multinationals operating in the region; and Polish and CEE enterprises with cross-border exposure. We are independent of any client, government, or vendor.",
     "heritageTitle": "On the name.",
+    "heritageCaption": "Elear banner",
     "heritageBody": "ELEARS renders the Polish chorągiew elearska — the period name for the Lisowczycy, the elite 17th-century Polish-Lithuanian light cavalry famed for cross-border reconnaissance, autonomy, and intelligence-gathering for the Crown. They were Polish-led and allied-deployed. The continuity is not aesthetic; it is operational.",
     "leadershipTitle": "Leadership",
     "leadershipNote": "Leadership names and biographies are confirmed at the point of mandate.",
@@ -231,7 +228,9 @@
     ],
     "leadership": {
       "companiesLabel": "Previously",
-      "photoPending": "Photo",
+      "photoWithheld": "Portrait withheld",
+      "redactedTag": "REDACTED",
+      "fileLabel": "FILE",
       "ceo": {
         "role": "Chief Executive Officer",
         "bio": "Ex-military. 20 years in business."
@@ -242,7 +241,7 @@
       },
       "investigations": {
         "role": "Head of Investigations",
-        "bio": "A decade doing due diligence and target analysis for C-suite leaders and clients in government, defence, healthcare and finance."
+        "bio": "A decade conducting investigations and target analysis for C-suite leaders and clients in government, defence, healthcare and finance."
       },
       "cyber": {
         "role": "Head of Cyber",
@@ -309,6 +308,7 @@
     "company": "ELEARS sp. z o.o."
   },
   "cookieBanner": {
+    "label": "Cookie notice",
     "message": "This site uses no tracking cookies. Only your locale preference is stored on your device.",
     "ack": "Acknowledge"
   },
