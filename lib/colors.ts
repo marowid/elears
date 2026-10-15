@@ -1,16 +1,16 @@
 /* Single source of truth for the palette. Consumed by tailwind.config.ts and
    by places that cannot use Tailwind classes (OG image, root 404, inline SVG).
 
-   Tactical Brutalism palette (design.md): deep black foundation, tactical dark
-   green, strategic dark blue. The three brand colours are too dark to carry
-   text on black, so `accent` and `signal` are lighter tints of the same hues
-   for text, rules and interaction states (WCAG AA on ink and surface). */
+   Tactical Brutalism palette (design.md) with a blue structure and a brass
+   accent: deep black foundation, strategic dark blues for surfaces and fills,
+   muted brass for emphasis, ice blue for interaction states.
+   All text pairs meet WCAG AA on ink, surface and navy. */
 export const colors = {
   ink: '#0A0A0A' /* deep black — page foundation (design.md) */,
   surface: '#0D1B2A' /* strategic dark blue — cards, panels (design.md) */,
-  forest: '#0F3D2E' /* tactical dark green — filled elements (design.md) */,
-  accent: '#5DBB8C' /* night-vision green tint — primary accent, active state */,
-  signal: '#6FA8DC' /* strategic blue tint — interaction (hover / focus) */,
+  navy: '#12355B' /* command blue — filled elements (buttons, banners, map) */,
+  accent: '#B8995F' /* antique brass — primary accent, active state */,
+  signal: '#B9DBF7' /* ice blue — interaction (hover / focus) */,
   ivory: '#F5F7FA' /* primary light text / inverse-button bg */,
   'ivory-dim': '#B8BDCC' /* secondary light text */,
   graphite: '#C9CDD8' /* body paragraph text on dark */,

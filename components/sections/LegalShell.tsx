@@ -18,7 +18,7 @@ export default function LegalShell({ eyebrow, title, intro, children }: Props) {
         <Container className="py-12 lg:py-16">
           <div
             role="status"
-            className="mb-10 border border-accent bg-forest/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
+            className="mb-10 border border-accent bg-navy/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
           >
             ⚠ {t('draftBanner')}
           </div>

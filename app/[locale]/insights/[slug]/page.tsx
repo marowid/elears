@@ -74,7 +74,7 @@ export default async function InsightPostPage({ params: { locale, slug } }: { pa
           {post.draft ? (
             <div
               role="status"
-              className="mb-10 border border-accent bg-forest/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
+              className="mb-10 border border-accent bg-navy/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
             >
               ⚠ {t('insights.draftBanner')}
             </div>
