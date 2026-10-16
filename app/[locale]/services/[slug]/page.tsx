@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Container from '@/components/ui/Container';
+import Eyebrow from '@/components/ui/Eyebrow';
 import PageHeader from '@/components/sections/PageHeader';
 import Button from '@/components/ui/Button';
 import { SERVICE_SLUGS, SERVICE_CODES, isServiceSlug, type ServiceSlug } from '@/lib/services';
@@ -11,9 +12,7 @@ import { languageAlternates, locales, type Locale } from '@/i18n';
 type Params = { locale: Locale; slug: string };
 
 export function generateStaticParams() {
-  return locales.flatMap((locale) =>
-    SERVICE_SLUGS.map((slug) => ({ locale, slug }))
-  );
+  return locales.flatMap((locale) => SERVICE_SLUGS.map((slug) => ({ locale, slug })));
 }
 
 export async function generateMetadata({
@@ -44,7 +43,6 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
   const engagements = t.raw(`${ns}.engagements`) as string[];
   const deliverables = t.raw(`${ns}.deliverables`) as string[];
 
-
   return (
     <>
       <PageHeader
@@ -53,14 +51,14 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
       />
 
       <section className="bg-ink">
-        <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
+        <Container className="grid grid-cols-1 gap-12 py-20 lg:grid-cols-12 lg:py-28">
           <div className="lg:col-span-8">
             <p className="max-w-prose font-serif text-xl leading-relaxed text-graphite">
               {t(`${ns}.lead`)}
             </p>
 
             <div className="mt-12">
-              <h2 className="eyebrow text-graphite-soft">{t('services.typicalEngagements')}</h2>
+              <Eyebrow as="h2">{t('services.typicalEngagements')}</Eyebrow>
               <ul className="mt-4 divide-y divide-rule/30 border-y border-rule/30">
                 {engagements.map((line, i) => (
                   <li key={i} className="flex gap-4 py-4">
@@ -74,7 +72,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
             </div>
 
             <div className="mt-12">
-              <h2 className="eyebrow text-graphite-soft">{t('services.howWeWork')}</h2>
+              <Eyebrow as="h2">{t('services.howWeWork')}</Eyebrow>
               <ol className="mt-4 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-3">
                 {(
                   [
@@ -83,10 +81,9 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
                     { label: t('services.stepHandover'), body: t(`${ns}.handover`) }
                   ] as const
                 ).map((step, i) => (
-                  <li key={i} className="bg-ink p-6">
-                    <p className="eyebrow text-accent">
-                      {String(i + 1).padStart(2, '0')} / {step.label}
-                    </p>
+                  <li key={i} className="bg-ink p-8">
+                    <p className="eyebrow text-graphite-soft">{String(i + 1).padStart(2, '0')}</p>
+                    <h3 className="mt-6 font-serif text-lg text-ivory">{step.label}</h3>
                     <p className="mt-3 text-sm text-graphite">{step.body}</p>
                   </li>
                 ))}
@@ -94,7 +91,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
             </div>
 
             <div className="mt-12">
-              <h2 className="eyebrow text-graphite-soft">{t('services.deliverables')}</h2>
+              <Eyebrow as="h2">{t('services.deliverables')}</Eyebrow>
               <ul className="mt-4 space-y-3">
                 {deliverables.map((line, i) => (
                   <li key={i} className="flex gap-3 text-graphite">
@@ -112,29 +109,41 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
             </div>
           </div>
 
-          <aside className="lg:col-span-4">
+          <div className="lg:col-span-4">
             <div className="brackets sticky top-24 border border-rule/40 p-6">
-              <p className="eyebrow text-graphite-soft">{'// '}{t('services.brief.title')}</p>
+              <p className="eyebrow text-graphite-soft">
+                {'// '}
+                {t('services.brief.title')}
+              </p>
               <dl className="mt-4 space-y-3 font-mono text-xs uppercase tracking-widish text-graphite-soft">
-                <div className="flex justify-between gap-4">
+                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
                   <dt>{t('services.brief.code')}</dt>
-                  <dd className="text-ivory">{SERVICE_CODES[slug]}</dd>
+                  <dd className="whitespace-nowrap text-ivory">{SERVICE_CODES[slug]}</dd>
                 </div>
-                <div className="flex justify-between gap-4">
+                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
                   <dt>{t('services.brief.pricing')}</dt>
-                  <dd className="text-right text-ivory">{t('services.brief.pricingValue')}</dd>
+                  <dd className="whitespace-nowrap text-right text-ivory">
+                    {t('services.brief.pricingValue')}
+                  </dd>
                 </div>
-                <div className="flex justify-between gap-4">
+                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
                   <dt>{t('services.brief.delivery')}</dt>
-                  <dd className="text-ivory">{t('services.brief.deliveryValue')}</dd>
+                  <dd className="whitespace-nowrap text-ivory">
+                    {t('services.brief.deliveryValue')}
+                  </dd>
                 </div>
-                <div className="flex justify-between gap-4">
+                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
                   <dt>{t('home.coordinates.languagesLabel')}</dt>
-                  <dd className="text-ivory">{t('home.coordinates.languagesValue')}</dd>
+                  <dd className="whitespace-nowrap text-ivory">
+                    {t('home.coordinates.languagesValue')}
+                  </dd>
                 </div>
               </dl>
               <hr className="my-6 border-rule/40" />
-              <p className="eyebrow text-graphite-soft">{'// '}{t('services.brief.others')}</p>
+              <p className="eyebrow text-graphite-soft">
+                {'// '}
+                {t('services.brief.others')}
+              </p>
               <ul className="mt-3 space-y-2 text-sm">
                 {SERVICE_SLUGS.map((s) => (
                   <li key={s}>
@@ -155,10 +164,9 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
                 ))}
               </ul>
             </div>
-          </aside>
+          </div>
         </Container>
       </section>
-
     </>
   );
 }

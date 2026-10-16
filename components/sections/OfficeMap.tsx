@@ -14,8 +14,8 @@ type Props = {
 
 const TIER_CLASS = {
   base: 'fill-surface stroke-rule',
-  cee: 'fill-forest/45 stroke-accent/25',
-  home: 'fill-forest stroke-accent'
+  cee: 'fill-navy stroke-accent/30',
+  home: 'fill-accent/40 stroke-accent'
 } as const;
 
 export default function OfficeMap({ label, pinTitle, coords, legendHome, legendRegion }: Props) {
@@ -75,11 +75,11 @@ export default function OfficeMap({ label, pinTitle, coords, legendHome, legendR
 
       <figcaption className="flex flex-wrap gap-x-6 gap-y-2 border-t border-rule/40 px-4 py-3 font-mono text-[11px] uppercase tracking-widish text-graphite-soft">
         <span className="flex items-center gap-2">
-          <span aria-hidden="true" className="inline-block h-2.5 w-2.5 border border-accent bg-forest" />
+          <span aria-hidden="true" className="inline-block h-2.5 w-2.5 border border-accent bg-accent/40" />
           {legendHome}
         </span>
         <span className="flex items-center gap-2">
-          <span aria-hidden="true" className="inline-block h-2.5 w-2.5 border border-accent/25 bg-forest/45" />
+          <span aria-hidden="true" className="inline-block h-2.5 w-2.5 border border-accent/30 bg-navy" />
           {legendRegion}
         </span>
       </figcaption>

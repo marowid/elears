@@ -13,7 +13,7 @@ export default function CtaStrip() {
           <h2 className="font-serif text-2xl lg:text-3xl">{t('home.footerCtaTitle')}</h2>
           <p className="mt-3 max-w-xl text-sm text-ivory-dim">{t('home.footerCtaSub')}</p>
         </div>
-        <Button href={`/${locale}/contact`} variant="invert">
+        <Button href={`/${locale}/contact`} variant="solid">
           {t('cta.discussMandate')}
         </Button>
       </Container>

@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "ELEARS",
-    "shortTagline": "Intelligence from Europe's eastern frontier.",
+    "shortTagline": "Intelligence from Europe's Eastern Frontier.",
     "description": "EU-sovereign, AI-native private intelligence. Wrocław, Poland.",
     "wordmark": "ELEARS"
   },
@@ -38,39 +38,39 @@
       "establishedValue": "2026"
     },
     "pillarsEyebrow": "01 / What we do",
-    "pillarsTitle": "Six service lines, one operating standard.",
+    "pillarsTitle": "Six Service Lines, One Operating Standard.",
     "whyEyebrow": "02 / Why ELEARS",
-    "whyTitle": "Built for the questions Western firms cannot answer alone.",
+    "whyTitle": "Built for the Questions Western Firms Cannot Answer Alone.",
     "insightsEyebrow": "03 / Selected insights",
-    "insightsTitle": "Recent analysis from the firm.",
-    "footerCtaTitle": "Have a mandate in mind?",
+    "insightsTitle": "Recent Analysis from the Firm.",
+    "footerCtaTitle": "Have a Mandate in Mind?",
     "footerCtaSub": "We respond to qualified enquiries within one business day."
   },
   "why": {
     "sovereign": {
-      "title": "EU-sovereign by design",
+      "title": "EU-Sovereign by Design",
       "body": "Data, infrastructure, and analysts inside the European Union."
     },
     "native": {
-      "title": "CEE-native, multilingual",
+      "title": "CEE-Native, Multilingual",
       "body": "Polish, Russian, Ukrainian, German and English source coverage."
     },
     "ai": {
-      "title": "AI-first delivery",
+      "title": "AI-First Delivery",
       "body": "An in-house platform that compresses cycle time, with humans in the loop."
     },
     "independent": {
-      "title": "Independent, ethically governed",
+      "title": "Independent, Ethically Governed",
       "body": "No mandates against journalists, activists, or whistleblowers."
     }
   },
   "services": {
     "indexEyebrow": "Services",
-    "indexTitle": "What we do.",
+    "indexTitle": "What We Do.",
     "indexLead": "Six service lines, scoped tightly and delivered by senior practitioners. Pricing on request — fixed-fee where the brief allows.",
     "pricingNote": "Pricing on request — fixed-fee where the brief allows.",
-    "typicalEngagements": "Typical engagements",
-    "howWeWork": "How we work",
+    "typicalEngagements": "Typical Engagements",
+    "howWeWork": "How We Work",
     "deliverables": "Deliverables",
     "stepScoping": "Scoping",
     "stepDelivery": "Delivery",
@@ -203,16 +203,16 @@
   },
   "about": {
     "eyebrow": "About",
-    "title": "Who we are.",
-    "whoTitle": "An EU-sovereign private intelligence firm.",
+    "title": "Who We Are.",
+    "whoTitle": "An EU-Sovereign Private Intelligence Firm.",
     "whoBody1": "ELEARS is a Wrocław-headquartered private intelligence firm. We combine an AI-native platform with a senior services bench drawn from former intelligence, prosecutorial, diplomatic, and investigative-journalism backgrounds. Our analysts work in Polish, Russian, Ukrainian, German and English.",
     "whoBody2": "We serve three audiences: NATO and EU defence buyers; global law firms and multinationals operating in the region; and Polish and CEE enterprises with cross-border exposure. We are independent of any client, government, or vendor.",
-    "heritageTitle": "On the name.",
+    "heritageTitle": "On the Name.",
     "heritageCaption": "Elear banner",
     "heritageBody": "ELEARS renders the Polish chorągiew elearska — the period name for the Lisowczycy, the elite 17th-century Polish-Lithuanian light cavalry famed for cross-border reconnaissance, autonomy, and intelligence-gathering for the Crown. They were Polish-led and allied-deployed. The continuity is not aesthetic; it is operational.",
     "leadershipTitle": "Leadership",
     "leadershipNote": "Leadership names and biographies are confirmed at the point of mandate.",
-    "ethicsTitle": "Ethics & governance",
+    "ethicsTitle": "Ethics & Governance",
     "ethicsBullets": [
       "Independent. We do not accept contingent fees on outcomes that create legal exposure.",
       "We do not accept mandates targeting journalists, activists, or whistleblowers.",
@@ -220,7 +220,7 @@
       "Conflicts-of-interest protocol applied at intake and throughout the engagement.",
       "Analyst-in-the-loop on all AI-generated outputs; no unsupervised model output leaves the firm."
     ],
-    "registrationsTitle": "Memberships & registrations",
+    "registrationsTitle": "Memberships & Registrations",
     "registrations": [
       "Security clearance — obtained",
       "ISO/IEC 27001 — in progress",
@@ -251,7 +251,7 @@
   },
   "insights": {
     "eyebrow": "Insights",
-    "title": "Analysis from the firm.",
+    "title": "Analysis from the Firm.",
     "lead": "Selected commentary on geopolitics, cyber, and investigations. We publish sparingly.",
     "readingTime": "{minutes} min read",
     "more": "More from ELEARS",
@@ -262,7 +262,7 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Get in touch.",
+    "title": "Get in Touch.",
     "lead": "We respond to qualified enquiries within one business day.",
     "general": "General",
     "press": "Press",
@@ -273,7 +273,7 @@
     "mapPin": "WROCŁAW · HQ",
     "mapLegendHome": "Poland",
     "mapLegendRegion": "Central & Eastern Europe",
-    "secureTitle": "Secure introductions",
+    "secureTitle": "Secure Introductions",
     "secureBody": "We accept encrypted introductions over Signal and PGP. Fingerprints below; please verify out-of-band before sharing sensitive material.",
     "signal": "Signal",
     "pgp": "PGP fingerprint",
@@ -284,17 +284,17 @@
     "draftBanner": "DRAFT — review by Polish-qualified counsel before launch.",
     "privacy": {
       "eyebrow": "Legal",
-      "title": "Privacy policy",
+      "title": "Privacy Policy",
       "intro": "This page describes how ELEARS processes personal data collected through this website."
     },
     "terms": {
       "eyebrow": "Legal",
-      "title": "Terms of use",
+      "title": "Terms of Use",
       "intro": "This website is provided for informational purposes only. The terms below govern its use."
     },
     "cookies": {
       "eyebrow": "Legal",
-      "title": "Cookie policy",
+      "title": "Cookie Policy",
       "intro": "This website does not use tracking cookies. Below is an exhaustive description of what is stored on your device."
     }
   },
@@ -305,7 +305,8 @@
     "legalHeading": "Legal",
     "careers": "Careers",
     "rights": "All rights reserved.",
-    "company": "ELEARS sp. z o.o."
+    "company": "ELEARS sp. z o.o.",
+    "location": "Wrocław · Poland"
   },
   "cookieBanner": {
     "label": "Cookie notice",
@@ -313,7 +314,7 @@
     "ack": "Acknowledge"
   },
   "notFound": {
-    "title": "Page not found.",
+    "title": "Page Not Found.",
     "body": "The page you requested does not exist.",
     "home": "Return home"
   }

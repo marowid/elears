@@ -4,7 +4,7 @@ import Container from '@/components/ui/Container';
 import PageHeader from '@/components/sections/PageHeader';
 import OfficeMap from '@/components/sections/OfficeMap';
 import { FEATURES } from '@/lib/features';
-import { languageAlternates, type  Locale } from '@/i18n';
+import { languageAlternates, type Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -98,12 +98,12 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             )}
           </div>
 
-          <aside className="lg:col-span-5">
+          <div className="lg:col-span-5">
             <div className="brackets border border-rule/40 p-6">
               <p className="eyebrow text-graphite-soft">{'// '}{t('contact.responseTitle')}</p>
               <p className="mt-3 text-graphite">{t('contact.responseBody')}</p>
             </div>
-          </aside>
+          </div>
         </Container>
       </section>
     </>

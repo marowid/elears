@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import LegalShell from '@/components/sections/LegalShell';
-import { languageAlternates, type  Locale } from '@/i18n';
+import { languageAlternates, type Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
@@ -26,7 +26,7 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
 
   return (
     <LegalShell eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')}>
-      <h2>{isPL ? 'Administrator danych' : 'Data controller'}</h2>
+      <h2>{isPL ? 'Administrator danych' : 'Data Controller'}</h2>
       {/* TODO:registrations — replace "registration details — TBD" with KRS / NIP / REGON before launch */}
       {/* TODO:contact-detail — confirm controller contact email with founders before launch */}
       <p>
@@ -36,7 +36,7 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
         <a href="mailto:contact@elears.com">contact@elears.com</a>.
       </p>
 
-      <h2>{isPL ? 'Jakie dane zbieramy' : 'What we collect'}</h2>
+      <h2>{isPL ? 'Jakie dane zbieramy' : 'What We Collect'}</h2>
       <p>
         {isPL
           ? 'Serwis korzysta z Plausible Analytics — bez plików cookie i bez identyfikatorów osobowych. Zbieramy: adres odwiedzanej strony, stronę odsyłającą (referer), ogólny typ urządzenia oraz kraj ustalony na podstawie adresu IP. Adres IP nie jest przechowywany.'
@@ -48,7 +48,7 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
           : 'Correspondence sent via mailto: is stored in the firm’s mail systems.'}
       </p>
 
-      <h2>{isPL ? 'Podstawa prawna' : 'Legal basis'}</h2>
+      <h2>{isPL ? 'Podstawa prawna' : 'Legal Basis'}</h2>
       <ul>
         <li>
           {isPL
@@ -69,7 +69,7 @@ export default async function PrivacyPage({ params: { locale } }: { params: { lo
           : 'Analytics — 24 months, in aggregate form. Correspondence — for the time necessary to handle the matter or comply with legal obligations.'}
       </p>
 
-      <h2>{isPL ? 'Prawa osób, których dane dotyczą' : 'Your rights'}</h2>
+      <h2>{isPL ? 'Prawa osób, których dane dotyczą' : 'Your Rights'}</h2>
       <p>
         {isPL
           ? 'Przysługują Państwu prawa określone w art. 15–22 RODO: dostęp do danych, ich sprostowanie, usunięcie, ograniczenie przetwarzania, przenoszenie oraz sprzeciw. Wnioski prosimy kierować na adres contact@elears.com. Przysługuje Państwu również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.'

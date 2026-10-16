@@ -7,7 +7,7 @@ import CtaStrip from '@/components/sections/CtaStrip';
 import { notFound } from 'next/navigation';
 import { getAllInsights, formatInsightDate } from '@/lib/insights';
 import { FEATURES } from '@/lib/features';
-import { languageAlternates, type  Locale } from '@/i18n';
+import { languageAlternates, type Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }

@@ -26,23 +26,26 @@ Do **not** commit deploy tokens. Configure secrets in the host's dashboard.
 
 ## Post-deploy smoke test
 
+The site is English-only while `FEATURES.polish` is off (see README → Feature switches).
+
 ```bash
-curl -I https://elears.com/                    # 307 → /pl
-curl -I https://elears.com/pl                  # 200
+curl -I https://elears.com/                    # 307 → /en
 curl -I https://elears.com/en                  # 200
-curl  https://elears.com/sitemap.xml | head    # PL + EN URLs
+curl -I https://elears.com/pl                  # 307 → /en (Polish switched off)
+curl  https://elears.com/sitemap.xml | head    # EN URLs only
 curl  https://elears.com/robots.txt
-curl  https://elears.com/pl/insights/rss.xml | head
 ```
 
 Then run Lighthouse (mobile) on:
-- `/pl`, `/en`
-- `/pl/services`, `/en/services`
-- `/pl/services/integrity-due-diligence`
-- `/pl/contact`, `/en/contact`
-- `/pl/insights/<one-post>`, `/en/insights/<one-post>`
+- `/en`
+- `/en/services`
+- `/en/services/integrity-due-diligence`
+- `/en/about`
+- `/en/contact`
 
 Each must score ≥ 95 on Performance, Accessibility, Best Practices, and SEO.
+
+When Polish is enabled, also check that `/` redirects to `/pl`, that `/pl` returns 200, and that the sitemap lists both locales; repeat the Lighthouse runs for the `/pl/...` pages. When Insights is enabled, add `/en/insights/rss.xml` and one post page.
 
 ## Rollback
 

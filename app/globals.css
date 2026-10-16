@@ -38,12 +38,12 @@ body {
   background-size: var(--grid-size, 32px) var(--grid-size, 32px);
 }
 
-/* Hero backdrop — tactical-map texture over green and blue field washes. */
+/* Hero backdrop — tactical-map texture over blue field washes. */
 .topo-bg {
   position: relative;
   background-color: theme('colors.ink');
   background-image:
-    radial-gradient(ellipse 1100px 420px at 18% 8%, theme('colors.forest / 70%'), transparent 65%),
+    radial-gradient(ellipse 1100px 420px at 18% 8%, theme('colors.navy / 70%'), transparent 65%),
     radial-gradient(ellipse 900px 360px at 86% 78%, theme('colors.surface / 90%'), transparent 65%),
     repeating-linear-gradient(
       90deg,
