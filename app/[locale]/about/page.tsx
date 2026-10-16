@@ -7,7 +7,7 @@ import CtaStrip from '@/components/sections/CtaStrip';
 import RedactedPortrait from '@/components/ui/RedactedPortrait';
 import { LEADERSHIP, type LeadershipKey } from '@/lib/leadership';
 import logo from '@/public/logo.svg';
-import { languageAlternates, type  Locale } from '@/i18n';
+import { languageAlternates, type Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }

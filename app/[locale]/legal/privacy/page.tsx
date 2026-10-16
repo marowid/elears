@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import LegalShell from '@/components/sections/LegalShell';
-import { languageAlternates, type  Locale } from '@/i18n';
+import { languageAlternates, type Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }

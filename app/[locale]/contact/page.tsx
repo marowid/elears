@@ -4,7 +4,7 @@ import Container from '@/components/ui/Container';
 import PageHeader from '@/components/sections/PageHeader';
 import OfficeMap from '@/components/sections/OfficeMap';
 import { FEATURES } from '@/lib/features';
-import { languageAlternates, type  Locale } from '@/i18n';
+import { languageAlternates, type Locale } from '@/i18n';
 
 export async function generateMetadata({
   params: { locale }
