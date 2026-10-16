@@ -14,7 +14,7 @@ export const colors = {
   ivory: '#F5F7FA' /* primary light text / inverse-button bg */,
   'ivory-dim': '#B8BDCC' /* secondary light text */,
   graphite: '#C9CDD8' /* body paragraph text on dark */,
-  'graphite-soft': '#7C8194' /* muted text, labels, captions */,
+  'graphite-soft': '#83889C' /* muted text, labels, captions (AA on surface) */,
   rule: '#22384C' /* hairline divider — lifted strategic blue */
 } as const;
 

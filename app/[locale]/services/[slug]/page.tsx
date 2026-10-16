@@ -112,7 +112,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
             </div>
           </div>
 
-          <aside className="lg:col-span-4">
+          <div className="lg:col-span-4">
             <div className="brackets sticky top-24 border border-rule/40 p-6">
               <p className="eyebrow text-graphite-soft">{'// '}{t('services.brief.title')}</p>
               <dl className="mt-4 space-y-3 font-mono text-xs uppercase tracking-widish text-graphite-soft">
@@ -155,7 +155,7 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
                 ))}
               </ul>
             </div>
-          </aside>
+          </div>
         </Container>
       </section>
 

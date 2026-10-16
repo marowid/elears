@@ -98,12 +98,12 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             )}
           </div>
 
-          <aside className="lg:col-span-5">
+          <div className="lg:col-span-5">
             <div className="brackets border border-rule/40 p-6">
               <p className="eyebrow text-graphite-soft">{'// '}{t('contact.responseTitle')}</p>
               <p className="mt-3 text-graphite">{t('contact.responseBody')}</p>
             </div>
-          </aside>
+          </div>
         </Container>
       </section>
     </>

@@ -42,7 +42,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
               <p>{t('about.whoBody2')}</p>
             </div>
           </div>
-          <aside className="lg:col-span-4">
+          <div className="lg:col-span-4">
             <div className="brackets border border-rule/40 p-6 font-mono text-xs uppercase tracking-widish text-graphite-soft">
               <p className="eyebrow text-graphite-soft">{'// '}{t('home.coordinates.hqLabel')}</p>
               <p className="mt-3 text-ivory normal-case tracking-normal font-sans text-sm">
@@ -52,7 +52,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 {t('home.coordinates.gpsValue')}
               </p>
             </div>
-          </aside>
+          </div>
         </Container>
       </section>
 
