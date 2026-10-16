@@ -3,7 +3,7 @@ import { colors } from '@/lib/colors';
 import { locales } from '@/i18n';
 
 const HOME_LABEL = { pl: 'Strona główna', en: 'Home' } as const;
-const TITLE = { pl: 'Nie znaleziono strony.', en: 'Page not found.' } as const;
+const TITLE = { pl: 'Nie znaleziono strony.', en: 'Page Not Found.' } as const;
 
 export default function RootNotFound() {
   return (

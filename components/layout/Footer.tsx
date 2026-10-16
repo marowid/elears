@@ -97,7 +97,7 @@ export default function Footer() {
       <div className="border-t border-surface">
         <Container className="flex flex-col items-start justify-between gap-3 py-6 text-xs text-graphite-soft sm:flex-row sm:items-center">
           <p className="font-mono uppercase tracking-widish">
-            © {year} {t('footer.company')} · Wrocław · Polska
+            © {year} {t('footer.company')} · {t('footer.location')}
           </p>
           <p className="font-mono uppercase tracking-widish">{t('footer.rights')}</p>
         </Container>
