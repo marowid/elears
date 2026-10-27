@@ -40,7 +40,7 @@ Do **not** commit deploy tokens. Configure secrets in the host's dashboard.
 ```bash
 curl -I https://elears.com/                    # 307 → /en
 curl -I https://elears.com/en                  # 200
-curl -I https://elears.com/pl                  # 200 (Polish enabled; English is default)
+curl -I https://elears.com/pl                  # 308 → /en (Polish disabled via FEATURES.polish)
 curl  https://elears.com/sitemap.xml | head    # EN and PL URLs
 curl  https://elears.com/robots.txt
 ```

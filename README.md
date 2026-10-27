@@ -2,7 +2,7 @@
 
 Marketing site for **ELEARS** — an EU-sovereign, AI-native private intelligence firm headquartered in Wrocław, Poland.
 
-The site is served in **English (primary) and Polish**. `/` redirects to `/en`; the header switcher leads to the same page under `/pl`. The Polish copy is maintained in `docs/polish-copy.md` and synced into `messages/pl.json` with `npm run sync:pl` (see [Polish copy](#polish-copy)).
+The site is currently served in **English only** (`FEATURES.polish` is off in `lib/features.ts`; `/pl/*` redirects to `/en/*` and the language switcher is hidden). Turning the flag on restores the Polish locale. The Polish copy is maintained in `docs/polish-copy.md` and synced into `messages/pl.json` with `npm run sync:pl` (see [Polish copy](#polish-copy)).
 
 This is a brochure + research-publishing site, not a web app. Built with Next.js 14 App Router, React Server Components, Tailwind CSS, MDX content, and `next-intl` for localisation.
 
@@ -16,7 +16,7 @@ npm install         # or: pnpm install
 npm run dev         # http://localhost:3000 → /en
 ```
 
-The middleware redirects `/` to `/en`. Browser-language detection is off on purpose: every visitor lands on English and chooses Polish from the header; next-intl remembers the choice in the `NEXT_LOCALE` cookie.
+The middleware redirects `/` to `/en`. Browser-language detection is off on purpose: every visitor lands on English and, when Polish is enabled, chooses it from the header; next-intl remembers the choice in the `NEXT_LOCALE` cookie.
 
 ## Available scripts
 
