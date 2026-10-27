@@ -14,15 +14,15 @@ export default function LegalShell({ eyebrow, title, intro, children }: Props) {
   return (
     <>
       <PageHeader eyebrow={eyebrow} title={title} lead={intro} />
-      <section className="bg-ink">
+      <section>
         <Container className="py-12 lg:py-16">
           <div
             role="status"
-            className="mb-10 border border-accent bg-navy/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
+            className="eyebrow mb-10 max-w-prose border-l-2 border-accent bg-paper-2 px-4 py-3 text-accent"
           >
-            ⚠ {t('draftBanner')}
+            {t('draftBanner')}
           </div>
-          <article className="prose prose-elears prose-sm max-w-prose lg:prose-base">
+          <article className="prose-elears prose prose-sm max-w-prose lg:prose-base">
             {children}
           </article>
         </Container>

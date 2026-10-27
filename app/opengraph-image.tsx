@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { colors, rgba } from '@/lib/colors';
+import { colors } from '@/lib/colors';
 
 export const runtime = 'edge';
 export const alt = 'ELEARS — EU-sovereign private intelligence';
@@ -8,79 +8,61 @@ export const contentType = 'image/png';
 
 export default function Image() {
   return new ImageResponse(
-    (
-      <div
-        style={{
-          height: '100%',
-          width: '100%',
-          background: colors.ink,
-          color: colors.ivory,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          padding: '64px',
-          backgroundImage: [
-            `radial-gradient(ellipse 900px 360px at 18% 8%, ${rgba('accent', 0.18)}, transparent 65%)`,
-            `radial-gradient(ellipse 800px 320px at 86% 78%, ${rgba('signal', 0.18)}, transparent 65%)`,
-            `linear-gradient(135deg, ${rgba('ivory', 0.04)} 0 1px, transparent 1px 24px)`,
-            `linear-gradient(45deg, ${rgba('ivory', 0.03)} 0 1px, transparent 1px 32px)`
-          ].join(', ')
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 18, fontSize: 28 }}>
-          <span style={{ letterSpacing: 8, fontWeight: 700 }}>ELEARS</span>
-          <span style={{ color: colors.accent }}>/</span>
-          <span style={{ letterSpacing: 6, opacity: 0.75, fontSize: 18, color: colors.signal }}>
-            LISOWCZYCY
-          </span>
-        </div>
+    <div
+      style={{
+        height: '100%',
+        width: '100%',
+        background: colors.paper,
+        color: colors.ink,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        padding: '64px 72px',
+        fontFamily: 'sans-serif'
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 24 }}>
+        <div style={{ width: 36, height: 36, background: colors.ink }} />
+        <span style={{ letterSpacing: 4, fontWeight: 500 }}>ELEARS</span>
+        <span style={{ color: colors.mute }}>/</span>
+        <span style={{ color: colors.mute }}>Lisowczycy</span>
+      </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-          <p
-            style={{
-              fontSize: 16,
-              letterSpacing: 4,
-              textTransform: 'uppercase',
-              color: colors.signal,
-              opacity: 0.85,
-              margin: 0,
-              fontFamily: 'monospace'
-            }}
-          >
-            ▍ Wrocław · CEE · NATO
-          </p>
-          <p
-            style={{
-              fontSize: 64,
-              lineHeight: 1.1,
-              margin: 0,
-              fontFamily: 'sans-serif',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: '0.02em',
-              textShadow: `2px 0 0 ${rgba('accent', 0.5)}, -2px 0 0 ${rgba('signal', 0.5)}`
-            }}
-          >
-            Intelligence from Europe&apos;s eastern frontier.
-          </p>
-        </div>
-
-        <div
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+        <p
           style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            fontSize: 14,
-            color: colors['ivory-dim'],
-            fontFamily: 'monospace',
-            letterSpacing: 2,
-            textTransform: 'uppercase'
+            fontSize: 16,
+            letterSpacing: 3,
+            textTransform: 'uppercase',
+            color: colors.mute,
+            margin: 0,
+            fontFamily: 'monospace'
           }}
         >
-          <span>elears.com</span>
-          <span>EU-sovereign · AI-native</span>
-        </div>
+          Wrocław · CEE · NATO
+        </p>
+        <p style={{ fontSize: 66, lineHeight: 1.08, margin: 0, fontWeight: 400, maxWidth: 980 }}>
+          Intelligence from Europe&apos;s Eastern Frontier.
+        </p>
       </div>
-    ),
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          borderTop: `1px solid ${colors.ink}`,
+          paddingTop: 20,
+          fontSize: 16,
+          color: colors.mute,
+          fontFamily: 'monospace',
+          letterSpacing: 2,
+          textTransform: 'uppercase'
+        }}
+      >
+        <span>elears.com</span>
+        <span>EU-sovereign · AI-native</span>
+      </div>
+    </div>,
     size
   );
 }

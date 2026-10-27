@@ -23,7 +23,11 @@ export async function generateStaticParams() {
   return all.flat();
 }
 
-export async function generateMetadata({ params: { locale, slug } }: { params: Params }): Promise<Metadata> {
+export async function generateMetadata({
+  params: { locale, slug }
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const post = await getInsight(locale, slug);
   if (!post) return {};
   return {
@@ -69,19 +73,21 @@ export default async function InsightPostPage({ params: { locale, slug } }: { pa
 
       <PageHeader eyebrow={`${t('insights.eyebrow')} · ${post.tag}`} title={post.title} />
 
-      <section className="bg-ink">
+      <section>
         <Container className="py-10 lg:py-16">
           {post.draft ? (
             <div
               role="status"
-              className="mb-10 border border-accent bg-navy/40 p-4 font-mono text-xs uppercase tracking-widish text-accent"
+              className="eyebrow mb-10 max-w-prose border-l-2 border-accent bg-paper-2 px-4 py-3 text-accent"
             >
-              ⚠ {t('insights.draftBanner')}
+              {t('insights.draftBanner')}
             </div>
           ) : null}
 
-          <header className="mb-10 flex flex-wrap items-baseline gap-4 border-b border-rule/30 pb-6 font-mono text-xs uppercase tracking-widish text-graphite-soft">
-            <span>{t('insights.publishedOn')}: {formatInsightDate(post.date, locale)}</span>
+          <header className="eyebrow mb-10 flex max-w-prose flex-wrap items-baseline gap-4 border-b border-line pb-6 text-mute">
+            <span>
+              {t('insights.publishedOn')}: {formatInsightDate(post.date, locale)}
+            </span>
             <span aria-hidden="true">·</span>
             <span>{t('insights.readingTime', { minutes: post.readingMinutes })}</span>
             {post.author ? (
@@ -92,28 +98,28 @@ export default async function InsightPostPage({ params: { locale, slug } }: { pa
             ) : null}
           </header>
 
-          <article className="prose prose-elears prose-sm max-w-prose lg:prose-lg">
+          <article className="prose-elears prose prose-sm max-w-prose lg:prose-lg">
             <MDXRemote source={post.body} />
           </article>
         </Container>
       </section>
 
       {more.length > 0 ? (
-        <section className="border-t border-rule/30 bg-surface/60">
+        <section className="border-t border-line">
           <Container className="py-16">
-            <h2 className="font-serif text-2xl text-ivory">{t('insights.more')}</h2>
-            <ul className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-3">
+            <h2 className="text-display-2 font-normal">{t('insights.more')}</h2>
+            <ul className="mt-8 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-3">
               {more.map((m) => (
-                <li key={m.slug} className="bg-ink">
+                <li key={m.slug} className="border-t border-ink">
                   <Link
                     href={`/${locale}/insights/${m.slug}`}
-                    className="flex h-full flex-col gap-3 p-6 hover:bg-surface/80"
+                    className="group flex h-full flex-col gap-3 py-5"
                   >
                     <span className="eyebrow text-accent">{m.tag}</span>
-                    <h3 className="font-serif text-lg text-ivory">{m.title}</h3>
-                    <span className="font-mono text-xs uppercase tracking-widish text-graphite-soft">
-                      {formatInsightDate(m.date, locale)}
-                    </span>
+                    <h3 className="text-lg font-medium leading-snug group-hover:text-signal">
+                      {m.title}
+                    </h3>
+                    <span className="eyebrow text-mute">{formatInsightDate(m.date, locale)}</span>
                   </Link>
                 </li>
               ))}

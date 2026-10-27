@@ -3,68 +3,47 @@ import typography from '@tailwindcss/typography';
 import { colors } from './lib/colors';
 
 const config: Config = {
-  content: [
-    './app/**/*.{ts,tsx,mdx}',
-    './components/**/*.{ts,tsx}',
-    './content/**/*.{md,mdx}'
-  ],
+  content: ['./app/**/*.{ts,tsx,mdx}', './components/**/*.{ts,tsx}', './content/**/*.{md,mdx}'],
   theme: {
     extend: {
       colors,
       fontFamily: {
-        serif: [
-          'Source Serif 4',
-          'Spectral',
-          'Iowan Old Style',
-          'Cambria',
-          'Georgia',
-          'serif'
-        ],
         sans: [
-          'Inter',
-          'IBM Plex Sans',
+          'var(--font-sans)',
+          'system-ui',
           '-apple-system',
-          'BlinkMacSystemFont',
           'Segoe UI',
           'Helvetica Neue',
           'Arial',
           'sans-serif'
         ],
         mono: [
-          'JetBrains Mono',
+          'var(--font-mono)',
           'IBM Plex Mono',
           'SFMono-Regular',
           'Menlo',
           'Consolas',
           'monospace'
-        ],
-        display: [
-          'Space Grotesk',
-          'Orbitron',
-          'Inter',
-          'sans-serif'
         ]
+      },
+      fontSize: {
+        /* Display scale — regular weight, tight leading, like reference docs. */
+        'display-1': ['2.75rem', { lineHeight: '1.08', letterSpacing: '-0.01em' }],
+        'display-2': ['2.125rem', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        'display-3': ['1.625rem', { lineHeight: '1.2', letterSpacing: '-0.005em' }],
+        lead: ['1.125rem', { lineHeight: '1.55' }]
       },
       maxWidth: {
         prose: '720px',
         page: '1200px'
       },
       letterSpacing: {
+        label: '0.08em',
         widish: '0.08em',
-        wide2: '0.18em',
-        wide3: '0.32em'
+        wide2: '0.14em'
       },
       borderRadius: {
         none: '0px'
-      },
-      keyframes: {
-        scan: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(100vh)' }
-        }
-      },
-      animation: {
-        scan: 'scan 7s linear infinite'
       }
     }
   },

@@ -1,33 +1,38 @@
 import Image from 'next/image';
 import logo from '@/public/logo.svg';
 
-type Props = { size?: 'sm' | 'md' | 'lg' };
+type Props = { size?: 'sm' | 'md'; subtitle?: boolean; tone?: 'ink' | 'on-navy' };
 
-const SIZES: Record<NonNullable<Props['size']>, { box: string; pixel: number }> = {
-  sm: { box: 'h-8 w-8', pixel: 64 },
-  md: { box: 'h-10 w-10', pixel: 80 },
-  lg: { box: 'h-16 w-16', pixel: 128 }
-};
-
-export default function Wordmark({ size = 'md' }: Props) {
-  const dims = SIZES[size];
+/* Emblem tile (the logo keeps its own black field) + wordmark + heritage name. */
+export default function Wordmark({ size = 'md', subtitle = true, tone = 'ink' }: Props) {
+  const box = size === 'sm' ? 'h-7 w-7' : 'h-9 w-9';
+  const text = tone === 'on-navy' ? 'text-on-navy' : 'text-ink';
+  const sub = tone === 'on-navy' ? 'text-on-navy-mute' : 'text-mute';
   return (
     <span className="flex items-center gap-3">
-      <span className={`${dims.box} relative shrink-0`}>
+      <span className={`${box} relative shrink-0 overflow-hidden bg-ink`}>
+        {/* Zoom on the eagle; the full emblem is shown on the About page. */}
         <Image
           src={logo}
           alt=""
           fill
-          sizes="64px"
+          sizes="72px"
           priority
-          className="object-contain"
+          className="origin-top scale-[1.55] object-cover object-top"
         />
       </span>
-      <span className="flex flex-col leading-none">
-        <span className="font-display font-bold tracking-wide2 text-ivory text-base sm:text-lg">
+      <span className="flex items-baseline gap-2 leading-none">
+        <span className={`font-sans text-[17px] font-medium tracking-[0.12em] ${text}`}>
           ELEARS
         </span>
-        <span className="eyebrow mt-1 text-signal/80">Lisowczycy</span>
+        {subtitle && (
+          <>
+            <span aria-hidden="true" className={`text-sm ${sub}`}>
+              /
+            </span>
+            <span className={`font-sans text-sm ${sub}`}>Lisowczycy</span>
+          </>
+        )}
       </span>
     </span>
   );

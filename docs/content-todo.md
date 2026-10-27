@@ -6,7 +6,7 @@ This file is the single, grep-able punch list of every placeholder, draft, or "c
 
 - [ ] Replace all `contact@`, `press@`, `careers@` email placeholders.
 - [ ] Replace Wrocław office address placeholder with the real street address.
-- [ ] Secure-contact block is hidden (`FEATURES.secureContact = false`). Add the real Signal username and PGP fingerprint before re-enabling.
+- [ ] Secure-contact block is shown with placeholders (`FEATURES.secureContact = true`). Replace the Signal username and PGP fingerprint (`TODO:secure-contact`) before launch.
 - [ ] Replace KRS / NIP / REGON / certification placeholders on About page.
 - [ ] Leadership cards show an anonymous redacted portrait (`components/ui/RedactedPortrait.tsx`). To use real portraits, put files in `public/team/` and set `photo` in `lib/leadership.ts` (shown greyscale automatically; `TODO:leadership-photo`).
 - [ ] Have a Polish-qualified lawyer review the three legal pages and remove the DRAFT banners.
@@ -14,7 +14,7 @@ This file is the single, grep-able punch list of every placeholder, draft, or "c
 - [ ] Confirm Plausible domain and add the production `data-domain` value.
 - [ ] Verify `hreflang` tags resolve correctly on every page.
 - [ ] Run final Lighthouse and axe sweeps on the production URL.
-- [ ] Polish is hidden (`FEATURES.polish = false` in `lib/features.ts`); the site is English-only and /pl/* redirects to /en/*. The revised Polish copy is kept in `messages/pl.json` and the legal pages — have a native-speaker editor proofread it before re-enabling.
+- [ ] Polish is live (`FEATURES.polish = true`), English is the default locale. The Polish copy is edited in `docs/polish-copy.md` and synced with `npm run sync:pl` — have a native-speaker editor proofread it (the legal pages carry their own Polish text).
 
 ---
 

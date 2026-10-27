@@ -6,13 +6,17 @@ const intl = createMiddleware({
   locales: [...locales],
   defaultLocale,
   localePrefix: 'always',
-  localeDetection: locales.length > 1
+  // English first for every visitor; the header switcher leads to /pl. The choice is
+  // remembered in the NEXT_LOCALE cookie set by next-intl.
+  localeDetection: false
 });
 
 export default function middleware(request: NextRequest) {
   // Send links to a hidden locale (e.g. /pl/about) to the same page in the default locale.
   const [, first, ...rest] = request.nextUrl.pathname.split('/');
-  const hidden = (allLocales as readonly string[]).includes(first) && !(locales as readonly string[]).includes(first);
+  const hidden =
+    (allLocales as readonly string[]).includes(first) &&
+    !(locales as readonly string[]).includes(first);
   if (hidden) {
     const url = request.nextUrl.clone();
     url.pathname = `/${[defaultLocale, ...rest].join('/')}`.replace(/\/$/, '');

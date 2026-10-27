@@ -39,13 +39,14 @@ export default async function ServicesIndex({
         lead={t('services.indexLead')}
       />
 
-      <section className="bg-ink">
-        <Container className="py-20 lg:py-28">
+      <section>
+        <Container className="py-16 lg:py-24">
           <div className={SERVICE_GRID}>
             {SERVICE_SLUGS.map((slug) => (
               <ServiceCard
                 key={slug}
                 as="h2"
+                slug={slug}
                 href={`/${locale}/services/${slug}`}
                 code={SERVICE_CODES[slug]}
                 title={t(`services.items.${slug}.title`)}
@@ -55,10 +56,7 @@ export default async function ServicesIndex({
             ))}
           </div>
 
-          <p className="mt-10 max-w-xl font-mono text-xs uppercase tracking-widish text-graphite-soft">
-            {'// '}
-            {t('services.pricingNote')}
-          </p>
+          <p className="mt-14 max-w-xl text-[15px] text-mute">{t('services.pricingNote')}</p>
         </Container>
       </section>
 

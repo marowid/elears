@@ -14,30 +14,30 @@ type Props = {
    redaction bar. Same image for everyone; replaced by a real photo once
    `photo` is set in lib/leadership.ts. */
 export default function RedactedPortrait({ label, tag, fileNo }: Props) {
-  const skin = '#4A5566';
-  const skinShade = '#3C4655';
-  const hair = '#1A222D';
-  const suit = '#16202B';
-  const lapel = '#1E2A37';
-  const shirt = '#C9CDD8';
-  const tie = '#0F1720';
+  const skin = '#8E96A3';
+  const skinShade = '#7C8492';
+  const hair = '#3A424D';
+  const suit = '#2C3440';
+  const lapel = '#3A4350';
+  const shirt = '#F4F5F7';
+  const tie = '#1E2124';
 
   return (
     <div
       role="img"
       aria-label={label}
-      className="brackets relative aspect-[4/5] w-32 shrink-0 self-start overflow-hidden border border-rule/40"
+      className="relative aspect-[4/5] w-32 shrink-0 self-start overflow-hidden border border-line"
     >
       <svg viewBox="0 0 80 100" aria-hidden="true" className="block h-full w-full">
         <defs>
           <radialGradient id="rp-studio" cx="0.5" cy="0.38" r="0.75">
-            <stop offset="0" stopColor="#24344A" />
-            <stop offset="0.7" stopColor={colors.surface} />
-            <stop offset="1" stopColor={colors.ink} />
+            <stop offset="0" stopColor="#E9ECF1" />
+            <stop offset="0.7" stopColor={colors.line} />
+            <stop offset="1" stopColor="#B9BEC7" />
           </radialGradient>
           <linearGradient id="rp-key" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stopColor={rgba('ivory', 0.07)} />
-            <stop offset="0.55" stopColor={rgba('ivory', 0)} />
+            <stop offset="0" stopColor={rgba('paper', 0.45)} />
+            <stop offset="0.55" stopColor={rgba('paper', 0)} />
           </linearGradient>
         </defs>
 
@@ -61,7 +61,7 @@ export default function RedactedPortrait({ label, tag, fileNo }: Props) {
           {/* Notched lapels */}
           <path d="M27 74.5 L31.5 72.5 L40 84 L37 92 L32 83 L34.2 80.6 Z" fill={lapel} />
           <path d="M53 74.5 L48.5 72.5 L40 84 L43 92 L48 83 L45.8 80.6 Z" fill={lapel} />
-          <path d="M32 83 L37 92 M48 83 L43 92" stroke={colors.ink} strokeWidth="0.5" fill="none" />
+          <path d="M32 83 L37 92 M48 83 L43 92" stroke="#1E2124" strokeWidth="0.5" fill="none" />
           {/* Breast pocket */}
           <path d="M58 88 H66" stroke={lapel} strokeWidth="0.9" />
 
@@ -83,7 +83,7 @@ export default function RedactedPortrait({ label, tag, fileNo }: Props) {
             />
             <path
               d="M35.5 23.4 C34.6 26 33.2 28.4 31 30.2"
-              stroke={rgba('ivory', 0.08)}
+              stroke={rgba('paper', 0.3)}
               strokeWidth="0.5"
               fill="none"
             />
@@ -93,7 +93,7 @@ export default function RedactedPortrait({ label, tag, fileNo }: Props) {
           <rect width="80" height="100" fill="url(#rp-key)" />
 
           {/* Document-style redaction bar */}
-          <rect x="21" y="40.5" width="38" height="9.5" fill="#05060A" />
+          <rect x="21" y="40.5" width="38" height="9.5" fill={colors.ink} />
           <text
             x="40"
             y="46.8"
@@ -102,7 +102,7 @@ export default function RedactedPortrait({ label, tag, fileNo }: Props) {
             fontSize="3.6"
             fontWeight="500"
             letterSpacing="1.1"
-            fill={colors.ivory}
+            fill={colors.paper}
           >
             {tag}
           </text>
@@ -115,7 +115,7 @@ export default function RedactedPortrait({ label, tag, fileNo }: Props) {
           fontFamily="JetBrains Mono, IBM Plex Mono, monospace"
           fontSize="3.2"
           letterSpacing="0.6"
-          fill={rgba('ivory', 0.55)}
+          fill={colors.mute}
         >
           {fileNo}
         </text>

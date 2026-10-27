@@ -43,17 +43,17 @@ export default async function InsightsIndex({
         lead={t('insights.lead')}
       />
 
-      <section className="bg-ink">
+      <section>
         <Container className="py-12 lg:py-16">
-          <ul className="divide-y divide-rule/30 border-y border-rule/30">
+          <ul className="rule-list">
             {posts.map((post) => (
               <li key={post.slug}>
                 <Link
                   href={`/${locale}/insights/${post.slug}`}
-                  className="grid grid-cols-1 gap-6 py-8 lg:grid-cols-12 lg:items-baseline"
+                  className="group grid grid-cols-1 gap-4 py-7 lg:grid-cols-12 lg:items-baseline"
                 >
                   <div className="flex items-baseline gap-3 lg:col-span-3">
-                    <span className="eyebrow text-graphite-soft">
+                    <span className="eyebrow text-mute">
                       {formatInsightDate(post.date, locale)}
                     </span>
                     <span className="eyebrow text-accent">{post.tag}</span>
@@ -64,11 +64,11 @@ export default async function InsightsIndex({
                         DRAFT
                       </span>
                     ) : null}
-                    <h2 className="inline font-serif text-xl text-ivory hover:text-signal lg:text-2xl">
+                    <h2 className="inline text-display-3 font-normal group-hover:text-signal">
                       {post.title}
                     </h2>
-                    <p className="mt-2 max-w-2xl text-sm text-graphite">{post.excerpt}</p>
-                    <p className="mt-2 text-xs font-mono uppercase tracking-widish text-graphite-soft">
+                    <p className="mt-2 max-w-2xl text-[15px] text-ink-2">{post.excerpt}</p>
+                    <p className="eyebrow mt-3 text-mute">
                       {t('insights.readingTime', { minutes: post.readingMinutes })}
                     </p>
                   </div>

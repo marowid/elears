@@ -6,6 +6,7 @@ import Container from '@/components/ui/Container';
 import Eyebrow from '@/components/ui/Eyebrow';
 import PageHeader from '@/components/sections/PageHeader';
 import Button from '@/components/ui/Button';
+import ServiceArt from '@/components/ui/illustrations/ServiceArt';
 import { SERVICE_SLUGS, SERVICE_CODES, isServiceSlug, type ServiceSlug } from '@/lib/services';
 import { languageAlternates, locales, type Locale } from '@/i18n';
 
@@ -42,122 +43,114 @@ export default async function ServiceDetail({ params: { locale, slug } }: { para
   const ns = `services.items.${slug}` as const;
   const engagements = t.raw(`${ns}.engagements`) as string[];
   const deliverables = t.raw(`${ns}.deliverables`) as string[];
+  const steps = [
+    { label: t('services.stepScoping'), body: t(`${ns}.scoping`) },
+    { label: t('services.stepDelivery'), body: t(`${ns}.delivery`) },
+    { label: t('services.stepHandover'), body: t(`${ns}.handover`) }
+  ] as const;
+
+  const sectionTitle = 'text-display-3 font-normal';
 
   return (
     <>
       <PageHeader
         eyebrow={`${SERVICE_CODES[slug]} · ${t('services.indexEyebrow')}`}
         title={t(`${ns}.title`)}
+        aside={<ServiceArt slug={slug} className="ml-auto max-w-[300px] text-ink" />}
       />
 
-      <section className="bg-ink">
-        <Container className="grid grid-cols-1 gap-12 py-20 lg:grid-cols-12 lg:py-28">
+      <section>
+        <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:gap-16 lg:py-24">
           <div className="lg:col-span-8">
-            <p className="max-w-prose font-serif text-xl leading-relaxed text-graphite">
-              {t(`${ns}.lead`)}
-            </p>
+            <p className="max-w-prose text-lead text-ink">{t(`${ns}.lead`)}</p>
 
-            <div className="mt-12">
-              <Eyebrow as="h2">{t('services.typicalEngagements')}</Eyebrow>
-              <ul className="mt-4 divide-y divide-rule/30 border-y border-rule/30">
-                {engagements.map((line, i) => (
-                  <li key={i} className="flex gap-4 py-4">
-                    <span className="font-mono text-xs uppercase tracking-widish text-graphite-soft">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-graphite">{line}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-12">
-              <Eyebrow as="h2">{t('services.howWeWork')}</Eyebrow>
-              <ol className="mt-4 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-3">
-                {(
-                  [
-                    { label: t('services.stepScoping'), body: t(`${ns}.scoping`) },
-                    { label: t('services.stepDelivery'), body: t(`${ns}.delivery`) },
-                    { label: t('services.stepHandover'), body: t(`${ns}.handover`) }
-                  ] as const
-                ).map((step, i) => (
-                  <li key={i} className="bg-ink p-8">
-                    <p className="eyebrow text-graphite-soft">{String(i + 1).padStart(2, '0')}</p>
-                    <h3 className="mt-6 font-serif text-lg text-ivory">{step.label}</h3>
-                    <p className="mt-3 text-sm text-graphite">{step.body}</p>
+            <div className="mt-14">
+              <h2 className={sectionTitle}>{t('services.typicalEngagements')}</h2>
+              <ol className="rule-list mt-6">
+                {engagements.map((item, i) => (
+                  <li key={i} className="flex gap-6 py-4">
+                    <span className="eyebrow pt-1 text-mute">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="text-[15px] leading-relaxed text-ink-2">{item}</span>
                   </li>
                 ))}
               </ol>
             </div>
 
-            <div className="mt-12">
-              <Eyebrow as="h2">{t('services.deliverables')}</Eyebrow>
-              <ul className="mt-4 space-y-3">
-                {deliverables.map((line, i) => (
-                  <li key={i} className="flex gap-3 text-graphite">
-                    <span aria-hidden="true" className="text-accent">
-                      ▍
+            <div className="mt-14">
+              <h2 className={sectionTitle}>{t('services.howWeWork')}</h2>
+              <ol className="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-3">
+                {steps.map((step, i) => (
+                  <li key={i} className="border-t border-ink pt-5">
+                    <Eyebrow>{String(i + 1).padStart(2, '0')}</Eyebrow>
+                    <h3 className="mt-4 text-lg font-medium">{step.label}</h3>
+                    <p className="mt-2 text-[15px] leading-relaxed text-ink-2">{step.body}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="mt-14">
+              <h2 className={sectionTitle}>{t('services.deliverables')}</h2>
+              <ul className="rule-list mt-6">
+                {deliverables.map((item, i) => (
+                  <li key={i} className="flex items-baseline justify-between gap-6 py-4">
+                    <span className="text-[15px] leading-relaxed text-ink-2">{item}</span>
+                    <span aria-hidden="true" className="text-mute">
+                      →
                     </span>
-                    <span>{line}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-14">
               <Button href={`/${locale}/contact`}>{t('cta.discussMandate')}</Button>
             </div>
           </div>
 
           <div className="lg:col-span-4">
-            <div className="brackets sticky top-24 border border-rule/40 p-6">
-              <p className="eyebrow text-graphite-soft">
-                {'// '}
-                {t('services.brief.title')}
-              </p>
-              <dl className="mt-4 space-y-3 font-mono text-xs uppercase tracking-widish text-graphite-soft">
-                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
-                  <dt>{t('services.brief.code')}</dt>
-                  <dd className="whitespace-nowrap text-ivory">{SERVICE_CODES[slug]}</dd>
-                </div>
-                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
-                  <dt>{t('services.brief.pricing')}</dt>
-                  <dd className="whitespace-nowrap text-right text-ivory">
-                    {t('services.brief.pricingValue')}
-                  </dd>
-                </div>
-                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
-                  <dt>{t('services.brief.delivery')}</dt>
-                  <dd className="whitespace-nowrap text-ivory">
-                    {t('services.brief.deliveryValue')}
-                  </dd>
-                </div>
-                <div className="flex flex-wrap justify-between gap-x-4 gap-y-1">
-                  <dt>{t('home.coordinates.languagesLabel')}</dt>
-                  <dd className="whitespace-nowrap text-ivory">
-                    {t('home.coordinates.languagesValue')}
-                  </dd>
-                </div>
+            <div className="sticky top-24 bg-paper-2 p-6">
+              <Eyebrow>{t('services.brief.title')}</Eyebrow>
+              <dl className="mt-3">
+                {(
+                  [
+                    [t('services.brief.code'), SERVICE_CODES[slug]],
+                    [t('services.brief.pricing'), t('services.brief.pricingValue')],
+                    [t('services.brief.delivery'), t('services.brief.deliveryValue')],
+                    [t('home.coordinates.languagesLabel'), t('home.coordinates.languagesValue')]
+                  ] as const
+                ).map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-line-2 py-2.5 text-sm last:border-b"
+                  >
+                    <dt className="text-mute">{label}</dt>
+                    <dd className="font-mono text-[13px] text-ink">{value}</dd>
+                  </div>
+                ))}
               </dl>
-              <hr className="my-6 border-rule/40" />
-              <p className="eyebrow text-graphite-soft">
-                {'// '}
-                {t('services.brief.others')}
-              </p>
-              <ul className="mt-3 space-y-2 text-sm">
+
+              <Eyebrow className="mt-8">{t('services.brief.others')}</Eyebrow>
+              <ul className="mt-3">
                 {SERVICE_SLUGS.map((s) => (
-                  <li key={s}>
+                  <li key={s} className="border-t border-line-2 last:border-b">
                     {s === slug ? (
-                      <span aria-current="page" className="flex gap-2 text-accent">
-                        <span aria-hidden="true">▍</span>
+                      <span
+                        aria-current="page"
+                        className="flex items-center justify-between py-2.5 text-sm font-medium text-ink"
+                      >
                         {t(`services.items.${s}.title`)}
+                        <span aria-hidden="true" className="eyebrow text-accent">
+                          {SERVICE_CODES[s]}
+                        </span>
                       </span>
                     ) : (
                       <Link
                         href={`/${locale}/services/${s}`}
-                        className="text-ivory hover:text-signal"
+                        className="flex items-center justify-between py-2.5 text-sm text-ink-2 hover:text-signal"
                       >
                         {t(`services.items.${s}.title`)}
+                        <span aria-hidden="true">→</span>
                       </Link>
                     )}
                   </li>

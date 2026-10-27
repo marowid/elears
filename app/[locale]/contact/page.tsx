@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Container from '@/components/ui/Container';
+import Eyebrow from '@/components/ui/Eyebrow';
 import PageHeader from '@/components/sections/PageHeader';
 import OfficeMap from '@/components/sections/OfficeMap';
 import { FEATURES } from '@/lib/features';
@@ -40,20 +41,17 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
         lead={t('contact.lead')}
       />
 
-      <section className="bg-ink">
-        <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
-          <div className="lg:col-span-7">
-            <ul className="divide-y divide-rule/30 border-y border-rule/30">
+      <section>
+        <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:gap-16 lg:py-24">
+          <div className="lg:col-span-5">
+            <ul className="rule-list">
               {channels.map((c) => (
-                <li
-                  key={c.email}
-                  className="flex flex-col gap-2 py-6 sm:flex-row sm:items-baseline sm:justify-between"
-                >
-                  <span className="eyebrow text-graphite-soft">{c.label}</span>
+                <li key={c.email} className="py-5">
+                  <span className="eyebrow text-mute">{c.label}</span>
                   {/* TODO:contact-detail — confirm with founders before launch */}
                   <a
                     href={`mailto:${c.email}`}
-                    className="font-mono text-lg text-ivory hover:text-signal"
+                    className="mt-2 block text-xl text-ink underline-offset-4 hover:text-signal hover:underline"
                   >
                     {c.email}
                   </a>
@@ -61,35 +59,27 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
               ))}
             </ul>
 
-            <div className="mt-12">
-              <h2 className="eyebrow text-graphite-soft">{t('contact.office')}</h2>
-              <p className="mt-3 font-serif text-xl text-ivory">{t('contact.officeBody')}</p>
-              {/* TODO:contact-detail — add the street address once confirmed */}
-              <div className="mt-6">
-                <OfficeMap
-                  label={t('contact.mapLabel')}
-                  pinTitle={t('contact.mapPin')}
-                  coords={t('home.coordinates.gpsValue')}
-                  legendHome={t('contact.mapLegendHome')}
-                  legendRegion={t('contact.mapLegendRegion')}
-                />
-              </div>
+            <div className="mt-10 bg-paper-2 p-6">
+              <Eyebrow as="h2">{t('contact.responseTitle')}</Eyebrow>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink-2">
+                {t('contact.responseBody')}
+              </p>
             </div>
 
             {FEATURES.secureContact && (
-              <div className="mt-12">
-                <h2 className="eyebrow text-graphite-soft">{t('contact.secureTitle')}</h2>
-                <p className="mt-3 max-w-prose text-graphite">{t('contact.secureBody')}</p>
-                <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="border border-rule/40 p-4">
-                    <dt className="eyebrow text-graphite-soft">{t('contact.signal')}</dt>
+              <div className="mt-10">
+                <Eyebrow as="h2">{t('contact.secureTitle')}</Eyebrow>
+                <p className="mt-3 max-w-prose text-[15px] text-ink-2">{t('contact.secureBody')}</p>
+                <dl className="mt-6 grid grid-cols-1 gap-4">
+                  <div className="border border-line p-4">
+                    <dt className="eyebrow text-mute">{t('contact.signal')}</dt>
                     {/* TODO:secure-contact — replace placeholder with real Signal username */}
-                    <dd className="mt-2 font-mono text-sm text-ivory">@elears.signal · TBD</dd>
+                    <dd className="mt-2 font-mono text-sm text-ink">@elears.signal · TBD</dd>
                   </div>
-                  <div className="border border-rule/40 p-4">
-                    <dt className="eyebrow text-graphite-soft">{t('contact.pgp')}</dt>
+                  <div className="border border-line p-4">
+                    <dt className="eyebrow text-mute">{t('contact.pgp')}</dt>
                     {/* TODO:secure-contact — replace placeholder with real PGP fingerprint */}
-                    <dd className="mt-2 break-all font-mono text-sm text-ivory">
+                    <dd className="mt-2 break-words font-mono text-sm text-ink">
                       0000 0000 0000 0000 0000 0000 0000 0000 0000 TBD
                     </dd>
                   </div>
@@ -98,10 +88,20 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             )}
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="brackets border border-rule/40 p-6">
-              <p className="eyebrow text-graphite-soft">{'// '}{t('contact.responseTitle')}</p>
-              <p className="mt-3 text-graphite">{t('contact.responseBody')}</p>
+          <div className="lg:col-span-7">
+            <Eyebrow as="h2">{t('contact.office')}</Eyebrow>
+            <p className="mt-2 text-xl text-ink">{t('contact.officeBody')}</p>
+            {/* TODO:contact-detail — add the street address once confirmed */}
+            <div className="mt-6">
+              <OfficeMap
+                label={t('contact.mapLabel')}
+                pinTitle={t('contact.mapPin')}
+                coords={t('home.coordinates.gpsValue')}
+                legendHome={t('contact.mapLegendHome')}
+                legendRegion={t('contact.mapLegendRegion')}
+                legendOps={t('contact.mapLegendOps')}
+                legendOpsDetail={t('contact.mapLegendOpsDetail')}
+              />
             </div>
           </div>
         </Container>

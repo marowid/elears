@@ -10,3 +10,6 @@ out/
 .idea/
 .vscode/
 coverage/
+
+# TypeScript incremental build info
+tsconfig.tsbuildinfo

@@ -1,17 +1,20 @@
 import type { HTMLAttributes } from 'react';
 
-type Props = HTMLAttributes<HTMLDivElement> & { tone?: 'surface' | 'sunken' };
+type Tone = 'paper' | 'grey' | 'tint' | 'navy';
 
-export default function Card({ tone = 'surface', className = '', children, ...rest }: Props) {
-  const palette =
-    tone === 'sunken'
-      ? 'bg-ink text-ivory border-rule/40'
-      : 'bg-surface text-ivory border-rule/40';
+type Props = HTMLAttributes<HTMLDivElement> & { tone?: Tone };
+
+const TONES: Record<Tone, string> = {
+  paper: 'border border-line bg-paper text-ink',
+  grey: 'bg-paper-2 text-ink',
+  tint: 'bg-tint text-ink',
+  navy: 'bg-navy text-on-navy'
+};
+
+/* Flat panel. No radius, no shadow; tone picks the surface. */
+export default function Card({ tone = 'paper', className = '', children, ...rest }: Props) {
   return (
-    <div
-      className={`brackets relative border ${palette} p-6 sm:p-8 transition-colors duration-150 ${className}`}
-      {...rest}
-    >
+    <div className={`relative ${TONES[tone]} p-6 sm:p-8 ${className}`} {...rest}>
       {children}
     </div>
   );

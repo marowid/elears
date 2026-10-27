@@ -7,7 +7,8 @@ export type Locale = (typeof allLocales)[number];
 
 /** Locales currently served. Polish is switchable via FEATURES.polish. */
 export const locales: readonly Locale[] = FEATURES.polish ? allLocales : ['en'];
-export const defaultLocale: Locale = FEATURES.polish ? 'pl' : 'en';
+/** English is the primary language; Polish is a secondary locale reached via the switcher. */
+export const defaultLocale: Locale = 'en';
 
 /** hreflang map for a locale-less path such as '/about' (or '' for home). */
 export function languageAlternates(path: string): Record<string, string> {
@@ -20,6 +21,7 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as Locale)) notFound();
 
   return {
+    locale,
     messages: (await import(`./messages/${locale}.json`)).default
   };
 });

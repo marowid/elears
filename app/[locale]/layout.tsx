@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Hanken_Grotesk, IBM_Plex_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -6,6 +7,20 @@ import { languageAlternates, locales, type Locale } from '@/i18n';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CookieBanner from '@/components/layout/CookieBanner';
+
+/* Fonts are fetched once at build time by next/font and served from our own
+   origin — no runtime request to a third-party CDN. */
+const sans = Hanken_Grotesk({
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  variable: '--font-sans'
+});
+const mono = IBM_Plex_Mono({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500'],
+  display: 'swap',
+  variable: '--font-mono'
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -63,7 +78,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} className="grid-paper">
+    <html lang={locale} className={`${sans.variable} ${mono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script
@@ -73,16 +88,18 @@ export default async function LocaleLayout({
         {/* Plausible — cookieless, GDPR-friendly */}
         <script defer data-domain={PLAUSIBLE_DOMAIN} src="https://plausible.io/js/script.js" />
       </head>
-      <body>
+      <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <a
             href="#main"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-ink focus:px-3 focus:py-2 focus:text-ivory"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-ink focus:px-3 focus:py-2 focus:text-paper"
           >
             {t('skipToContent')}
           </a>
           <Header />
-          <main id="main">{children}</main>
+          <main id="main" className="flex-1">
+            {children}
+          </main>
           <Footer />
           <CookieBanner />
         </NextIntlClientProvider>

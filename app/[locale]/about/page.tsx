@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Container from '@/components/ui/Container';
+import Eyebrow from '@/components/ui/Eyebrow';
 import PageHeader from '@/components/sections/PageHeader';
 import CtaStrip from '@/components/sections/CtaStrip';
 import RedactedPortrait from '@/components/ui/RedactedPortrait';
@@ -22,84 +23,92 @@ export async function generateMetadata({
   };
 }
 
+const h2 = 'text-display-2 font-normal';
+
 export default async function AboutPage({ params: { locale } }: { params: { locale: Locale } }) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
   const ethics = t.raw('about.ethicsBullets') as string[];
   const registrations = t.raw('about.registrations') as string[];
-  const leadership = t.raw('about.leadership') as Record<LeadershipKey, { role: string; bio: string }>;
+  const leadership = t.raw('about.leadership') as Record<
+    LeadershipKey,
+    { role: string; bio: string }
+  >;
 
   return (
     <>
       <PageHeader eyebrow={t('about.eyebrow')} title={t('about.title')} />
 
-      <section className="bg-ink">
-        <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
+      {/* Who we are */}
+      <section>
+        <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-8">
-            <h2 className="font-serif text-2xl text-ivory lg:text-3xl">{t('about.whoTitle')}</h2>
-            <div className="mt-6 max-w-prose space-y-5 text-graphite">
+            <h2 className={h2}>{t('about.whoTitle')}</h2>
+            <div className="mt-6 max-w-prose space-y-5 text-lead text-ink-2">
               <p>{t('about.whoBody1')}</p>
               <p>{t('about.whoBody2')}</p>
             </div>
           </div>
           <div className="lg:col-span-4">
-            <div className="brackets border border-rule/40 p-6 font-mono text-xs uppercase tracking-widish text-graphite-soft">
-              <p className="eyebrow text-graphite-soft">{'// '}{t('home.coordinates.hqLabel')}</p>
-              <p className="mt-3 text-ivory normal-case tracking-normal font-sans text-sm">
-                {t('contact.officeBody')}
-              </p>
-              <p className="mt-1 text-ivory normal-case tracking-normal font-sans text-sm">
-                {t('home.coordinates.gpsValue')}
-              </p>
-            </div>
+            <dl className="bg-paper-2 p-6">
+              <div className="border-b border-line-2 pb-3">
+                <dt className="eyebrow text-mute">{t('home.coordinates.hqLabel')}</dt>
+                <dd className="mt-2 text-base text-ink">{t('contact.officeBody')}</dd>
+              </div>
+              <div className="pt-3">
+                <dt className="eyebrow text-mute">{t('home.coordinates.gpsLabel')}</dt>
+                <dd className="mt-2 font-mono text-sm text-ink">
+                  {t('home.coordinates.gpsValue')}
+                </dd>
+              </div>
+            </dl>
           </div>
         </Container>
       </section>
 
-      <section className="border-y border-rule/30 bg-surface/60">
-        <Container className="grid grid-cols-1 items-center gap-8 py-12 sm:grid-cols-[auto_1fr] lg:gap-12 lg:py-16">
-          <figure className="w-36 sm:w-44">
-            <div className="brackets relative bg-ink p-4">
-              <div className="relative aspect-[1685/2048] w-full">
+      {/* Heritage */}
+      <section className="border-t border-line">
+        <Container className="py-16 lg:py-24">
+          <div className="grid grid-cols-1 items-center gap-10 bg-tint px-6 py-10 sm:grid-cols-[auto_1fr] sm:px-10 lg:gap-14 lg:py-14">
+            <figure className="w-40 sm:w-48">
+              <div className="relative aspect-[1685/2048] w-full overflow-hidden bg-ink">
                 <Image
                   src={logo}
                   alt="ELEARS — heraldic eagle and Lisowczycy wordmark"
                   fill
-                  sizes="176px"
-                  className="object-contain"
+                  sizes="192px"
+                  className="object-cover"
                 />
               </div>
+              <figcaption className="eyebrow mt-3 text-mute">
+                {t('about.heritageCaption')}
+              </figcaption>
+            </figure>
+            <div>
+              <Eyebrow>Lisowczycy · 1615–1635</Eyebrow>
+              <h2 className={`mt-3 ${h2}`}>{t('about.heritageTitle')}</h2>
+              <p className="mt-5 max-w-prose text-lead text-ink-2">{t('about.heritageBody')}</p>
             </div>
-            <figcaption className="eyebrow mt-3 text-center text-graphite-soft">
-              <span className="text-accent">▍</span> {t('about.heritageCaption')}
-            </figcaption>
-          </figure>
-          <div>
-            <p className="eyebrow text-graphite-soft">Lisowczycy · 1615–1635</p>
-            <h2 className="mt-3 font-serif text-2xl text-ivory lg:text-3xl">
-              {t('about.heritageTitle')}
-            </h2>
-            <p className="mt-4 max-w-prose font-serif text-lg leading-relaxed text-graphite">
-              {t('about.heritageBody')}
-            </p>
           </div>
         </Container>
       </section>
 
-      <section className="bg-ink">
-        <Container className="py-16 lg:py-20">
-          <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
-            {t('about.leadershipTitle')}
-          </h2>
+      {/* Leadership */}
+      <section className="border-t border-line">
+        <Container className="py-16 lg:py-24">
+          <h2 className={h2}>{t('about.leadershipTitle')}</h2>
 
-          <ul className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 md:grid-cols-2">
+          <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2">
             {LEADERSHIP.map((person, i) => {
               const { role, bio } = leadership[person.key];
               return (
-                <li key={person.key} className="flex flex-col gap-6 bg-ink p-8 sm:flex-row">
+                <li
+                  key={person.key}
+                  className="flex flex-col gap-6 border-t border-ink pt-6 sm:flex-row"
+                >
                   {/* TODO:leadership-photo — set `photo` in lib/leadership.ts */}
                   {person.photo ? (
-                    <div className="brackets relative aspect-[4/5] w-32 shrink-0 self-start overflow-hidden border border-rule/40 bg-surface">
+                    <div className="relative aspect-[4/5] w-32 shrink-0 self-start overflow-hidden bg-paper-2">
                       <Image
                         src={person.photo}
                         alt={`${person.name}, ${role}`}
@@ -115,18 +124,18 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                       fileNo={`${t('about.leadership.fileLabel')} ${String(i + 1).padStart(2, '0')}`}
                     />
                   )}
-                  <div className="flex flex-1 flex-col gap-3">
-                    <p className="eyebrow text-accent">{String(i + 1).padStart(2, '0')}</p>
-                    <h3 className="font-serif text-2xl text-ivory">{person.name}</h3>
-                    <p className="font-mono text-xs uppercase tracking-widish text-signal">{role}</p>
-                    {bio && <p className="text-sm text-graphite">{bio}</p>}
-                    <div className="mt-auto border-t border-rule/30 pt-4">
-                      <p className="eyebrow text-graphite-soft">{t('about.leadership.companiesLabel')}</p>
+                  <div className="flex flex-1 flex-col">
+                    <Eyebrow>{String(i + 1).padStart(2, '0')}</Eyebrow>
+                    <h3 className="mt-3 text-display-3 font-normal">{person.name}</h3>
+                    <p className="mt-1 text-[15px] text-ink-2">{role}</p>
+                    {bio && <p className="mt-3 text-[15px] leading-relaxed text-ink-2">{bio}</p>}
+                    <div className="mt-5 border-t border-line pt-4">
+                      <p className="eyebrow text-mute">{t('about.leadership.companiesLabel')}</p>
                       <ul className="mt-3 flex flex-wrap gap-2">
                         {person.companies.map((company) => (
                           <li
                             key={company}
-                            className="border border-rule/40 px-2 py-1 font-mono text-[11px] uppercase tracking-widish text-ivory-dim"
+                            className="border border-line px-2 py-1 text-[13px] text-ink-2"
                           >
                             {company}
                           </li>
@@ -139,39 +148,34 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             })}
           </ul>
 
-          <p className="mt-6 max-w-prose text-sm text-graphite-soft">{t('about.leadershipNote')}</p>
+          <p className="mt-8 max-w-prose text-[15px] text-mute">{t('about.leadershipNote')}</p>
         </Container>
       </section>
 
-      <section className="border-t border-rule/30 bg-ink">
-        <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-12 lg:py-20">
+      {/* Ethics */}
+      <section className="border-t border-line">
+        <Container className="grid grid-cols-1 gap-10 py-16 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-5">
-            <h2 className="font-serif text-2xl text-ivory lg:text-3xl">{t('about.ethicsTitle')}</h2>
+            <h2 className={h2}>{t('about.ethicsTitle')}</h2>
           </div>
-          <ul className="space-y-4 lg:col-span-7">
+          <ol className="rule-list lg:col-span-7">
             {ethics.map((line, i) => (
-              <li key={i} className="flex gap-4 border-b border-rule/30 pb-4 text-graphite">
-                <span aria-hidden="true" className="font-mono text-xs uppercase tracking-widish text-accent">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span>{line}</span>
+              <li key={i} className="flex gap-6 py-4">
+                <span className="eyebrow pt-1 text-mute">{String(i + 1).padStart(2, '0')}</span>
+                <span className="text-[15px] leading-relaxed text-ink-2">{line}</span>
               </li>
             ))}
-          </ul>
+          </ol>
         </Container>
       </section>
 
-      <section className="border-t border-rule/30 bg-surface/60">
-        <Container className="py-16 lg:py-20">
-          <h2 className="font-serif text-2xl text-ivory lg:text-3xl">
-            {t('about.registrationsTitle')}
-          </h2>
-          <ul className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-rule/30 bg-rule/30 sm:grid-cols-3">
+      {/* Registrations */}
+      <section className="border-t border-line">
+        <Container className="py-16 lg:py-24">
+          <h2 className={h2}>{t('about.registrationsTitle')}</h2>
+          <ul className="mt-8 grid grid-cols-1 gap-x-10 gap-y-6 sm:grid-cols-3">
             {registrations.map((line) => (
-              <li
-                key={line}
-                className="bg-ink p-6 font-mono text-xs uppercase tracking-widish text-graphite-soft"
-              >
+              <li key={line} className="border-t border-ink pt-4 text-[15px] text-ink-2">
                 {/* TODO:registrations — replace with real numbers and certifications before launch */}
                 {line}
               </li>

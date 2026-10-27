@@ -14,7 +14,11 @@
     "skipToContent": "Skip to content",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "toggleLanguage": "Switch language"
+    "toggleLanguage": "Switch language",
+    "languageName": {
+      "en": "English",
+      "pl": "Polski"
+    }
   },
   "cta": {
     "ourServices": "Our services",
@@ -37,11 +41,11 @@
       "establishedLabel": "Established",
       "establishedValue": "2026"
     },
-    "pillarsEyebrow": "01 / What we do",
+    "pillarsEyebrow": "What we do",
     "pillarsTitle": "Six Service Lines, One Operating Standard.",
-    "whyEyebrow": "02 / Why ELEARS",
+    "whyEyebrow": "Why ELEARS",
     "whyTitle": "Built for the Questions Western Firms Cannot Answer Alone.",
-    "insightsEyebrow": "03 / Selected insights",
+    "insightsEyebrow": "Selected insights",
     "insightsTitle": "Recent Analysis from the Firm.",
     "footerCtaTitle": "Have a Mandate in Mind?",
     "footerCtaSub": "We respond to qualified enquiries within one business day."
@@ -269,7 +273,7 @@
     "careers": "Careers",
     "office": "Office",
     "officeBody": "Wrocław, Poland",
-    "mapLabel": "Map of Europe highlighting Central and Eastern Europe and Poland, with ELEARS headquarters marked in Wrocław at 51.1079°N 17.0385°E.",
+    "mapLabel": "Map of Europe, the Middle East and North Africa. ELEARS’s area of operations covers Europe, the Middle East and North Africa; Central and Eastern Europe and Poland are highlighted, with the headquarters marked in Wrocław at 51.1079°N 17.0385°E.",
     "mapPin": "WROCŁAW · HQ",
     "mapLegendHome": "Poland",
     "mapLegendRegion": "Central & Eastern Europe",
@@ -278,7 +282,9 @@
     "signal": "Signal",
     "pgp": "PGP fingerprint",
     "responseTitle": "Response time",
-    "responseBody": "Qualified enquiries: one business day. Press: same day, where possible."
+    "responseBody": "Qualified enquiries: one business day. Press: same day, where possible.",
+    "mapLegendOps": "Area of operations",
+    "mapLegendOpsDetail": "Europe · Middle East · North Africa"
   },
   "legal": {
     "draftBanner": "DRAFT — review by Polish-qualified counsel before launch.",

@@ -1,32 +1,35 @@
 import Link from 'next/link';
 import type { ComponentProps } from 'react';
 
-type Variant = 'solid' | 'ghost' | 'invert';
+type Variant = 'solid' | 'ghost' | 'link' | 'invert';
 
 const base =
-  'inline-flex items-center gap-3 px-5 py-3 text-sm font-medium tracking-widish transition-colors duration-150 border';
+  'inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-label transition-colors duration-150';
 
 const variants: Record<Variant, string> = {
-  /* Primary — command-blue fill, lights up to accent on hover */
-  solid:
-    'bg-navy text-ivory border-accent hover:bg-accent hover:text-ink focus-visible:bg-accent focus-visible:text-ink',
-  /* Outline — light on dark, signal outline on hover */
-  ghost:
-    'bg-transparent text-ivory border-ivory/60 hover:bg-signal/10 hover:border-signal hover:text-signal focus-visible:bg-signal/10 focus-visible:border-signal focus-visible:text-signal',
-  /* Inverse — pale fill, becomes signal on hover */
+  /* Primary — ink fill, shifts to navy on hover */
+  solid: 'border border-ink bg-ink px-5 py-3 text-paper hover:border-navy hover:bg-navy',
+  /* Secondary — ink outline, fills on hover */
+  ghost: 'border border-ink bg-transparent px-5 py-3 text-ink hover:bg-ink hover:text-paper',
+  /* Inline — underlined label with arrow, as used in the feature cards */
+  link: 'link-mono text-ink',
+  /* On navy panels — pale outline */
   invert:
-    'bg-ivory text-ink border-ivory hover:bg-signal hover:border-signal focus-visible:bg-signal focus-visible:border-signal'
+    'border border-on-navy/60 bg-transparent px-5 py-3 text-on-navy hover:border-on-navy hover:bg-on-navy hover:text-navy'
 };
 
 type LinkProps = ComponentProps<typeof Link> & { variant?: Variant; children: React.ReactNode };
 
-export default function Button({ variant = 'solid', className = '', children, ...rest }: LinkProps) {
+export default function Button({
+  variant = 'solid',
+  className = '',
+  children,
+  ...rest
+}: LinkProps) {
   return (
     <Link className={`${base} ${variants[variant]} ${className}`} {...rest}>
       <span>{children}</span>
-      <span aria-hidden="true" className="font-mono">
-        →
-      </span>
+      <span aria-hidden="true">→</span>
     </Link>
   );
 }

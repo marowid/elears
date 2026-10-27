@@ -11,8 +11,8 @@ export default function RootNotFound() {
       <body
         style={{
           fontFamily: 'system-ui, sans-serif',
-          background: colors.ink,
-          color: colors.ivory,
+          background: colors.paper,
+          color: colors.ink,
           minHeight: '100vh',
           display: 'grid',
           placeItems: 'center',
@@ -25,13 +25,14 @@ export default function RootNotFound() {
             style={{
               fontFamily: 'monospace',
               textTransform: 'uppercase',
-              letterSpacing: '0.18em',
+              letterSpacing: '0.12em',
+              fontSize: 12,
               color: colors.accent
             }}
           >
             404
           </p>
-          <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '2.25rem', marginTop: '1rem' }}>
+          <h1 style={{ fontSize: '2.25rem', fontWeight: 400, marginTop: '1rem' }}>
             {locales.map((l) => TITLE[l]).join(' · ')}
           </h1>
           <p style={{ marginTop: '1rem' }}>

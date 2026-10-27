@@ -1,6 +1,17 @@
 # DEPLOY
 
-The site is a standard Next.js 14 App Router build. Two deploy targets are documented: Vercel (zero-config) and Cloudflare Pages.
+The site is a standard Next.js 14 App Router build (SSR with middleware; no `output: 'export'`). Production runs on **AWS Amplify Hosting**; Vercel and Cloudflare Pages are documented as alternatives.
+
+## AWS Amplify Hosting (production)
+
+Amplify auto-detects the Next.js framework; no `amplify.yml` is committed, so the default build (`npm ci` / `npm run build`, output `.next`) applies. Nothing in the redesign changes the build contract:
+
+- No new runtime dependencies. The map data and illustrations are static TypeScript/SVG.
+- Fonts are fetched by `next/font/google` **at build time** and bundled; the build container needs outbound HTTPS to `fonts.googleapis.com` (Amplify allows this by default). If a locked-down build ever blocks it, drop the WOFF2 files in `public/fonts` and switch the two `next/font/google` calls in `app/[locale]/layout.tsx` to `next/font/local`.
+- Node version: `.nvmrc` pins 20. Match it in Amplify → Build settings → Build image settings (or set `NODE_VERSION=20`).
+- Middleware handles `/` → `/en` and locale routing; Amplify's Next.js SSR compute supports it.
+
+Post-deploy, run the smoke test below.
 
 Do **not** commit deploy tokens. Configure secrets in the host's dashboard.
 
@@ -26,13 +37,11 @@ Do **not** commit deploy tokens. Configure secrets in the host's dashboard.
 
 ## Post-deploy smoke test
 
-The site is English-only while `FEATURES.polish` is off (see README → Feature switches).
-
 ```bash
 curl -I https://elears.com/                    # 307 → /en
 curl -I https://elears.com/en                  # 200
-curl -I https://elears.com/pl                  # 307 → /en (Polish switched off)
-curl  https://elears.com/sitemap.xml | head    # EN URLs only
+curl -I https://elears.com/pl                  # 200 (Polish enabled; English is default)
+curl  https://elears.com/sitemap.xml | head    # EN and PL URLs
 curl  https://elears.com/robots.txt
 ```
 
@@ -45,8 +54,8 @@ Then run Lighthouse (mobile) on:
 
 Each must score ≥ 95 on Performance, Accessibility, Best Practices, and SEO.
 
-When Polish is enabled, also check that `/` redirects to `/pl`, that `/pl` returns 200, and that the sitemap lists both locales; repeat the Lighthouse runs for the `/pl/...` pages. When Insights is enabled, add `/en/insights/rss.xml` and one post page.
+Repeat the Lighthouse runs for the matching `/pl/...` pages. When Insights is enabled, add `/en/insights/rss.xml` and one post page.
 
 ## Rollback
 
-Vercel and Cloudflare Pages both keep the prior deploy live. Use the dashboard's "Promote" / "Rollback" action — do not force-push to recreate state.
+Amplify, Vercel and Cloudflare Pages all keep prior deploys. Use the dashboard's "Redeploy this version" / "Promote" / "Rollback" action — do not force-push to recreate state.

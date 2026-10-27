@@ -1,21 +1,25 @@
 /* Single source of truth for the palette. Consumed by tailwind.config.ts and
    by places that cannot use Tailwind classes (OG image, root 404, inline SVG).
 
-   Tactical Brutalism palette (design.md) with a blue structure and a brass
-   accent: deep black foundation, strategic dark blues for surfaces and fills,
-   muted brass for emphasis, ice blue for interaction states.
-   All text pairs meet WCAG AA on ink, surface and navy. */
+   Documentation-grade light palette: white paper, near-black ink for text and
+   rules, one light-blue tint and one dark navy for feature panels, a muted
+   brass accent for small marks, and a restrained blue for links and focus.
+   Every text/background pair below meets WCAG AA. */
 export const colors = {
-  ink: '#0A0A0A' /* deep black — page foundation (design.md) */,
-  surface: '#0D1B2A' /* strategic dark blue — cards, panels (design.md) */,
-  navy: '#12355B' /* command blue — filled elements (buttons, banners, map) */,
-  accent: '#B8995F' /* antique brass — primary accent, active state */,
-  signal: '#B9DBF7' /* ice blue — interaction (hover / focus) */,
-  ivory: '#F5F7FA' /* primary light text / inverse-button bg */,
-  'ivory-dim': '#B8BDCC' /* secondary light text */,
-  graphite: '#C9CDD8' /* body paragraph text on dark */,
-  'graphite-soft': '#83889C' /* muted text, labels, captions (AA on surface) */,
-  rule: '#22384C' /* hairline divider — lifted strategic blue */
+  paper: '#FFFFFF' /* page background */,
+  'paper-2': '#F4F5F7' /* quiet grey panels (brief, legend, code) */,
+  tint: '#E3EDF8' /* light-blue feature panel */,
+  ink: '#1E2124' /* primary text, strong rules, solid buttons */,
+  'ink-2': '#44474C' /* body paragraph text */,
+  mute: '#5E626A' /* captions, labels, eyebrows (AA on paper and tint) */,
+  line: '#D6DADF' /* hairline dividers */,
+  'line-2': '#E8EAEE' /* lighter hairline on grey panels */,
+  navy: '#16304F' /* dark feature panel */,
+  'navy-2': '#23416A' /* raised element on navy */,
+  accent: '#786536' /* muted brass — marks, active state (AA on paper) */,
+  signal: '#245FB8' /* link hover, focus ring (AA on paper) */,
+  'on-navy': '#E8EEF6' /* text on navy */,
+  'on-navy-mute': '#A9B8CC' /* secondary text on navy (AA) */
 } as const;
 
 export type ColorToken = keyof typeof colors;
