@@ -6,7 +6,7 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import PageHeader from '@/components/sections/PageHeader';
 import CtaStrip from '@/components/sections/CtaStrip';
 import RedactedPortrait from '@/components/ui/RedactedPortrait';
-import { LEADERSHIP, type LeadershipKey } from '@/lib/leadership';
+import { LEADERSHIP } from '@/lib/leadership';
 import logo from '@/public/logo.svg';
 import { languageAlternates, type Locale } from '@/i18n';
 
@@ -30,10 +30,6 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
   const t = await getTranslations({ locale });
   const ethics = t.raw('about.ethicsBullets') as string[];
   const registrations = t.raw('about.registrations') as string[];
-  const leadership = t.raw('about.leadership') as Record<
-    LeadershipKey,
-    { role: string; bio: string }
-  >;
 
   return (
     <>
@@ -98,57 +94,31 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         <Container className="py-16 lg:py-24">
           <h2 className={h2}>{t('about.leadershipTitle')}</h2>
 
-          <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2">
-            {LEADERSHIP.map((person, i) => {
-              const { role, bio } = leadership[person.key];
-              return (
-                <li
-                  key={person.key}
-                  className="flex flex-col gap-6 border-t border-ink pt-6 sm:flex-row"
-                >
-                  {/* TODO:leadership-photo — set `photo` in lib/leadership.ts */}
-                  {person.photo ? (
-                    <div className="relative aspect-[4/5] w-32 shrink-0 self-start overflow-hidden bg-paper-2">
-                      <Image
-                        src={person.photo}
-                        alt={`${person.name}, ${role}`}
-                        fill
-                        sizes="128px"
-                        className="object-cover contrast-125 grayscale"
-                      />
-                    </div>
-                  ) : (
-                    <RedactedPortrait
-                      label={t('about.leadership.photoWithheld')}
-                      tag={t('about.leadership.redactedTag')}
-                      fileNo={`${t('about.leadership.fileLabel')} ${String(i + 1).padStart(2, '0')}`}
+          <ul className="mt-10 grid grid-cols-2 gap-x-10 gap-y-10 md:grid-cols-4">
+            {LEADERSHIP.map((person, i) => (
+              <li key={person.key} className="flex flex-col gap-5 border-t border-ink pt-6">
+                {/* TODO:leadership-photo — set `photo` in lib/leadership.ts */}
+                {person.photo ? (
+                  <div className="relative aspect-[4/5] w-32 shrink-0 overflow-hidden bg-paper-2">
+                    <Image
+                      src={person.photo}
+                      alt={person.name}
+                      fill
+                      sizes="128px"
+                      className="object-cover contrast-125 grayscale"
                     />
-                  )}
-                  <div className="flex flex-1 flex-col">
-                    <Eyebrow>{String(i + 1).padStart(2, '0')}</Eyebrow>
-                    <h3 className="mt-3 text-display-3 font-normal">{person.name}</h3>
-                    <p className="mt-1 text-[15px] text-ink-2">{role}</p>
-                    {bio && <p className="mt-3 text-[15px] leading-relaxed text-ink-2">{bio}</p>}
-                    <div className="mt-5 border-t border-line pt-4">
-                      <p className="eyebrow text-mute">{t('about.leadership.companiesLabel')}</p>
-                      <ul className="mt-3 flex flex-wrap gap-2">
-                        {person.companies.map((company) => (
-                          <li
-                            key={company}
-                            className="border border-line px-2 py-1 text-[13px] text-ink-2"
-                          >
-                            {company}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
-                </li>
-              );
-            })}
+                ) : (
+                  <RedactedPortrait
+                    label={t('about.leadership.photoWithheld')}
+                    tag={t('about.leadership.redactedTag')}
+                    fileNo={`${t('about.leadership.fileLabel')} ${String(i + 1).padStart(2, '0')}`}
+                  />
+                )}
+                <h3 className="text-display-3 font-normal">{person.name}</h3>
+              </li>
+            ))}
           </ul>
-
-          <p className="mt-8 max-w-prose text-[15px] text-mute">{t('about.leadershipNote')}</p>
         </Container>
       </section>
 
